@@ -3,582 +3,653 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>看護師転職サポート｜あなたに合った職場をプロが無料でご紹介</title>
-  <meta name="description" content="看護師専門の転職支援サービス。求人数10,000件以上、専任コンサルタントが無料で転職をサポート。年収アップ・働き方改善を実現しましょう。">
+  <title>看護師転職サイト比較ナビ｜口コミ人気ランキングTOP5【2024年最新】</title>
+  <meta name="description" content="看護師転職サイトを口コミ・評判で徹底比較。実際に利用した看護師の声をもとにランキング化。あなたに合った転職サイトが見つかります。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #1a7fbf;
-      --primary-dark: #155f95;
-      --primary-light: #e8f4fd;
-      --accent: #f97316;
-      --accent-dark: #ea6a00;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --bg: #ffffff;
-      --bg-soft: #f8fafc;
-      --border: #e2e8f0;
-      --success: #16a34a;
-      --radius: 12px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.08);
-      --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+      --pink: #e84d8a;
+      --pink-light: #fff0f7;
+      --pink-mid: #fcd7ea;
+      --green: #2ab552;
+      --green-dark: #1d9040;
+      --text: #333;
+      --text-muted: #777;
+      --border: #e8e8e8;
+      --bg: #fff;
+      --bg-soft: #fafafa;
+      --gold: #d4a017;
+      --radius: 10px;
     }
-
-    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: #f5f5f5;
+      font-size: 15px;
       line-height: 1.7;
-      font-size: 16px;
     }
+
+    a { text-decoration: none; color: inherit; }
 
     /* ── HEADER ── */
     header {
+      background: white;
+      border-bottom: 3px solid var(--pink);
+      padding: 10px 16px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .header-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .header-logo::before,
+    .header-logo::after {
+      content: '///////';
+      color: #ccc;
+      font-size: 0.7rem;
+      letter-spacing: -2px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* ── PROMO NOTE ── */
+    .promo-note {
+      text-align: right;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    /* ── HERO BANNER ── */
+    .hero-banner {
+      background: linear-gradient(135deg, #ffe0ef 0%, #fef0f7 60%, #e0f4ff 100%);
+      border-radius: var(--radius);
+      padding: 28px 24px 28px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      gap: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      min-height: 180px;
     }
-    .logo {
+    .hero-text { flex: 1; }
+    .hero-review-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      border: 2px solid var(--pink);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--pink);
+      margin-bottom: 10px;
+    }
+    .hero-h1 {
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 0;
+    }
+    .hero-h1 em {
+      color: var(--pink);
+      font-style: normal;
+    }
+    .hero-h1 .highlight-box {
+      background: var(--pink);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .hero-img {
+      flex-shrink: 0;
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nurse-illust {
+      width: 110px;
+      height: 150px;
+      background: linear-gradient(180deg, #ffe4f0 0%, #ffc8df 100%);
+      border-radius: 50% 50% 40% 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    /* ── SEARCH BAR ── */
+    .search-bar {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 100px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .logo-badge {
-      background: var(--primary);
-      color: white;
-      font-size: 0.65rem;
-      padding: 2px 8px;
-      border-radius: 100px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-    .header-cta {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 10px 24px;
-      border-radius: 100px;
-      font-weight: 700;
-      font-size: 0.9rem;
+      margin-bottom: 24px;
       cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
-      white-space: nowrap;
+      transition: border-color 0.2s;
     }
-    .header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, #0f4c81 0%, #1a7fbf 50%, #2196c4 100%);
+    .search-bar:hover { border-color: var(--pink); }
+    .search-bar-icon { color: var(--pink); font-size: 1rem; }
+    .search-bar-text { color: var(--text-muted); flex: 1; font-size: 0.9rem; }
+    .search-bar-btn {
+      background: var(--pink);
       color: white;
-      padding: 64px 24px 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 360px; height: 360px;
-      background: rgba(255,255,255,0.05);
+      width: 32px; height: 32px;
       border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -40px;
-      width: 280px; height: 280px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 50%;
-    }
-    .hero-inner {
-      max-width: 680px;
-      margin: 0 auto;
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
       text-align: center;
+      padding: 8px 0 24px;
+      position: relative;
+    }
+    .section-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      height: 1px;
+      background: repeating-linear-gradient(90deg, var(--pink) 0, var(--pink) 4px, transparent 4px, transparent 8px);
+    }
+    .section-title-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 2px solid var(--pink);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--text);
       position: relative;
       z-index: 1;
     }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.18);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.3);
+    .section-title-badge .bubble-icon {
+      background: var(--pink);
       color: white;
+      border-radius: 50%;
+      width: 28px; height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 0.8rem;
-      font-weight: 700;
-      padding: 5px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.1em;
-      margin-bottom: 20px;
     }
-    .hero h1 {
-      font-size: clamp(1.7rem, 5vw, 2.6rem);
-      font-weight: 900;
-      line-height: 1.35;
-      margin-bottom: 18px;
-      letter-spacing: -0.01em;
-    }
-    .hero h1 em {
-      color: #fbbf24;
-      font-style: normal;
-      font-size: 1.1em;
-    }
-    .hero-sub {
-      font-size: 1.05rem;
-      opacity: 0.92;
-      margin-bottom: 36px;
-      line-height: 1.8;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-    .stat-item {
-      text-align: center;
-    }
-    .stat-num {
-      display: block;
-      font-size: 2rem;
-      font-weight: 900;
-      color: #fbbf24;
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      opacity: 0.85;
-    }
-    .hero-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--accent);
-      color: white;
-      font-weight: 800;
-      font-size: 1.15rem;
-      padding: 18px 48px;
-      border-radius: 100px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 8px 32px rgba(249,115,22,0.5);
-      transition: all 0.2s;
-      width: 100%;
-      max-width: 380px;
-    }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(249,115,22,0.6); }
-    .btn-primary svg { flex-shrink: 0; }
-    .cta-note { font-size: 0.8rem; opacity: 0.8; }
 
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--bg-soft);
+    /* ── RANKING TABLE ── */
+    .rank-table-wrap {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .rank-tabs {
+      display: flex;
       border-bottom: 1px solid var(--border);
-      padding: 20px 24px;
     }
-    .trust-bar-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .rank-tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
       font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-    .trust-icon { color: var(--success); font-size: 1.1rem; }
-
-    /* ── SECTION BASE ── */
-    section { padding: 64px 24px; }
-    .section-inner { max-width: 860px; margin: 0 auto; }
-    .section-label {
-      display: inline-block;
-      background: var(--primary-light);
-      color: var(--primary);
-      font-size: 0.78rem;
       font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 100px;
-      letter-spacing: 0.1em;
-      margin-bottom: 12px;
-    }
-    h2 {
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 900;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-    .section-desc {
+      cursor: pointer;
+      border: none;
+      background: #f8f8f8;
       color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 40px;
+      transition: all 0.2s;
     }
-
-    /* ── PROBLEMS ── */
-    .problems { background: var(--bg-soft); }
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
+    .rank-tab.active {
+      background: var(--pink);
+      color: white;
     }
-    .problem-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
+    .rank-table {
+      width: 100%;
+      border-collapse: collapse;
     }
-    .problem-icon { font-size: 1.5rem; flex-shrink: 0; }
-
-    /* ── FEATURES ── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+    .rank-table thead tr {
+      background: #f8f8f8;
+      border-bottom: 1px solid var(--border);
     }
-    .feature-card {
-      background: var(--bg-soft);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      border: 1px solid var(--border);
-      transition: box-shadow 0.2s, transform 0.2s;
+    .rank-table th {
+      padding: 10px 12px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
     }
-    .feature-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    .feature-num {
+    .rank-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .rank-table tbody tr:last-child { border-bottom: none; }
+    .rank-table tbody tr:hover { background: var(--pink-light); }
+    .rank-table td {
+      padding: 14px 10px;
+      text-align: center;
+      font-size: 0.82rem;
+      vertical-align: middle;
+    }
+    .rank-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 36px; height: 36px;
-      background: var(--primary);
-      color: white;
+      width: 32px; height: 32px;
       border-radius: 50%;
+      font-weight: 900;
+      font-size: 0.95rem;
+      color: white;
+    }
+    .rank-1 { background: linear-gradient(135deg, #f5c842, #e8a800); }
+    .rank-2 { background: linear-gradient(135deg, #c0c0c0, #9e9e9e); }
+    .rank-3 { background: linear-gradient(135deg, #cd7f32, #a0522d); }
+    .rank-other { background: #ccc; }
+    .site-name-cell { text-align: left; padding-left: 8px; }
+    .site-logo-text {
       font-weight: 800;
       font-size: 0.9rem;
-      margin-bottom: 14px;
+      margin-bottom: 2px;
     }
-    .feature-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
-    .feature-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
-
-    /* ── FLOW ── */
-    .flow { background: var(--bg-soft); }
-    .flow-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
+    .site-link {
+      font-size: 0.72rem;
+      color: var(--pink);
+      text-decoration: underline;
     }
-    .flow-steps::before {
-      content: '';
-      position: absolute;
-      left: 28px;
-      top: 48px;
-      bottom: 48px;
-      width: 2px;
-      background: var(--primary-light);
+    .stars { color: #f5a623; font-size: 0.8rem; }
+    .rating-num { font-weight: 800; font-size: 1rem; display: block; }
+    .area-badge {
+      display: inline-block;
+      border: 1.5px solid var(--text-muted);
+      border-radius: 100px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
     }
-    .flow-step {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      padding: 20px 0;
-      position: relative;
-    }
-    .step-circle {
-      flex-shrink: 0;
-      width: 58px; height: 58px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
+    .feature-text { font-size: 0.78rem; text-align: left; line-height: 1.5; }
+    .btn-official {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 0.65rem;
-      line-height: 1.2;
-      z-index: 1;
+      gap: 4px;
+      background: var(--green);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      transition: background 0.2s;
     }
-    .step-circle span { font-size: 1.3rem; font-weight: 900; }
-    .step-body h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
-    .step-body p { font-size: 0.875rem; color: var(--text-muted); }
+    .btn-official:hover { background: var(--green-dark); }
+    .update-note {
+      text-align: right;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      background: #f8f8f8;
+      border-top: 1px solid var(--border);
+    }
 
-    /* ── TESTIMONIALS ── */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .testimonial-card {
+    /* ── KEY SECTION ── */
+    .key-section {
       background: white;
-      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
-      position: relative;
+      margin-bottom: 24px;
     }
-    .quote-mark {
-      font-size: 3rem;
-      color: var(--primary-light);
-      line-height: 1;
-      font-family: Georgia, serif;
-      position: absolute;
-      top: 12px; left: 18px;
-    }
-    .testimonial-text {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      margin-bottom: 16px;
-      padding-top: 20px;
-      position: relative;
-    }
-    .testimonial-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .meta-avatar {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--primary-light);
+    .key-title {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 900;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      gap: 8px;
     }
-    .meta-info { font-size: 0.82rem; }
-    .meta-name { font-weight: 700; margin-bottom: 2px; }
-    .meta-detail { color: var(--text-muted); }
-    .stars { color: #fbbf24; font-size: 0.9rem; margin-bottom: 4px; }
+    .key-emphasis {
+      display: inline-flex;
+      align-items: center;
+      background: var(--pink);
+      color: white;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .key-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px;
+      background: var(--pink-light);
+      border-radius: 8px;
+      border-left: 4px solid var(--pink);
+      margin-bottom: 16px;
+    }
+    .key-point-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .key-point h3 { font-size: 0.95rem; font-weight: 800; color: var(--pink); margin-bottom: 4px; }
+    .key-point p { font-size: 0.85rem; color: var(--text); }
+    .key-point a { color: var(--pink); text-decoration: underline; }
 
-    /* ── SALARY ── */
-    .salary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; }
-    .salary h2 { color: white; }
-    .salary .section-desc { color: rgba(255,255,255,0.8); }
-    .salary-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-    .salary-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.2);
+    /* ── TIP BOX ── */
+    .tip-box {
+      background: var(--pink-light);
+      border: 1.5px solid var(--pink-mid);
       border-radius: var(--radius);
-      padding: 24px 20px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+    .tip-title {
       text-align: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 14px;
     }
-    .salary-type { font-size: 0.85rem; font-weight: 600; opacity: 0.85; margin-bottom: 8px; }
-    .salary-range { font-size: 1.6rem; font-weight: 900; color: #fbbf24; margin-bottom: 4px; }
-    .salary-unit { font-size: 0.78rem; opacity: 0.75; }
-
-    /* ── FAQ ── */
-    .faq { background: var(--bg-soft); }
-    .faq-list { display: flex; flex-direction: column; gap: 12px; }
-    .faq-item {
+    .tip-highlight {
+      color: var(--pink);
+      font-weight: 900;
+    }
+    .tip-body { font-size: 0.88rem; line-height: 1.8; margin-bottom: 14px; }
+    .tip-cta-box {
       background: white;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--pink);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .tip-cta-icon { font-size: 2rem; flex-shrink: 0; }
+    .tip-cta-text { font-size: 0.85rem; }
+    .tip-cta-text strong { color: var(--pink); font-size: 1rem; }
+
+    /* ── SERVICE DETAIL CARD ── */
+    .detail-card {
+      background: white;
       border-radius: var(--radius);
+      border: 2px solid var(--border);
+      margin-bottom: 20px;
       overflow: hidden;
     }
-    .faq-q {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 18px 20px;
-      text-align: left;
-      font-size: 0.92rem;
-      font-weight: 700;
-      cursor: pointer;
+    .detail-card-header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       gap: 12px;
-      color: var(--text);
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #fafafa;
     }
-    .faq-q:hover { background: var(--bg-soft); }
-    .faq-icon { flex-shrink: 0; font-size: 1.2rem; transition: transform 0.2s; color: var(--primary); }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-a {
-      display: none;
-      padding: 0 20px 18px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.8;
+    .detail-rank-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--pink);
+      min-width: 32px;
     }
-    .faq-item.open .faq-a { display: block; }
-
-    /* ── FORM ── */
-    .form-section {
-      background: linear-gradient(160deg, #0f4c81 0%, #1a7fbf 100%);
-      color: white;
+    .detail-site-name {
+      font-size: 1.05rem;
+      font-weight: 900;
+      flex: 1;
     }
-    .form-section h2 { color: white; }
-    .form-section .section-desc { color: rgba(255,255,255,0.8); }
-    .form-box {
-      background: white;
-      border-radius: 20px;
-      padding: 40px 36px;
-      box-shadow: var(--shadow-lg);
-      max-width: 560px;
-      margin: 0 auto;
+    .detail-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
     }
-    .form-box h3 {
-      font-size: 1.1rem;
+    .detail-card-left {
+      padding: 16px;
+      border-right: 1px solid var(--border);
+    }
+    .detail-service-img {
+      background: linear-gradient(135deg, var(--pink-light), var(--pink-mid));
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 12px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       font-weight: 800;
-      color: var(--text);
+      font-size: 1.1rem;
+      color: var(--pink);
+      position: relative;
+    }
+    .service-count-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: var(--pink);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .detail-points { list-style: none; }
+    .detail-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 0.82rem;
+      padding: 4px 0;
+      line-height: 1.5;
+    }
+    .detail-points li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .detail-points li a { color: var(--pink); font-weight: 700; }
+    .detail-card-right { padding: 16px; }
+    .detail-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+    .stat-cell {
+      background: #f8f8f8;
+      border-radius: 6px;
+      padding: 8px 4px;
+      text-align: center;
+    }
+    .stat-cell-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .stat-cell-value {
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .stat-cell-value.rating { font-size: 1.2rem; font-weight: 900; }
+    .detail-reviews-title {
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      background: var(--pink);
+      color: white;
+      border-radius: 100px;
+      padding: 4px 0;
+      margin-bottom: 10px;
+    }
+    .review-item {
+      background: var(--pink-light);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .review-avatar {
+      width: 28px; height: 28px;
+      background: var(--pink-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .review-meta { font-size: 0.72rem; }
+    .review-name { font-weight: 700; }
+    .review-title { color: var(--pink); font-size: 0.8rem; font-weight: 700; margin-bottom: 3px; }
+    .review-text { font-size: 0.78rem; color: var(--text); line-height: 1.6; }
+    .detail-card-footer {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .btn-official-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--green);
+      color: white;
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+      max-width: 320px;
+    }
+    .btn-official-lg:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    /* ── MULTIPLE REGISTER TIP ── */
+    .multi-register {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px;
       margin-bottom: 24px;
       text-align: center;
     }
-    .form-group { margin-bottom: 16px; }
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .form-group label .required {
-      color: #ef4444;
-      margin-left: 4px;
-    }
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      color: var(--text);
-      background: var(--bg-soft);
-      transition: border-color 0.2s;
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary);
-      background: white;
-    }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .btn-submit {
-      width: 100%;
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 18px;
-      border-radius: 100px;
+    .multi-register h2 {
       font-size: 1.1rem;
-      font-weight: 800;
-      cursor: pointer;
-      margin-top: 8px;
-      box-shadow: 0 8px 24px rgba(249,115,22,0.4);
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      font-weight: 900;
+      margin-bottom: 14px;
     }
-    .btn-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
-    .form-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 14px;
-      line-height: 1.6;
+    .multi-register h2 em {
+      color: var(--pink);
+      font-style: normal;
     }
+    .multi-body {
+      font-size: 0.875rem;
+      text-align: left;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .multi-body a { color: var(--pink); font-weight: 700; text-decoration: underline; }
+    .multi-cta {
+      background: var(--pink-light);
+      border: 1.5px solid var(--pink-mid);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .multi-cta-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 100px;
+      margin-bottom: 8px;
+    }
+    .multi-cta p {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .multi-cta p em { color: var(--pink); font-style: normal; font-size: 1rem; }
+    .multi-illust { font-size: 3rem; margin: 8px 0; }
 
     /* ── FOOTER ── */
     footer {
-      background: #0f172a;
+      background: #333;
       color: rgba(255,255,255,0.6);
-      padding: 40px 24px;
+      padding: 30px 16px;
       text-align: center;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
     }
-    .footer-inner { max-width: 860px; margin: 0 auto; }
-    .footer-logo { color: white; font-weight: 800; font-size: 1.1rem; margin-bottom: 12px; }
-    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
-    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-links a { color: rgba(255,255,255,0.5); }
     .footer-links a:hover { color: white; }
-    .footer-copy { opacity: 0.45; margin-top: 16px; }
 
-    /* ── FLOATING CTA ── */
-    .floating-cta {
+    /* ── BACK TO TOP ── */
+    .back-top {
       position: fixed;
       bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 200;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      animation: fadeUp 0.5s ease 1s both;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-      to { opacity: 1; transform: translateX(-50%) translateY(0); }
-    }
-    .floating-btn {
-      background: var(--accent);
+      right: 20px;
+      background: var(--pink);
       color: white;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 100px;
-      font-weight: 800;
-      font-size: 1rem;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px rgba(232,77,138,0.4);
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 8px 32px rgba(249,115,22,0.55);
-      transition: all 0.2s;
-      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
-    .floating-btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
-    .floating-note {
-      font-size: 0.72rem;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 3px 12px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
+    .back-top.visible { opacity: 1; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      .hero-stats { gap: 16px; }
-      .form-box { padding: 28px 20px; }
-      .form-grid { grid-template-columns: 1fr; }
-      .trust-bar-inner { gap: 16px; }
-      .flow-steps::before { display: none; }
+      .detail-card-body { grid-template-columns: 1fr; }
+      .detail-card-left { border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-banner { flex-direction: column; text-align: center; }
+      .rank-table th:nth-child(4),
+      .rank-table td:nth-child(4) { display: none; }
     }
   </style>
 </head>
@@ -586,405 +657,448 @@
 
 <!-- ヘッダー -->
 <header>
-  <a href="#" class="logo">
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <rect width="28" height="28" rx="8" fill="#1a7fbf"/>
-      <path d="M14 6v16M6 14h16" stroke="white" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-    ナースキャリア
-    <span class="logo-badge">無料</span>
-  </a>
-  <a href="#form" class="header-cta">無料で相談する →</a>
+  <div class="header-logo">看護師転職サイト比較ナビ</div>
 </header>
 
-<!-- ヒーロー -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-tag">✦ 看護師専門の転職支援サービス</div>
-    <h1>「給与・職場・働き方」<br><em>全部</em>変えられます</h1>
-    <p class="hero-sub">
-      あなたの「こうしたい」を看護師専門コンサルタントが<br>
-      無料でサポート。まずは気軽にご相談ください。
+<div class="page-wrap">
+  <p class="promo-note">※プロモーションを含みます</p>
+
+  <!-- ヒーローバナー -->
+  <div class="hero-banner">
+    <div class="hero-text">
+      <div class="hero-review-badge">
+        💬 口コミ
+      </div>
+      <h1 class="hero-h1">
+        転職経験者の <span style="color:var(--pink); background:var(--pink-mid); padding:0 6px; border-radius:4px;">💬 口コミ</span> で見つかる！<br>
+        <span style="font-size:1.5em; color:var(--pink);">看護師</span>転職サイト<br>
+        <span style="display:inline-flex; gap:6px; margin-top:4px;">
+          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">一</span>
+          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">括</span>
+          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">比</span>
+          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">較</span>
+        </span>
+      </h1>
+    </div>
+    <div class="hero-img">
+      <div class="nurse-illust">👩‍⚕️</div>
+    </div>
+  </div>
+
+  <!-- 検索バー -->
+  <div class="search-bar">
+    <span class="search-bar-icon">🔍</span>
+    <span class="search-bar-text">条件から看護師転職サイトを探す</span>
+    <span class="search-bar-btn">→</span>
+  </div>
+
+  <!-- ランキングタイトル -->
+  <div class="section-divider">
+    <div class="section-title-badge">
+      <span class="bubble-icon">💬</span>
+      転職したいすべての看護師さんにおすすめ！口コミ 人気ランキング TOP5
+    </div>
+  </div>
+
+  <!-- ランキング表 -->
+  <div class="rank-table-wrap">
+    <div class="rank-tabs">
+      <button class="rank-tab active">おすすめ</button>
+      <button class="rank-tab" onclick="this.closest('.rank-tabs').querySelectorAll('.rank-tab').forEach(t=>t.classList.remove('active')); this.classList.add('active')">サービス内容</button>
+    </div>
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th>順位</th>
+          <th>サイト名</th>
+          <th>口コミ評価 ⇅</th>
+          <th>エリア</th>
+          <th>特徴</th>
+          <th>詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank-badge rank-1">1</span></td>
+          <td class="site-name-cell">
+            <div class="site-logo-text" style="color:#1a7cc4;">🔵 レバウェル看護</div>
+            <a href="#detail-1" class="site-link">レバウェル看護</a>
+          </td>
+          <td>
+            <span class="rating-num">4.6</span>
+            <div class="stars">★★★★★</div>
+            <a href="#detail-1" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
+          </td>
+          <td><span class="area-badge">全国</span></td>
+          <td class="feature-text">年収600万円など<span style="color:var(--pink); font-weight:700;">高給与の優良求人</span>が豊富</td>
+          <td><a href="#detail-1" class="btn-official">公式サイト ›</a></td>
+        </tr>
+        <tr>
+          <td><span class="rank-badge rank-2">2</span></td>
+          <td class="site-name-cell">
+            <div class="site-logo-text" style="color:#e84d8a;">🩺 ナース専科 転職</div>
+            <a href="#detail-2" class="site-link">ナース専科 転職</a><br>
+            <span style="font-size:0.68rem; color:var(--text-muted);">※常勤のみ</span>
+          </td>
+          <td>
+            <span class="rating-num">4.5</span>
+            <div class="stars">★★★★★</div>
+            <a href="#detail-2" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
+          </td>
+          <td><span class="area-badge">全国</span></td>
+          <td class="feature-text">求人数約20万件で登録者限定の<span style="color:var(--pink); font-weight:700;">レア求人多数</span>（常勤のみ）</td>
+          <td><a href="#detail-2" class="btn-official">公式サイト ›</a></td>
+        </tr>
+        <tr>
+          <td><span class="rank-badge rank-3">3</span></td>
+          <td class="site-name-cell">
+            <div class="site-logo-text" style="color:#2ab552;">🦘 看護roo!</div>
+            <a href="#detail-3" class="site-link">看護roo!</a>
+          </td>
+          <td>
+            <span class="rating-num">4.2</span>
+            <div class="stars">★★★★☆</div>
+            <a href="#detail-3" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
+          </td>
+          <td><span class="area-badge">全国</span></td>
+          <td class="feature-text">利用満足度90%、<span style="color:var(--pink); font-weight:700;">累計160万人</span>が使用するサイト</td>
+          <td><a href="#detail-3" class="btn-official">公式サイト ›</a></td>
+        </tr>
+        <tr>
+          <td><span class="rank-badge rank-other">4</span></td>
+          <td class="site-name-cell">
+            <div class="site-logo-text" style="color:#e84d8a;">💜 ナースではたらこ</div>
+            <a href="#detail-4" class="site-link">ナースではたらこ</a>
+          </td>
+          <td>
+            <span class="rating-num">3.6</span>
+            <div class="stars">★★★★☆</div>
+            <a href="#detail-4" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
+          </td>
+          <td><span class="area-badge">全国</span></td>
+          <td class="feature-text">年収、残業など<span style="color:var(--pink); font-weight:700;">聞きづらいこともお任せ</span></td>
+          <td><a href="#detail-4" class="btn-official">公式サイト ›</a></td>
+        </tr>
+        <tr>
+          <td><span class="rank-badge rank-other">5</span></td>
+          <td class="site-name-cell">
+            <div class="site-logo-text" style="color:#333;">🏥 看護師ワーカー</div>
+            <a href="#detail-5" class="site-link">看護師ワーカー</a>
+          </td>
+          <td>
+            <span class="rating-num">3.5</span>
+            <div class="stars">★★★★☆</div>
+            <a href="#detail-5" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
+          </td>
+          <td><span class="area-badge">全国</span></td>
+          <td class="feature-text">年間<span style="color:var(--pink); font-weight:700;">1万人以上</span>の転職実績あり</td>
+          <td><a href="#detail-5" class="btn-official">公式サイト ›</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="update-note">※2025年3月時点</div>
+  </div>
+
+  <!-- 転職成功のカギ -->
+  <div class="key-section">
+    <div class="key-title">
+      転職を成功させる
+      <span class="key-emphasis">🔑 カギ</span>
+      ━━
+    </div>
+    <div class="key-point">
+      <span class="key-point-icon">🔒</span>
+      <div>
+        <h3>好条件の求人は非公開の中にあり！</h3>
+        <p>魅力的な求人が公開されると応募者が殺到し、採用する企業も対応しきれなくなってしまいます。そのため、<a href="#">このような求人は転職サイトに登録している人のみが見られる非公開求人として提供されることが多い</a>のです。</p>
+        <div style="margin-top:10px; padding:10px 14px; background:white; border:1.5px solid var(--pink); border-radius:8px; display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:700;">
+          <span style="font-size:1.5rem;">👩‍⚕️</span>
+          まずは転職サイトに登録するところからスタートです！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 複数サイト登録のすすめ -->
+  <div class="multi-register">
+    <h2>複数サイトに<em>登録して比較</em>しよう</h2>
+    <div class="multi-illust">📱</div>
+    <p class="multi-body">
+      求人を出す企業は1つの転職サイトにしか掲載しないことがしばしばあります。複数の転職サイトと連携して求人を出すのは大変なためです。<br>
+      なので、1つの転職サイトしか利用しないと、他のサイトにある<a href="#">より良い条件の求人を見逃してしまう</a>かもしれません。
     </p>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">10,000<sup style="font-size:0.5em">件+</sup></span>
-        <span class="stat-label">非公開求人含む</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">98<sup style="font-size:0.5em">%</sup></span>
-        <span class="stat-label">利用者満足度</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">平均<br style="display:none"><span style="font-size:0.7em">年収</span>+52<sup style="font-size:0.5em">万</sup></span>
-        <span class="stat-label">転職後の年収増加</span>
-      </div>
-    </div>
-    <div class="hero-cta-wrap">
-      <a href="#form" class="btn-primary">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M2 3h16v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3z" stroke="white" stroke-width="1.5"/>
-          <path d="M2 3l8 7 8-7" stroke="white" stroke-width="1.5"/>
-        </svg>
-        今すぐ無料で求人を見る
-      </a>
-      <span class="cta-note">登録60秒・完全無料・しつこい勧誘なし</span>
+    <div class="multi-cta">
+      <div class="multi-cta-badge">登録はすべて無料</div>
+      <p><em>2〜3サイト登録し、求人を比較する</em>ことが、転職成功のカギとなります！</p>
     </div>
   </div>
-</section>
 
-<!-- 信頼バー -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-item"><span class="trust-icon">✓</span>登録・利用は完全無料</div>
-    <div class="trust-item"><span class="trust-icon">✓</span>専任コンサルタント対応</div>
-    <div class="trust-item"><span class="trust-icon">✓</span>非公開求人10,000件以上</div>
-    <div class="trust-item"><span class="trust-icon">✓</span>転職後もアフターフォロー</div>
+  <!-- ランキング詳細ヘッダー -->
+  <div class="section-divider">
+    <div class="section-title-badge">
+      <span class="bubble-icon">💬</span>
+      各サービスの詳細・口コミ
+    </div>
   </div>
+
+  <!-- 詳細カード 1 -->
+  <div class="detail-card" id="detail-1">
+    <div class="detail-card-header">
+      <div class="detail-rank-num">1</div>
+      <div class="detail-site-name" style="color:#1a7cc4;">◀ レバウェル看護</div>
+      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
+    </div>
+    <div class="detail-card-body">
+      <div class="detail-card-left">
+        <div class="detail-service-img">
+          <div style="font-size:2.5rem;">🏥</div>
+          <div>看護師転職なら<br><strong>レバウェル看護</strong></div>
+          <div class="service-count-badge">求人15万件以上</div>
+        </div>
+        <ul class="detail-points">
+          <li>各エリアに特化したキャリアアドバイザーが、<a href="#">地域ならではの求人</a>を紹介</li>
+          <li>求人票に載っていない情報まで詳細に教えてもらえる</li>
+          <li>過去の面接をもとにした模擬面接で対策もバッチリ</li>
+        </ul>
+      </div>
+      <div class="detail-card-right">
+        <div class="detail-stats-grid">
+          <div class="stat-cell">
+            <div class="stat-cell-label">口コミ評価</div>
+            <div class="stat-cell-value rating" style="color:var(--pink);">4.6</div>
+            <div class="stars" style="font-size:0.65rem;">★★★★★</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">対応エリア</div>
+            <div class="stat-cell-value">全国</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">求人数</div>
+            <div class="stat-cell-value">15万件+</div>
+          </div>
+        </div>
+        <div class="detail-reviews-title">利用者の声</div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">👩</div>
+            <div class="review-meta">
+              <div class="review-name">★★★★★ 30代／女性</div>
+            </div>
+          </div>
+          <div class="review-title">引っ越し先までお世話になりました</div>
+          <div class="review-text">詳しいキャリアアドバイザーが希望条件の病院を探してくれました。引っ越し先の病院紹介の不動産屋を紹介してくれて、家賃が半額になるということで。その不動産屋にも取り次いで頂き、家まで決めることができたんです。有給消化しやすいのも、学校行事のある私には嬉しいポイントでした。</div>
+        </div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">👩</div>
+            <div class="review-meta">
+              <div class="review-name">★★★★★ 20代／女性</div>
+            </div>
+          </div>
+          <div class="review-title">転職の不安が楽しみに変わりました</div>
+          <div class="review-text">職場の雰囲気や周辺環境、前に紹介した方からのアドバイスなんかも教えてくれたので、転職後の具体的なイメージが湧いて、不安というより楽しみの方が大きい転職でした。</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-footer">
+      <a href="#" class="btn-official-lg">レバウェル看護 公式サイトへ ›</a>
+    </div>
+  </div>
+
+  <!-- 詳細カード 2 -->
+  <div class="detail-card" id="detail-2">
+    <div class="detail-card-header">
+      <div class="detail-rank-num">2</div>
+      <div class="detail-site-name" style="color:var(--pink);">🩺 ナース専科 転職</div>
+      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
+    </div>
+    <div class="detail-card-body">
+      <div class="detail-card-left">
+        <div class="detail-service-img" style="background:linear-gradient(135deg,#ffe8f4,#ffc8e4);">
+          <div style="font-size:2.5rem;">🩺</div>
+          <div><strong>ナース専科</strong> 転職</div>
+          <div class="service-count-badge">求人20万件以上</div>
+        </div>
+        <ul class="detail-points">
+          <li>業界最大規模の<a href="#">求人数約20万件</a></li>
+          <li>登録者限定のレア求人・非公開求人多数</li>
+          <li>常勤希望の看護師に特に強いサービス</li>
+        </ul>
+      </div>
+      <div class="detail-card-right">
+        <div class="detail-stats-grid">
+          <div class="stat-cell">
+            <div class="stat-cell-label">口コミ評価</div>
+            <div class="stat-cell-value rating" style="color:var(--pink);">4.5</div>
+            <div class="stars" style="font-size:0.65rem;">★★★★★</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">対応エリア</div>
+            <div class="stat-cell-value">全国</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">求人数</div>
+            <div class="stat-cell-value">20万件+</div>
+          </div>
+        </div>
+        <div class="detail-reviews-title">利用者の声</div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">👩</div>
+            <div class="review-meta"><div class="review-name">★★★★★ 30代／女性</div></div>
+          </div>
+          <div class="review-title">希望条件をすべて叶えてくれた</div>
+          <div class="review-text">「夜勤なし・土日休み・年収400万以上」という条件でも、希望に合う求人を複数紹介してくれました。担当さんの対応も丁寧で、内定まで安心してお任せできました。</div>
+        </div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">🧑</div>
+            <div class="review-meta"><div class="review-name">★★★★☆ 20代／男性</div></div>
+          </div>
+          <div class="review-title">男性看護師にも対応してくれた</div>
+          <div class="review-text">男性でも親身に対応してくれて、男性が働きやすい職場を重点的に紹介してもらえました。転職後も順調で満足しています。</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-footer">
+      <a href="#" class="btn-official-lg">ナース専科 公式サイトへ ›</a>
+    </div>
+  </div>
+
+  <!-- 詳細カード 3 -->
+  <div class="detail-card" id="detail-3">
+    <div class="detail-card-header">
+      <div class="detail-rank-num">3</div>
+      <div class="detail-site-name" style="color:var(--green);">🦘 看護roo!</div>
+      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
+    </div>
+    <div class="detail-card-body">
+      <div class="detail-card-left">
+        <div class="detail-service-img" style="background:linear-gradient(135deg,#e8f9ee,#c8f0d4);">
+          <div style="font-size:2.5rem;">🦘</div>
+          <div style="color:var(--green);"><strong>看護roo!</strong></div>
+          <div class="service-count-badge" style="background:var(--green);">累計160万人利用</div>
+        </div>
+        <ul class="detail-points">
+          <li>利用満足度<a href="#">90%以上</a>を誇る大手サービス</li>
+          <li>全国対応・あらゆる施設形態に対応</li>
+          <li>専任スタッフが転職を徹底サポート</li>
+        </ul>
+      </div>
+      <div class="detail-card-right">
+        <div class="detail-stats-grid">
+          <div class="stat-cell">
+            <div class="stat-cell-label">口コミ評価</div>
+            <div class="stat-cell-value rating" style="color:var(--pink);">4.2</div>
+            <div class="stars" style="font-size:0.65rem;">★★★★☆</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">対応エリア</div>
+            <div class="stat-cell-value">全国</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-label">満足度</div>
+            <div class="stat-cell-value">90%+</div>
+          </div>
+        </div>
+        <div class="detail-reviews-title">利用者の声</div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">👩</div>
+            <div class="review-meta"><div class="review-name">★★★★★ 40代／女性</div></div>
+          </div>
+          <div class="review-title">ブランク明けでも丁寧に対応</div>
+          <div class="review-text">育児で5年のブランクがあって不安でしたが、ブランクに理解のある職場を多数紹介してもらいました。今は週3のクリニックで働けており、生活が安定しました。</div>
+        </div>
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">👩</div>
+            <div class="review-meta"><div class="review-name">★★★★☆ 30代／女性</div></div>
+          </div>
+          <div class="review-title">転職先での定着率が高い</div>
+          <div class="review-text">職場の内部情報をしっかり共有してくれるので、入職後のギャップが少なかったです。今の職場も長く続けられそうで満足しています。</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-footer">
+      <a href="#" class="btn-official-lg" style="background:var(--green);">看護roo! 公式サイトへ ›</a>
+    </div>
+  </div>
+
+  <!-- 詳細カード 4・5（コンパクト版） -->
+  <div class="detail-card" id="detail-4">
+    <div class="detail-card-header">
+      <div class="detail-rank-num">4</div>
+      <div class="detail-site-name" style="color:var(--pink);">💜 ナースではたらこ</div>
+    </div>
+    <div style="padding:16px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="flex:1; min-width:220px;">
+        <ul class="detail-points">
+          <li>年収・残業など交渉しにくいことも代行</li>
+          <li>パート・アルバイト求人も豊富</li>
+          <li>ライフスタイルに合わせた求人を提案</li>
+        </ul>
+      </div>
+      <div style="flex:1; min-width:220px;">
+        <div class="review-item">
+          <div class="review-title" style="color:var(--pink);">★★★★☆ 「給与交渉を代わりにやってくれた」</div>
+          <div class="review-text">自分では言いにくい給与面の交渉を担当さんがやってくれて、希望より月2万円アップで入職できました。</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-footer">
+      <a href="#" class="btn-official-lg">ナースではたらこ 公式サイトへ ›</a>
+    </div>
+  </div>
+
+  <div class="detail-card" id="detail-5">
+    <div class="detail-card-header">
+      <div class="detail-rank-num">5</div>
+      <div class="detail-site-name">🏥 看護師ワーカー</div>
+    </div>
+    <div style="padding:16px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="flex:1; min-width:220px;">
+        <ul class="detail-points">
+          <li>年間1万人以上の転職実績</li>
+          <li>地方・都市部ともに求人が充実</li>
+          <li>24時間LINEで相談できる</li>
+        </ul>
+      </div>
+      <div style="flex:1; min-width:220px;">
+        <div class="review-item">
+          <div class="review-title" style="color:var(--pink);">★★★★☆ 「LINEで気軽に相談できた」</div>
+          <div class="review-text">忙しくて電話できない時もLINEで質問できて助かりました。夜遅くでも返信が来てとても便利でした。</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-footer">
+      <a href="#" class="btn-official-lg">看護師ワーカー 公式サイトへ ›</a>
+    </div>
+  </div>
+
 </div>
-
-<!-- お悩みセクション -->
-<section class="problems">
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom:36px;">
-      <span class="section-label">PROBLEMS</span>
-      <h2>こんなお悩み、ありませんか？</h2>
-      <p class="section-desc">転職を考えている看護師さんに多い悩みを解決します</p>
-    </div>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <span class="problem-icon">😔</span>
-        <span>夜勤や残業が多すぎて<br>体力的につらい</span>
-      </div>
-      <div class="problem-card">
-        <span class="problem-icon">💰</span>
-        <span>給与が低く、将来が<br>不安でたまらない</span>
-      </div>
-      <div class="problem-card">
-        <span class="problem-icon">😰</span>
-        <span>人間関係のストレスで<br>毎日が憂鬱</span>
-      </div>
-      <div class="problem-card">
-        <span class="problem-icon">🏥</span>
-        <span>今の診療科から転科・<br>転職したいが不安</span>
-      </div>
-      <div class="problem-card">
-        <span class="problem-icon">👶</span>
-        <span>育児との両立ができる<br>職場に移りたい</span>
-      </div>
-      <div class="problem-card">
-        <span class="problem-icon">🔍</span>
-        <span>自分に合う職場をどう<br>探せばいいか分からない</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 特長セクション -->
-<section>
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom:36px;">
-      <span class="section-label">FEATURES</span>
-      <h2>選ばれる3つの理由</h2>
-      <p class="section-desc">ナースキャリアが支持される理由をご紹介します</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-num">1</div>
-        <h3>看護師専門コンサルタント</h3>
-        <p>医療・看護業界に精通した専任コンサルタントが担当。あなたの経歴・希望・悩みを深くヒアリングし、最適な求人をご提案します。</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">2</div>
-        <h3>非公開求人10,000件以上</h3>
-        <p>ネットに出ていない優良求人を豊富に保有。好条件の求人はすぐ埋まるため、登録者限定で先行情報をご案内します。</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">3</div>
-        <h3>内定まで完全無料サポート</h3>
-        <p>履歴書添削・面接対策・条件交渉まで、転職のあらゆる場面を専任スタッフが全力でサポート。費用は一切かかりません。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 給与水準 -->
-<section class="salary">
-  <div class="section-inner" style="text-align:center;">
-    <span class="section-label" style="background:rgba(255,255,255,0.15); color:white;">SALARY</span>
-    <h2>転職後の平均年収</h2>
-    <p class="section-desc">職場選びで給与は大きく変わります。まず市場を知りましょう。</p>
-    <div class="salary-cards">
-      <div class="salary-card">
-        <div class="salary-type">急性期病院</div>
-        <div class="salary-range">420〜550<span style="font-size:0.6em">万</span></div>
-        <div class="salary-unit">年収目安</div>
-      </div>
-      <div class="salary-card">
-        <div class="salary-type">クリニック</div>
-        <div class="salary-range">350〜480<span style="font-size:0.6em">万</span></div>
-        <div class="salary-unit">年収目安</div>
-      </div>
-      <div class="salary-card">
-        <div class="salary-type">訪問看護</div>
-        <div class="salary-range">400〜520<span style="font-size:0.6em">万</span></div>
-        <div class="salary-unit">年収目安</div>
-      </div>
-      <div class="salary-card">
-        <div class="salary-type">施設・介護</div>
-        <div class="salary-range">380〜460<span style="font-size:0.6em">万</span></div>
-        <div class="salary-unit">年収目安</div>
-      </div>
-    </div>
-    <p style="margin-top:24px; font-size:0.82rem; opacity:0.7;">※目安であり、地域・経験・施設規模により異なります</p>
-  </div>
-</section>
-
-<!-- 利用の流れ -->
-<section class="flow">
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom:36px;">
-      <span class="section-label">FLOW</span>
-      <h2>転職成功までの流れ</h2>
-      <p class="section-desc">最短2週間で内定！シンプルなステップで転職できます</p>
-    </div>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="step-circle">STEP<span>1</span></div>
-        <div class="step-body">
-          <h3>無料登録（60秒）</h3>
-          <p>お名前・連絡先・ご希望を入力するだけ。しつこい勧誘は一切ありません。</p>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle">STEP<span>2</span></div>
-        <div class="step-body">
-          <h3>専任コンサルタントと面談</h3>
-          <p>現在の状況・転職理由・理想の職場についてヒアリング。電話・オンラインどちらでもOK。</p>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle">STEP<span>3</span></div>
-        <div class="step-body">
-          <h3>求人紹介・応募</h3>
-          <p>あなたに合う求人をピックアップしてご提案。気に入った求人に応募します。</p>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle">STEP<span>4</span></div>
-        <div class="step-body">
-          <h3>面接・内定</h3>
-          <p>面接対策もコンサルタントが支援。入職日の調整まで全面バックアップします。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 口コミ -->
-<section>
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom:36px;">
-      <span class="section-label">VOICE</span>
-      <h2>転職成功者の声</h2>
-      <p class="section-desc">ナースキャリアを使って転職した方々のリアルな感想</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">急性期病院の激務に限界を感じ相談しました。希望どおりの訪問看護ステーションに転職でき、年収も30万円アップ。担当さんが親身になってくれて本当に助かりました。</p>
-        <div class="testimonial-meta">
-          <div class="meta-avatar">👩‍⚕️</div>
-          <div class="meta-info">
-            <div class="meta-name">Aさん（32歳）</div>
-            <div class="meta-detail">急性期病院 → 訪問看護 / 年収+30万</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">子育て中でフルタイムが難しく、パート希望で登録。週3日・日勤のみのクリニックをすぐ紹介してもらえました。無理なく続けられる職場で大満足です。</p>
-        <div class="testimonial-meta">
-          <div class="meta-avatar">👩</div>
-          <div class="meta-info">
-            <div class="meta-name">Bさん（38歳）</div>
-            <div class="meta-detail">総合病院 → クリニック（パート） / ワークライフバランス◎</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">転科を希望していましたが、不安で一歩踏み出せずにいました。コンサルタントさんのアドバイスで自信を持って面接に臨めて、ICUへの転職が実現しました！</p>
-        <div class="testimonial-meta">
-          <div class="meta-avatar">🧑‍⚕️</div>
-          <div class="meta-info">
-            <div class="meta-name">Cさん（27歳）</div>
-            <div class="meta-detail">外科病棟 → ICU / キャリアアップ実現</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom:36px;">
-      <span class="section-label">FAQ</span>
-      <h2>よくあるご質問</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>利用料金はかかりますか？</span>
-          <span class="faq-icon">＋</span>
-        </button>
-        <div class="faq-a">いいえ、完全無料です。求人紹介・面接対策・条件交渉まですべてのサービスを無料でご利用いただけます。採用が決まった際に、採用先の事業者からご紹介料をいただく仕組みのため、求職者の方に費用は発生しません。</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>在職中でも相談できますか？</span>
-          <span class="faq-icon">＋</span>
-        </button>
-        <div class="faq-a">はい、在職中の方でも多数ご利用いただいています。現在の職場に知られることはございません。面談は平日夜・土日も対応しておりますので、お気軽にご相談ください。</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>今すぐ転職する気がなくてもOKですか？</span>
-          <span class="faq-icon">＋</span>
-        </button>
-        <div class="faq-a">もちろん大丈夫です。「まず情報収集したい」「半年後に転職を考えている」という方も多くいらっしゃいます。転職を急かすことは一切ありませんので、安心してご登録ください。</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>ブランクがあっても大丈夫ですか？</span>
-          <span class="faq-icon">＋</span>
-        </button>
-        <div class="faq-a">はい、ブランクのある方の転職実績も豊富にございます。ブランクを前向きにアピールする方法や、未経験の分野でも受け入れてくれる職場をご紹介します。お気軽にご相談ください。</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>地方でも対応していますか？</span>
-          <span class="faq-icon">＋</span>
-        </button>
-        <div class="faq-a">全国対応しております。オンライン・電話での面談も可能ですので、どの地域にお住まいでも安心してご利用いただけます。</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- フォーム -->
-<section class="form-section" id="form">
-  <div class="section-inner" style="text-align:center;">
-    <span class="section-label" style="background:rgba(255,255,255,0.15); color:white;">REGISTER</span>
-    <h2>無料で転職相談を始める</h2>
-    <p class="section-desc">60秒で登録完了。専任コンサルタントからご連絡いたします。</p>
-    <div class="form-box">
-      <h3>📋 無料転職相談フォーム</h3>
-      <form onsubmit="handleSubmit(event)">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>お名前<span class="required">*</span></label>
-            <input type="text" placeholder="山田 花子" required>
-          </div>
-          <div class="form-group">
-            <label>ふりがな<span class="required">*</span></label>
-            <input type="text" placeholder="やまだ はなこ" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>電話番号<span class="required">*</span></label>
-          <input type="tel" placeholder="090-0000-0000" required>
-        </div>
-        <div class="form-group">
-          <label>メールアドレス<span class="required">*</span></label>
-          <input type="email" placeholder="example@email.com" required>
-        </div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>現在の勤務形態<span class="required">*</span></label>
-            <select required>
-              <option value="" disabled selected>選択してください</option>
-              <option>在職中（転職活動中）</option>
-              <option>在職中（まだ検討段階）</option>
-              <option>離職中</option>
-              <option>育休・産休中</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>ご希望の転職時期<span class="required">*</span></label>
-            <select required>
-              <option value="" disabled selected>選択してください</option>
-              <option>すぐにでも転職したい</option>
-              <option>3ヶ月以内</option>
-              <option>半年以内</option>
-              <option>1年以内</option>
-              <option>まずは情報収集</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>ご希望の勤務地</label>
-          <input type="text" placeholder="例：東京都、大阪府 など">
-        </div>
-        <button type="submit" class="btn-submit">
-          無料で相談する →
-        </button>
-        <p class="form-note">
-          ※ 入力した情報は厳密に管理し、転職支援目的以外には使用しません<br>
-          ※ 利用は完全無料・いつでも退会できます
-        </p>
-      </form>
-    </div>
-  </div>
-</section>
 
 <!-- フッター -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo">ナースキャリア</div>
-    <p>看護師専門の転職支援サービス</p>
-    <div class="footer-links">
-      <a href="#">プライバシーポリシー</a>
-      <a href="#">利用規約</a>
-      <a href="#">運営会社</a>
-      <a href="#">お問い合わせ</a>
-    </div>
-    <p class="footer-copy">© 2024 ナースキャリア All Rights Reserved.</p>
+  <div class="footer-links">
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">利用規約</a>
+    <a href="#">運営会社</a>
+    <a href="#">お問い合わせ</a>
+    <a href="#">サイトマップ</a>
   </div>
+  <p>当サイトはプロモーション・広告収入により運営されています。</p>
+  <p style="margin-top:8px; opacity:0.4;">© 2024 看護師転職サイト比較ナビ All Rights Reserved.</p>
 </footer>
 
-<!-- フローティングCTA -->
-<div class="floating-cta">
-  <a href="#form" class="floating-btn">無料で求人を見る →</a>
-  <span class="floating-note">登録60秒・完全無料</span>
-</div>
+<!-- トップに戻る -->
+<a href="#" class="back-top" id="backTop">↑</a>
 
 <script>
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    item.classList.toggle('open');
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.btn-submit');
-    btn.textContent = '送信しました！ありがとうございます ✓';
-    btn.style.background = '#16a34a';
-    btn.disabled = true;
-  }
-
-  // スクロールでフローティングCTAを非表示（フォームセクション付近）
-  const formSection = document.getElementById('form');
-  const floatingCta = document.querySelector('.floating-cta');
+  // トップに戻るボタン
+  const backTop = document.getElementById('backTop');
   window.addEventListener('scroll', () => {
-    const rect = formSection.getBoundingClientRect();
-    floatingCta.style.opacity = rect.top < window.innerHeight ? '0' : '1';
-    floatingCta.style.pointerEvents = rect.top < window.innerHeight ? 'none' : 'auto';
+    backTop.classList.toggle('visible', window.scrollY > 300);
   });
 </script>
 </body>
