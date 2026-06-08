@@ -3,1103 +3,1376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>看護師転職サイト比較ナビ｜口コミ人気ランキングTOP5【2024年最新】</title>
-  <meta name="description" content="看護師転職サイトを口コミ・評判で徹底比較。実際に利用した看護師の声をもとにランキング化。あなたに合った転職サイトが見つかります。">
+  <title>NurseSelect｜看護師転職サービス徹底比較【2024年最新版】</title>
+  <meta name="description" content="実際に転職した看護師のリアルな評価をもとに転職サービスを徹底比較。あなたに最適なサービスを見つけましょう。完全無料・中立・客観評価。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ============================================
+       DESIGN SYSTEM
+       Primary: #0f3460 (Deep Navy)
+       Secondary: #0ea5e9 (Sky Blue)
+       Accent: #10b981 (Emerald)
+       Warm: #f59e0b (Amber)
+       Surface: #f0f7ff
+    ============================================ */
 
     :root {
-      --pink: #e84d8a;
-      --pink-light: #fff0f7;
-      --pink-mid: #fcd7ea;
-      --green: #2ab552;
-      --green-dark: #1d9040;
-      --text: #333;
-      --text-muted: #777;
-      --border: #e8e8e8;
-      --bg: #fff;
-      --bg-soft: #fafafa;
-      --gold: #d4a017;
-      --radius: 10px;
+      --navy:        #0f3460;
+      --navy-mid:    #1a4a7a;
+      --navy-light:  #e8f0fb;
+      --sky:         #0ea5e9;
+      --sky-light:   #e0f2fe;
+      --emerald:     #10b981;
+      --emerald-dark:#059669;
+      --amber:       #f59e0b;
+      --amber-light: #fffbeb;
+      --coral:       #ef4444;
+      --text-primary:#0f1729;
+      --text-second: #475569;
+      --text-muted:  #94a3b8;
+      --border:      #e2e8f0;
+      --surface:     #f8fafc;
+      --white:       #ffffff;
+      --radius-sm:   6px;
+      --radius:      12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 4px rgba(15,52,96,.08);
+      --shadow:      0 4px 20px rgba(15,52,96,.10);
+      --shadow-lg:   0 12px 48px rgba(15,52,96,.16);
     }
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
     body {
-      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-      color: var(--text);
-      background: #f5f5f5;
-      font-size: 15px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      color: var(--text-primary);
+      background: var(--surface);
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
-
     a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
 
-    /* ── HEADER ── */
-    header {
-      background: white;
-      border-bottom: 3px solid var(--pink);
-      padding: 10px 16px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* ── UTILITIES ── */
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    .text-navy  { color: var(--navy); }
+    .text-sky   { color: var(--sky); }
+    .text-em    { color: var(--sky); font-style: normal; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+      padding: 3px 12px; border-radius: 100px;
     }
-    .header-logo {
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--pink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .header-logo::before,
-    .header-logo::after {
-      content: '///////';
-      color: #ccc;
-      font-size: 0.7rem;
-      letter-spacing: -2px;
-    }
+    .badge-navy   { background: var(--navy); color: #fff; }
+    .badge-sky    { background: var(--sky-light); color: var(--sky); border: 1px solid var(--sky); }
+    .badge-amber  { background: var(--amber-light); color: #92400e; border: 1px solid #fcd34d; }
+    .badge-emerald{ background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
 
-    /* ── MAIN LAYOUT ── */
-    .page-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 16px;
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      font-weight: 700; cursor: pointer; border: none; border-radius: var(--radius);
+      transition: all .18s; text-decoration: none; white-space: nowrap; font-family: inherit;
     }
+    .btn-primary {
+      background: var(--sky); color: #fff;
+      box-shadow: 0 4px 16px rgba(14,165,233,.35);
+    }
+    .btn-primary:hover { background: #0284c7; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(14,165,233,.4); }
+    .btn-emerald {
+      background: var(--emerald); color: #fff;
+      box-shadow: 0 4px 16px rgba(16,185,129,.3);
+    }
+    .btn-emerald:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: var(--navy);
+      border: 2px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--sky); color: var(--sky); }
+    .btn-sm  { padding: 8px 18px; font-size: .82rem; }
+    .btn-md  { padding: 12px 28px; font-size: .92rem; }
+    .btn-lg  { padding: 16px 40px; font-size: 1.05rem; border-radius: var(--radius-lg); }
+    .btn-full{ width: 100%; }
 
-    /* ── PROMO NOTE ── */
-    .promo-note {
-      text-align: right;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    /* ── HERO BANNER ── */
-    .hero-banner {
-      background: linear-gradient(135deg, #ffe0ef 0%, #fef0f7 60%, #e0f4ff 100%);
-      border-radius: var(--radius);
-      padding: 28px 24px 28px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 16px;
-      position: relative;
-      overflow: hidden;
-      min-height: 180px;
-    }
-    .hero-text { flex: 1; }
-    .hero-review-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: white;
-      border: 2px solid var(--pink);
-      border-radius: 100px;
-      padding: 4px 14px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--pink);
+    /* ── SECTION LABEL ── */
+    .section-eyebrow {
+      display: flex; align-items: center; gap: 10px;
       margin-bottom: 10px;
     }
-    .hero-h1 {
-      font-size: clamp(1.3rem, 4vw, 1.8rem);
-      font-weight: 900;
-      line-height: 1.3;
-      margin-bottom: 0;
+    .section-eyebrow::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
     }
-    .hero-h1 em {
-      color: var(--pink);
-      font-style: normal;
+    .section-eyebrow span {
+      font-size: .72rem; font-weight: 700; letter-spacing: .15em;
+      color: var(--sky); white-space: nowrap;
     }
-    .hero-h1 .highlight-box {
-      background: var(--pink);
-      color: white;
-      padding: 2px 8px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 4px;
+    h2.section-title {
+      font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+      font-weight: 900; line-height: 1.35; margin-bottom: 8px;
     }
-    .hero-img {
-      flex-shrink: 0;
-      width: 130px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .nurse-illust {
-      width: 110px;
-      height: 150px;
-      background: linear-gradient(180deg, #ffe4f0 0%, #ffc8df 100%);
-      border-radius: 50% 50% 40% 40%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      position: relative;
+    .section-sub {
+      font-size: .9rem; color: var(--text-second); margin-bottom: 40px;
     }
 
-    /* ── SEARCH BAR ── */
-    .search-bar {
-      background: white;
-      border: 2px solid var(--border);
-      border-radius: 100px;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 24px;
-      cursor: pointer;
-      transition: border-color 0.2s;
+    /* ============================================
+       HEADER
+    ============================================ */
+    .site-header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
     }
-    .search-bar:hover { border-color: var(--pink); }
-    .search-bar-icon { color: var(--pink); font-size: 1rem; }
-    .search-bar-text { color: var(--text-muted); flex: 1; font-size: 0.9rem; }
-    .search-bar-btn {
-      background: var(--pink);
-      color: white;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; max-width: 1000px; margin: 0 auto;
     }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 900; font-size: 1.15rem; color: var(--navy);
+    }
+    .logo-icon {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--sky) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .logo-sub { font-size: .65rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -3px; }
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .header-label { font-size: .75rem; color: var(--text-muted); }
 
-    /* ── SECTION DIVIDER ── */
-    .section-divider {
-      text-align: center;
-      padding: 8px 0 24px;
+    /* ============================================
+       HERO
+    ============================================ */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #1e6091 100%);
+      padding: 60px 20px 0;
+      overflow: hidden;
       position: relative;
     }
-    .section-divider::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0; right: 0;
-      height: 1px;
-      background: repeating-linear-gradient(90deg, var(--pink) 0, var(--pink) 4px, transparent 4px, transparent 8px);
+    /* geometric bg shapes */
+    .hero::before {
+      content: ''; position: absolute;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(14,165,233,.15) 0%, transparent 70%);
+      top: -100px; right: -100px; pointer-events: none;
     }
-    .section-title-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: white;
-      border: 2px solid var(--pink);
-      border-radius: 100px;
-      padding: 8px 20px;
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--text);
-      position: relative;
-      z-index: 1;
+    .hero::after {
+      content: ''; position: absolute;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(16,185,129,.10) 0%, transparent 70%);
+      bottom: 60px; left: -60px; pointer-events: none;
     }
-    .section-title-badge .bubble-icon {
-      background: var(--pink);
-      color: white;
-      border-radius: 50%;
-      width: 28px; height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
+    .hero-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 380px; gap: 40px;
+      align-items: flex-end; position: relative; z-index: 1;
     }
+    .hero-text { padding-bottom: 60px; }
+    .hero-badge { margin-bottom: 18px; }
+    .hero-headline {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 16px;
+    }
+    .hero-headline .hl-sky   { color: #7dd3fc; }
+    .hero-headline .hl-amber { color: #fcd34d; }
+    .hero-desc {
+      font-size: .95rem; color: rgba(255,255,255,.8);
+      line-height: 1.8; margin-bottom: 32px;
+    }
+    .hero-stats {
+      display: flex; gap: 24px; margin-bottom: 32px; flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      display: block; font-size: 1.9rem; font-weight: 900; color: #fcd34d; line-height: 1;
+    }
+    .hero-stat-label { font-size: .7rem; color: rgba(255,255,255,.7); margin-top: 2px; }
+    .hero-cta-group { display: flex; flex-direction: column; gap: 10px; max-width: 360px; }
+    .hero-cta-note { font-size: .75rem; color: rgba(255,255,255,.6); text-align: center; }
+    /* hero visual panel */
+    .hero-visual {
+      align-self: flex-end;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      padding: 24px 20px 0;
+      min-height: 340px;
+      display: flex; flex-direction: column; justify-content: flex-end; gap: 12px;
+    }
+    .score-card {
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius); padding: 12px 16px;
+      display: flex; align-items: center; gap: 12px; color: white;
+    }
+    .score-card-rank {
+      width: 38px; height: 38px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .rank-gold   { background: linear-gradient(135deg,#f59e0b,#d97706); }
+    .rank-silver { background: linear-gradient(135deg,#94a3b8,#64748b); }
+    .rank-bronze { background: linear-gradient(135deg,#b45309,#92400e); }
+    .score-card-name { font-weight: 700; font-size: .88rem; flex: 1; }
+    .score-card-score {
+      font-size: 1.3rem; font-weight: 900; color: #fcd34d;
+    }
+    .score-stars { font-size: .7rem; color: rgba(255,255,255,.6); }
 
-    /* ── RANKING TABLE ── */
+    /* ============================================
+       SEARCH
+    ============================================ */
+    .search-section {
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 20px;
+    }
+    .search-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    }
+    .search-label { font-size: .82rem; font-weight: 700; white-space: nowrap; color: var(--text-second); }
+    .search-chips { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      border: 1.5px solid var(--border); border-radius: 100px;
+      padding: 6px 14px; font-size: .78rem; font-weight: 600;
+      cursor: pointer; background: white; transition: all .15s;
+      color: var(--text-second);
+    }
+    .chip:hover, .chip.active { border-color: var(--sky); color: var(--sky); background: var(--sky-light); }
+    .chip.active { font-weight: 700; }
+
+    /* ============================================
+       PAGE BODY
+    ============================================ */
+    .page-body { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── TRUST RIBBON ── */
+    .trust-ribbon {
+      background: var(--navy-light); border-radius: var(--radius);
+      padding: 14px 20px; margin: 24px 0;
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .trust-ribbon-title { font-size: .78rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .trust-items { display: flex; gap: 16px; flex-wrap: wrap; }
+    .trust-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: .78rem; font-weight: 600; color: var(--text-second);
+    }
+    .trust-item-icon { color: var(--emerald); font-size: .9rem; }
+
+    /* ============================================
+       RANKING TABLE (TOP5 Summary)
+    ============================================ */
+    .ranking-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+    }
+    .ranking-title-group {}
+    .ranking-updated { font-size: .72rem; color: var(--text-muted); }
+
+    /* Tab switch */
+    .tab-group {
+      display: flex; border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0;
+    }
+    .tab-btn {
+      padding: 8px 20px; font-size: .82rem; font-weight: 700;
+      background: white; border: none; cursor: pointer; color: var(--text-muted);
+      transition: all .15s;
+    }
+    .tab-btn.active { background: var(--navy); color: white; }
+
+    /* Rank table */
     .rank-table-wrap {
-      background: white;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      margin-bottom: 24px;
+      background: white; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); overflow: hidden;
+      box-shadow: var(--shadow-sm); margin-bottom: 32px;
     }
-    .rank-tabs {
-      display: flex;
+    .rtable { width: 100%; border-collapse: collapse; }
+    .rtable thead tr { background: var(--navy); }
+    .rtable thead th {
+      padding: 12px 14px; text-align: center;
+      font-size: .75rem; font-weight: 700; color: rgba(255,255,255,.85);
+      letter-spacing: .06em;
+    }
+    .rtable thead th:first-child { text-align: center; }
+    .rtable tbody tr {
       border-bottom: 1px solid var(--border);
+      transition: background .15s;
     }
-    .rank-tab {
-      flex: 1;
-      padding: 12px;
-      text-align: center;
-      font-size: 0.88rem;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      background: #f8f8f8;
-      color: var(--text-muted);
-      transition: all 0.2s;
+    .rtable tbody tr:last-child { border-bottom: none; }
+    .rtable tbody tr:hover { background: #f8faff; }
+    .rtable tbody td {
+      padding: 16px 12px; text-align: center;
+      font-size: .84rem; vertical-align: middle;
     }
-    .rank-tab.active {
-      background: var(--pink);
-      color: white;
+
+    /* Rank badge */
+    .rnum {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1rem; color: white; margin: 0 auto;
     }
-    .rank-table {
-      width: 100%;
-      border-collapse: collapse;
+    .rnum-1 { background: linear-gradient(135deg,#f59e0b,#d97706); box-shadow: 0 3px 10px rgba(245,158,11,.4); }
+    .rnum-2 { background: linear-gradient(135deg,#94a3b8,#64748b); }
+    .rnum-3 { background: linear-gradient(135deg,#cd7f32,#92400e); }
+    .rnum-n { background: #cbd5e1; color: var(--text-second); }
+
+    /* Service name cell */
+    .td-name { text-align: left !important; }
+    .service-name-wrap { display: flex; flex-direction: column; gap: 3px; }
+    .svc-name { font-weight: 800; font-size: .95rem; }
+    .svc-tag  { font-size: .7rem; color: var(--text-muted); }
+
+    /* Rating */
+    .rating-val { font-size: 1.25rem; font-weight: 900; color: var(--navy); display: block; line-height: 1; }
+    .rating-stars { color: #f59e0b; font-size: .75rem; }
+    .rating-link  { font-size: .68rem; color: var(--sky); text-decoration: underline; }
+
+    /* Area pill */
+    .area-pill {
+      display: inline-block; border: 1.5px solid var(--border);
+      border-radius: 100px; padding: 3px 12px;
+      font-size: .75rem; font-weight: 600; color: var(--text-second);
     }
-    .rank-table thead tr {
-      background: #f8f8f8;
-      border-bottom: 1px solid var(--border);
+
+    /* Feature */
+    .td-feature { text-align: left !important; max-width: 180px; }
+    .feature-txt { font-size: .78rem; line-height: 1.55; }
+    .feature-em  { color: var(--navy); font-weight: 700; }
+
+    /* CTA btn in table */
+    .tbl-cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+      background: var(--emerald); color: white;
+      padding: 9px 16px; border-radius: var(--radius-sm);
+      font-weight: 700; font-size: .8rem; white-space: nowrap;
+      transition: background .15s, transform .1s;
     }
-    .rank-table th {
-      padding: 10px 12px;
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      font-weight: 700;
-    }
-    .rank-table tbody tr {
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s;
-    }
-    .rank-table tbody tr:last-child { border-bottom: none; }
-    .rank-table tbody tr:hover { background: var(--pink-light); }
-    .rank-table td {
-      padding: 14px 10px;
-      text-align: center;
-      font-size: 0.82rem;
-      vertical-align: middle;
-    }
-    .rank-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      font-weight: 900;
-      font-size: 0.95rem;
-      color: white;
-    }
-    .rank-1 { background: linear-gradient(135deg, #f5c842, #e8a800); }
-    .rank-2 { background: linear-gradient(135deg, #c0c0c0, #9e9e9e); }
-    .rank-3 { background: linear-gradient(135deg, #cd7f32, #a0522d); }
-    .rank-other { background: #ccc; }
-    .site-name-cell { text-align: left; padding-left: 8px; }
-    .site-logo-text {
-      font-weight: 800;
-      font-size: 0.9rem;
-      margin-bottom: 2px;
-    }
-    .site-link {
-      font-size: 0.72rem;
-      color: var(--pink);
-      text-decoration: underline;
-    }
-    .stars { color: #f5a623; font-size: 0.8rem; }
-    .rating-num { font-weight: 800; font-size: 1rem; display: block; }
-    .area-badge {
-      display: inline-block;
-      border: 1.5px solid var(--text-muted);
-      border-radius: 100px;
-      padding: 2px 10px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-    .feature-text { font-size: 0.78rem; text-align: left; line-height: 1.5; }
-    .btn-official {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      background: var(--green);
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.78rem;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .btn-official:hover { background: var(--green-dark); }
-    .update-note {
-      text-align: right;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      padding: 6px 12px;
-      background: #f8f8f8;
+    .tbl-cta:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+    .rank-table-foot {
+      padding: 8px 16px; background: var(--surface);
+      text-align: right; font-size: .7rem; color: var(--text-muted);
       border-top: 1px solid var(--border);
     }
 
-    /* ── KEY SECTION ── */
-    .key-section {
-      background: white;
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 24px;
+    /* ============================================
+       INSIGHT BOX (転職のカギ)
+    ============================================ */
+    .insight-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      margin-bottom: 40px;
     }
-    .key-title {
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: 900;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+    .insight-card {
+      background: white; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); padding: 24px;
+      box-shadow: var(--shadow-sm);
     }
-    .key-emphasis {
-      display: inline-flex;
-      align-items: center;
-      background: var(--pink);
+    .insight-icon {
+      width: 44px; height: 44px; border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 14px;
+    }
+    .insight-icon-navy  { background: var(--navy-light); }
+    .insight-icon-sky   { background: var(--sky-light); }
+    .insight-icon-amber { background: var(--amber-light); }
+    .insight-icon-green { background: #d1fae5; }
+    .insight-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; }
+    .insight-card p  { font-size: .83rem; color: var(--text-second); line-height: 1.75; }
+    .insight-card a  { color: var(--sky); font-weight: 700; }
+
+    /* ── MULTI-REGISTER BOX ── */
+    .multi-box {
+      background: white; border-radius: var(--radius-lg);
+      border: 1.5px solid var(--sky); padding: 28px 28px 24px;
+      margin-bottom: 40px; box-shadow: var(--shadow-sm);
+    }
+    .multi-box-head {
+      display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;
+    }
+    .multi-box-icon { font-size: 2.2rem; flex-shrink: 0; }
+    .multi-box-title { font-size: 1.05rem; font-weight: 900; margin-bottom: 4px; }
+    .multi-box-title em { color: var(--sky); font-style: normal; }
+    .multi-box-body { font-size: .84rem; color: var(--text-second); line-height: 1.8; }
+    .multi-box-body a { color: var(--sky); font-weight: 700; }
+    .multi-box-tip {
+      background: linear-gradient(135deg, var(--navy-light), var(--sky-light));
+      border-radius: var(--radius); padding: 14px 20px; margin-top: 16px;
+      display: flex; align-items: center; gap: 12px;
+      border: 1px solid rgba(14,165,233,.15);
+    }
+    .multi-box-tip-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .multi-box-tip-text { font-size: .84rem; font-weight: 700; color: var(--navy); }
+    .multi-box-tip-text em { color: var(--sky); font-style: normal; }
+
+    /* ============================================
+       DETAIL CARDS
+    ============================================ */
+    .detail-section { margin-bottom: 48px; }
+    .detail-card {
+      background: white; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); overflow: hidden;
+      box-shadow: var(--shadow); margin-bottom: 24px;
+      transition: box-shadow .2s;
+    }
+    .detail-card:hover { box-shadow: var(--shadow-lg); }
+
+    /* Card header */
+    .dc-head {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px; background: var(--navy);
       color: white;
-      padding: 2px 10px;
-      border-radius: 4px;
-      font-size: 1rem;
     }
-    .key-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 14px;
-      background: var(--pink-light);
-      border-radius: 8px;
-      border-left: 4px solid var(--pink);
+    .dc-head-rank {
+      width: 40px; height: 40px; border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.2rem; flex-shrink: 0;
+    }
+    .dc-head-name { font-size: 1.1rem; font-weight: 900; flex: 1; }
+    .dc-head-tag {
+      font-size: .72rem; background: rgba(255,255,255,.15);
+      padding: 3px 10px; border-radius: 100px;
+    }
+
+    /* Card body */
+    .dc-body {
+      display: grid; grid-template-columns: 240px 1fr; gap: 0;
+    }
+    .dc-left {
+      padding: 20px; border-right: 1px solid var(--border);
+    }
+    .dc-service-visual {
+      border-radius: var(--radius); overflow: hidden;
+      margin-bottom: 14px; min-height: 130px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 4px; position: relative;
+      background: linear-gradient(135deg, var(--navy-light) 0%, var(--sky-light) 100%);
+    }
+    .dc-service-visual .visual-icon { font-size: 3rem; }
+    .dc-service-visual .visual-name { font-size: 1rem; font-weight: 800; color: var(--navy); }
+    .visual-stat-badge {
+      position: absolute; bottom: 8px; right: 8px;
+      background: var(--navy); color: white;
+      font-size: .65rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 4px;
+    }
+
+    .dc-points { list-style: none; }
+    .dc-points li {
+      display: flex; align-items: flex-start; gap: 6px;
+      font-size: .82rem; padding: 5px 0; line-height: 1.55;
+      border-bottom: 1px solid var(--border);
+    }
+    .dc-points li:last-child { border-bottom: none; }
+    .dc-points-icon { color: var(--emerald); font-weight: 900; flex-shrink: 0; font-size: .85rem; margin-top: 2px; }
+    .dc-points a { color: var(--sky); font-weight: 700; }
+
+    .dc-right { padding: 20px; }
+
+    /* Stats grid */
+    .dc-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
       margin-bottom: 16px;
     }
-    .key-point-icon { font-size: 1.3rem; flex-shrink: 0; }
-    .key-point h3 { font-size: 0.95rem; font-weight: 800; color: var(--pink); margin-bottom: 4px; }
-    .key-point p { font-size: 0.85rem; color: var(--text); }
-    .key-point a { color: var(--pink); text-decoration: underline; }
+    .dc-stat-box {
+      background: var(--surface); border-radius: var(--radius-sm);
+      padding: 10px 8px; text-align: center; border: 1px solid var(--border);
+    }
+    .dc-stat-label { font-size: .65rem; color: var(--text-muted); margin-bottom: 4px; }
+    .dc-stat-val   { font-size: .95rem; font-weight: 800; color: var(--text-primary); }
+    .dc-stat-val.big { font-size: 1.4rem; color: var(--navy); }
 
-    /* ── TIP BOX ── */
-    .tip-box {
-      background: var(--pink-light);
-      border: 1.5px solid var(--pink-mid);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      margin-bottom: 24px;
+    /* Review area */
+    .dc-reviews-head {
+      font-size: .8rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
     }
-    .tip-title {
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 900;
-      margin-bottom: 14px;
+    .review-card {
+      background: var(--surface); border-radius: var(--radius);
+      padding: 12px 14px; margin-bottom: 10px;
+      border-left: 3px solid var(--sky);
     }
-    .tip-highlight {
-      color: var(--pink);
-      font-weight: 900;
+    .review-card:last-child { margin-bottom: 0; }
+    .rc-head {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 6px;
     }
-    .tip-body { font-size: 0.88rem; line-height: 1.8; margin-bottom: 14px; }
-    .tip-cta-box {
-      background: white;
-      border: 1.5px solid var(--pink);
-      border-radius: 8px;
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .rc-avatar {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy-light), var(--sky-light));
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+      flex-shrink: 0;
     }
-    .tip-cta-icon { font-size: 2rem; flex-shrink: 0; }
-    .tip-cta-text { font-size: 0.85rem; }
-    .tip-cta-text strong { color: var(--pink); font-size: 1rem; }
+    .rc-meta { font-size: .72rem; }
+    .rc-stars { color: #f59e0b; font-size: .72rem; }
+    .rc-name  { font-weight: 700; color: var(--text-primary); }
+    .rc-title { font-size: .82rem; font-weight: 700; color: var(--sky); margin-bottom: 4px; }
+    .rc-body  { font-size: .78rem; color: var(--text-second); line-height: 1.65; }
 
-    /* ── SERVICE DETAIL CARD ── */
-    .detail-card {
-      background: white;
-      border-radius: var(--radius);
-      border: 2px solid var(--border);
-      margin-bottom: 20px;
-      overflow: hidden;
+    /* Card footer */
+    .dc-foot {
+      padding: 16px 20px; border-top: 1px solid var(--border);
+      background: var(--surface); text-align: center;
     }
-    .detail-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      background: #fafafa;
+    .dc-cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, var(--emerald) 0%, #059669 100%);
+      color: white; font-weight: 800; font-size: 1rem;
+      padding: 14px 48px; border-radius: 100px;
+      box-shadow: 0 6px 20px rgba(16,185,129,.35);
+      transition: all .2s; max-width: 360px; width: 100%;
     }
-    .detail-rank-num {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: var(--pink);
-      min-width: 32px;
+    .dc-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(16,185,129,.45); }
+
+    /* ============================================
+       FAQ
+    ============================================ */
+    .faq-section {
+      background: white; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); overflow: hidden;
+      box-shadow: var(--shadow-sm); margin-bottom: 40px;
     }
-    .detail-site-name {
-      font-size: 1.05rem;
-      font-weight: 900;
-      flex: 1;
+    .faq-head {
+      background: var(--navy); padding: 20px 24px; color: white;
     }
-    .detail-card-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
+    .faq-head h2 { font-size: 1.05rem; font-weight: 900; color: white; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q-btn {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 18px 24px; text-align: left; font-family: inherit;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      transition: background .15s;
     }
-    .detail-card-left {
-      padding: 16px;
-      border-right: 1px solid var(--border);
+    .faq-q-btn:hover { background: var(--surface); }
+    .faq-q-text { font-size: .9rem; font-weight: 700; color: var(--text-primary); }
+    .faq-q-icon {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--navy-light); color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 900; transition: transform .2s; flex-shrink: 0;
     }
-    .detail-service-img {
-      background: linear-gradient(135deg, var(--pink-light), var(--pink-mid));
-      border-radius: 8px;
-      padding: 16px;
-      text-align: center;
-      margin-bottom: 12px;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.1rem;
-      color: var(--pink);
+    .faq-item.open .faq-q-icon { transform: rotate(45deg); background: var(--navy); color: white; }
+    .faq-ans {
+      display: none; padding: 0 24px 18px;
+      font-size: .85rem; color: var(--text-second); line-height: 1.8;
+    }
+    .faq-item.open .faq-ans { display: block; }
+
+    /* ============================================
+       FINAL CTA BANNER
+    ============================================ */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e6091 100%);
+      border-radius: var(--radius-lg); padding: 48px 32px;
+      text-align: center; margin-bottom: 40px;
+      position: relative; overflow: hidden;
+    }
+    .final-cta::before {
+      content: ''; position: absolute;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(14,165,233,.12), transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .final-cta h2 { color: white; font-size: clamp(1.2rem, 3vw, 1.7rem); margin-bottom: 10px; position: relative; }
+    .final-cta p  { color: rgba(255,255,255,.75); font-size: .9rem; margin-bottom: 28px; position: relative; }
+    .final-cta-btns {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
       position: relative;
     }
-    .service-count-badge {
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
-      background: var(--pink);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-    .detail-points { list-style: none; }
-    .detail-points li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: 0.82rem;
-      padding: 4px 0;
-      line-height: 1.5;
-    }
-    .detail-points li::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 900;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .detail-points li a { color: var(--pink); font-weight: 700; }
-    .detail-card-right { padding: 16px; }
-    .detail-stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 4px;
-      margin-bottom: 12px;
-    }
-    .stat-cell {
-      background: #f8f8f8;
-      border-radius: 6px;
-      padding: 8px 4px;
-      text-align: center;
-    }
-    .stat-cell-label {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .stat-cell-value {
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-    .stat-cell-value.rating { font-size: 1.2rem; font-weight: 900; }
-    .detail-reviews-title {
-      text-align: center;
-      font-size: 0.85rem;
-      font-weight: 800;
-      background: var(--pink);
-      color: white;
-      border-radius: 100px;
-      padding: 4px 0;
-      margin-bottom: 10px;
-    }
-    .review-item {
-      background: var(--pink-light);
-      border-radius: 8px;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-    }
-    .review-header {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    .review-avatar {
-      width: 28px; height: 28px;
-      background: var(--pink-mid);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-    }
-    .review-meta { font-size: 0.72rem; }
-    .review-name { font-weight: 700; }
-    .review-title { color: var(--pink); font-size: 0.8rem; font-weight: 700; margin-bottom: 3px; }
-    .review-text { font-size: 0.78rem; color: var(--text); line-height: 1.6; }
-    .detail-card-footer {
-      padding: 12px 16px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .btn-official-lg {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--green);
-      color: white;
-      padding: 14px 40px;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 0.95rem;
-      transition: background 0.2s, transform 0.1s;
-      width: 100%;
-      max-width: 320px;
-    }
-    .btn-official-lg:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .final-note { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 14px; position: relative; }
 
-    /* ── MULTIPLE REGISTER TIP ── */
-    .multi-register {
-      background: white;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 24px;
-      margin-bottom: 24px;
-      text-align: center;
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .site-footer {
+      background: var(--text-primary); color: rgba(255,255,255,.55);
+      padding: 40px 20px 24px;
     }
-    .multi-register h2 {
-      font-size: 1.1rem;
-      font-weight: 900;
-      margin-bottom: 14px;
+    .footer-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start;
     }
-    .multi-register h2 em {
-      color: var(--pink);
-      font-style: normal;
-    }
-    .multi-body {
-      font-size: 0.875rem;
-      text-align: left;
-      color: var(--text);
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-    .multi-body a { color: var(--pink); font-weight: 700; text-decoration: underline; }
-    .multi-cta {
-      background: var(--pink-light);
-      border: 1.5px solid var(--pink-mid);
-      border-radius: 8px;
-      padding: 16px;
-    }
-    .multi-cta-badge {
-      display: inline-block;
-      background: var(--pink);
-      color: white;
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 3px 14px;
-      border-radius: 100px;
-      margin-bottom: 8px;
-    }
-    .multi-cta p {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .multi-cta p em { color: var(--pink); font-style: normal; font-size: 1rem; }
-    .multi-illust { font-size: 3rem; margin: 8px 0; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #333;
-      color: rgba(255,255,255,0.6);
-      padding: 30px 16px;
-      text-align: center;
-      font-size: 0.78rem;
-    }
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-    .footer-links a { color: rgba(255,255,255,0.5); }
+    .footer-logo { color: white; font-weight: 900; font-size: 1.1rem; margin-bottom: 8px; }
+    .footer-desc { font-size: .78rem; line-height: 1.7; max-width: 360px; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.45); transition: color .15s; }
     .footer-links a:hover { color: white; }
-
-    /* ── BACK TO TOP ── */
-    .back-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--pink);
-      color: white;
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 16px rgba(232,77,138,0.4);
-      cursor: pointer;
-      text-decoration: none;
-      opacity: 0;
-      transition: opacity 0.3s;
+    .footer-copy {
+      max-width: 1000px; margin: 24px auto 0;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,.08);
+      font-size: .72rem; text-align: center;
     }
-    .back-top.visible { opacity: 1; }
+    .footer-promo {
+      font-size: .7rem; color: rgba(255,255,255,.35);
+      background: rgba(255,255,255,.05); border-radius: 4px;
+      padding: 6px 12px; margin-bottom: 20px; display: inline-block;
+    }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .detail-card-body { grid-template-columns: 1fr; }
-      .detail-card-left { border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-banner { flex-direction: column; text-align: center; }
-      .rank-table th:nth-child(4),
-      .rank-table td:nth-child(4) { display: none; }
+    /* ── Floating CTA ── */
+    .float-cta {
+      position: fixed; bottom: 24px; right: 24px; z-index: 300;
+      display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+      opacity: 0; transform: translateY(10px); transition: all .3s; pointer-events: none;
+    }
+    .float-cta.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .float-btn {
+      background: var(--emerald); color: white;
+      padding: 12px 22px; border-radius: 100px; font-weight: 800;
+      font-size: .88rem; box-shadow: 0 6px 24px rgba(16,185,129,.45);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: all .15s;
+    }
+    .float-btn:hover { background: var(--emerald-dark); transform: scale(1.03); }
+    .float-note {
+      font-size: .68rem; background: rgba(15,23,42,.75); color: white;
+      padding: 3px 10px; border-radius: 100px; backdrop-filter: blur(4px);
+    }
+
+    /* ============================================
+       RESPONSIVE — mobile first
+    ============================================ */
+    @media (max-width: 768px) {
+      /* hero */
+      .hero { padding: 40px 20px 0; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-text { padding-bottom: 40px; }
+      .hero-stats { gap: 16px; }
+      .hero-cta-group { max-width: 100%; }
+      /* insight */
+      .insight-grid { grid-template-columns: 1fr; }
+      /* detail card */
+      .dc-body { grid-template-columns: 1fr; }
+      .dc-left { border-right: none; border-bottom: 1px solid var(--border); }
+      /* ranking table */
+      .rtable thead th:nth-child(4),
+      .rtable tbody td:nth-child(4) { display: none; }
+      /* hero stats */
+      .hero-stat-num { font-size: 1.5rem; }
+      /* footer */
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      /* float cta */
+      .float-cta { bottom: 16px; right: 16px; }
+      /* tab */
+      .tab-btn { padding: 8px 14px; font-size: .76rem; }
+    }
+    @media (max-width: 480px) {
+      .rtable thead th:nth-child(5),
+      .rtable tbody td:nth-child(5) { display: none; }
+      .dc-stats { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- ヘッダー -->
-<header>
-  <div class="header-logo">看護師転職サイト比較ナビ</div>
+<!-- ============================================
+     HEADER
+============================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">🏥</div>
+      <div>
+        NurseSelect
+        <span class="logo-sub">看護師転職サービス比較</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <span class="header-label">※広告・プロモーション含む</span>
+      <a href="#ranking" class="btn btn-primary btn-sm">ランキングを見る</a>
+    </div>
+  </div>
 </header>
 
-<div class="page-wrap">
-  <p class="promo-note">※プロモーションを含みます</p>
 
-  <!-- ヒーローバナー -->
-  <div class="hero-banner">
+<!-- ============================================
+     HERO
+============================================ -->
+<section class="hero">
+  <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-review-badge">
-        💬 口コミ
+      <div class="hero-badge">
+        <span class="badge badge-sky">📋 2024年最新・中立評価</span>
       </div>
-      <h1 class="hero-h1">
-        転職経験者の <span style="color:var(--pink); background:var(--pink-mid); padding:0 6px; border-radius:4px;">💬 口コミ</span> で見つかる！<br>
-        <span style="font-size:1.5em; color:var(--pink);">看護師</span>転職サイト<br>
-        <span style="display:inline-flex; gap:6px; margin-top:4px;">
-          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">一</span>
-          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">括</span>
-          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">比</span>
-          <span style="background:#c8960c; color:white; padding:4px 12px; border-radius:6px; font-size:0.85em;">較</span>
-        </span>
+      <h1 class="hero-headline">
+        実際に転職した<br>
+        <span class="hl-sky">看護師の評価</span>で選ぶ、<br>
+        <span class="hl-amber">転職サービス</span>比較
       </h1>
-    </div>
-    <div class="hero-img">
-      <div class="nurse-illust">👩‍⚕️</div>
-    </div>
-  </div>
-
-  <!-- 検索バー -->
-  <div class="search-bar">
-    <span class="search-bar-icon">🔍</span>
-    <span class="search-bar-text">条件から看護師転職サイトを探す</span>
-    <span class="search-bar-btn">→</span>
-  </div>
-
-  <!-- ランキングタイトル -->
-  <div class="section-divider">
-    <div class="section-title-badge">
-      <span class="bubble-icon">💬</span>
-      転職したいすべての看護師さんにおすすめ！口コミ 人気ランキング TOP5
-    </div>
-  </div>
-
-  <!-- ランキング表 -->
-  <div class="rank-table-wrap">
-    <div class="rank-tabs">
-      <button class="rank-tab active">おすすめ</button>
-      <button class="rank-tab" onclick="this.closest('.rank-tabs').querySelectorAll('.rank-tab').forEach(t=>t.classList.remove('active')); this.classList.add('active')">サービス内容</button>
-    </div>
-    <table class="rank-table">
-      <thead>
-        <tr>
-          <th>順位</th>
-          <th>サイト名</th>
-          <th>口コミ評価 ⇅</th>
-          <th>エリア</th>
-          <th>特徴</th>
-          <th>詳細</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="rank-badge rank-1">1</span></td>
-          <td class="site-name-cell">
-            <div class="site-logo-text" style="color:#1a7cc4;">🔵 レバウェル看護</div>
-            <a href="#detail-1" class="site-link">レバウェル看護</a>
-          </td>
-          <td>
-            <span class="rating-num">4.6</span>
-            <div class="stars">★★★★★</div>
-            <a href="#detail-1" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
-          </td>
-          <td><span class="area-badge">全国</span></td>
-          <td class="feature-text">年収600万円など<span style="color:var(--pink); font-weight:700;">高給与の優良求人</span>が豊富</td>
-          <td><a href="#detail-1" class="btn-official">公式サイト ›</a></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-2">2</span></td>
-          <td class="site-name-cell">
-            <div class="site-logo-text" style="color:#e84d8a;">🩺 ナース専科 転職</div>
-            <a href="#detail-2" class="site-link">ナース専科 転職</a><br>
-            <span style="font-size:0.68rem; color:var(--text-muted);">※常勤のみ</span>
-          </td>
-          <td>
-            <span class="rating-num">4.5</span>
-            <div class="stars">★★★★★</div>
-            <a href="#detail-2" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
-          </td>
-          <td><span class="area-badge">全国</span></td>
-          <td class="feature-text">求人数約20万件で登録者限定の<span style="color:var(--pink); font-weight:700;">レア求人多数</span>（常勤のみ）</td>
-          <td><a href="#detail-2" class="btn-official">公式サイト ›</a></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-3">3</span></td>
-          <td class="site-name-cell">
-            <div class="site-logo-text" style="color:#2ab552;">🦘 看護roo!</div>
-            <a href="#detail-3" class="site-link">看護roo!</a>
-          </td>
-          <td>
-            <span class="rating-num">4.2</span>
-            <div class="stars">★★★★☆</div>
-            <a href="#detail-3" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
-          </td>
-          <td><span class="area-badge">全国</span></td>
-          <td class="feature-text">利用満足度90%、<span style="color:var(--pink); font-weight:700;">累計160万人</span>が使用するサイト</td>
-          <td><a href="#detail-3" class="btn-official">公式サイト ›</a></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-other">4</span></td>
-          <td class="site-name-cell">
-            <div class="site-logo-text" style="color:#e84d8a;">💜 ナースではたらこ</div>
-            <a href="#detail-4" class="site-link">ナースではたらこ</a>
-          </td>
-          <td>
-            <span class="rating-num">3.6</span>
-            <div class="stars">★★★★☆</div>
-            <a href="#detail-4" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
-          </td>
-          <td><span class="area-badge">全国</span></td>
-          <td class="feature-text">年収、残業など<span style="color:var(--pink); font-weight:700;">聞きづらいこともお任せ</span></td>
-          <td><a href="#detail-4" class="btn-official">公式サイト ›</a></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-other">5</span></td>
-          <td class="site-name-cell">
-            <div class="site-logo-text" style="color:#333;">🏥 看護師ワーカー</div>
-            <a href="#detail-5" class="site-link">看護師ワーカー</a>
-          </td>
-          <td>
-            <span class="rating-num">3.5</span>
-            <div class="stars">★★★★☆</div>
-            <a href="#detail-5" style="font-size:0.7rem; color:var(--pink);">💬 口コミ</a>
-          </td>
-          <td><span class="area-badge">全国</span></td>
-          <td class="feature-text">年間<span style="color:var(--pink); font-weight:700;">1万人以上</span>の転職実績あり</td>
-          <td><a href="#detail-5" class="btn-official">公式サイト ›</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="update-note">※2025年3月時点</div>
-  </div>
-
-  <!-- 転職成功のカギ -->
-  <div class="key-section">
-    <div class="key-title">
-      転職を成功させる
-      <span class="key-emphasis">🔑 カギ</span>
-      ━━
-    </div>
-    <div class="key-point">
-      <span class="key-point-icon">🔒</span>
-      <div>
-        <h3>好条件の求人は非公開の中にあり！</h3>
-        <p>魅力的な求人が公開されると応募者が殺到し、採用する企業も対応しきれなくなってしまいます。そのため、<a href="#">このような求人は転職サイトに登録している人のみが見られる非公開求人として提供されることが多い</a>のです。</p>
-        <div style="margin-top:10px; padding:10px 14px; background:white; border:1.5px solid var(--pink); border-radius:8px; display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:700;">
-          <span style="font-size:1.5rem;">👩‍⚕️</span>
-          まずは転職サイトに登録するところからスタートです！
+      <p class="hero-desc">
+        広告費に左右されない実績データと口コミスコアをもとに、<br>
+        あなたの転職目的に合ったサービスを客観的にご紹介します。
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">847<sup style="font-size:.55em">件</sup></span>
+          <span class="hero-stat-label">収集口コミ数</span>
         </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">12<sup style="font-size:.55em">社</sup></span>
+          <span class="hero-stat-label">調査対象サービス</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">月1<sup style="font-size:.55em">回</sup></span>
+          <span class="hero-stat-label">データ更新</span>
+        </div>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#ranking" class="btn btn-primary btn-lg btn-full">
+          ▼ ランキングを確認する
+        </a>
+        <a href="#how-to" class="btn btn-outline btn-md btn-full" style="color:rgba(255,255,255,.7); border-color:rgba(255,255,255,.25);">
+          転職サービスの選び方を読む
+        </a>
+        <span class="hero-cta-note">登録・利用はすべて無料です</span>
+      </div>
+    </div>
+
+    <!-- Hero visual: mini ranking preview -->
+    <div class="hero-visual">
+      <div style="color:rgba(255,255,255,.6); font-size:.72rem; font-weight:700; letter-spacing:.1em; margin-bottom:4px;">RANKING PREVIEW</div>
+      <div class="score-card">
+        <div class="score-card-rank rank-gold">1</div>
+        <div>
+          <div class="score-card-name">レバウェル看護</div>
+          <div class="score-stars">★★★★★ 口コミ多数</div>
+        </div>
+        <div class="score-card-score">4.6</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card-rank rank-silver">2</div>
+        <div>
+          <div class="score-card-name">ナース専科 転職</div>
+          <div class="score-stars">★★★★★ 求人数最大級</div>
+        </div>
+        <div class="score-card-score">4.5</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card-rank rank-bronze">3</div>
+        <div>
+          <div class="score-card-name">看護roo!</div>
+          <div class="score-stars">★★★★☆ 満足度90%+</div>
+        </div>
+        <div class="score-card-score">4.2</div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- 複数サイト登録のすすめ -->
-  <div class="multi-register">
-    <h2>複数サイトに<em>登録して比較</em>しよう</h2>
-    <div class="multi-illust">📱</div>
-    <p class="multi-body">
-      求人を出す企業は1つの転職サイトにしか掲載しないことがしばしばあります。複数の転職サイトと連携して求人を出すのは大変なためです。<br>
-      なので、1つの転職サイトしか利用しないと、他のサイトにある<a href="#">より良い条件の求人を見逃してしまう</a>かもしれません。
-    </p>
-    <div class="multi-cta">
-      <div class="multi-cta-badge">登録はすべて無料</div>
-      <p><em>2〜3サイト登録し、求人を比較する</em>ことが、転職成功のカギとなります！</p>
+
+<!-- ============================================
+     SEARCH / FILTER
+============================================ -->
+<div class="search-section">
+  <div class="search-inner">
+    <span class="search-label">絞り込み：</span>
+    <div class="search-chips">
+      <button class="chip active">すべて</button>
+      <button class="chip">常勤希望</button>
+      <button class="chip">パート・非常勤</button>
+      <button class="chip">夜勤なし</button>
+      <button class="chip">年収アップ</button>
+      <button class="chip">ブランクあり</button>
+      <button class="chip">育児との両立</button>
     </div>
   </div>
-
-  <!-- ランキング詳細ヘッダー -->
-  <div class="section-divider">
-    <div class="section-title-badge">
-      <span class="bubble-icon">💬</span>
-      各サービスの詳細・口コミ
-    </div>
-  </div>
-
-  <!-- 詳細カード 1 -->
-  <div class="detail-card" id="detail-1">
-    <div class="detail-card-header">
-      <div class="detail-rank-num">1</div>
-      <div class="detail-site-name" style="color:#1a7cc4;">◀ レバウェル看護</div>
-      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
-    </div>
-    <div class="detail-card-body">
-      <div class="detail-card-left">
-        <div class="detail-service-img">
-          <div style="font-size:2.5rem;">🏥</div>
-          <div>看護師転職なら<br><strong>レバウェル看護</strong></div>
-          <div class="service-count-badge">求人15万件以上</div>
-        </div>
-        <ul class="detail-points">
-          <li>各エリアに特化したキャリアアドバイザーが、<a href="#">地域ならではの求人</a>を紹介</li>
-          <li>求人票に載っていない情報まで詳細に教えてもらえる</li>
-          <li>過去の面接をもとにした模擬面接で対策もバッチリ</li>
-        </ul>
-      </div>
-      <div class="detail-card-right">
-        <div class="detail-stats-grid">
-          <div class="stat-cell">
-            <div class="stat-cell-label">口コミ評価</div>
-            <div class="stat-cell-value rating" style="color:var(--pink);">4.6</div>
-            <div class="stars" style="font-size:0.65rem;">★★★★★</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">対応エリア</div>
-            <div class="stat-cell-value">全国</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">求人数</div>
-            <div class="stat-cell-value">15万件+</div>
-          </div>
-        </div>
-        <div class="detail-reviews-title">利用者の声</div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">👩</div>
-            <div class="review-meta">
-              <div class="review-name">★★★★★ 30代／女性</div>
-            </div>
-          </div>
-          <div class="review-title">引っ越し先までお世話になりました</div>
-          <div class="review-text">詳しいキャリアアドバイザーが希望条件の病院を探してくれました。引っ越し先の病院紹介の不動産屋を紹介してくれて、家賃が半額になるということで。その不動産屋にも取り次いで頂き、家まで決めることができたんです。有給消化しやすいのも、学校行事のある私には嬉しいポイントでした。</div>
-        </div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">👩</div>
-            <div class="review-meta">
-              <div class="review-name">★★★★★ 20代／女性</div>
-            </div>
-          </div>
-          <div class="review-title">転職の不安が楽しみに変わりました</div>
-          <div class="review-text">職場の雰囲気や周辺環境、前に紹介した方からのアドバイスなんかも教えてくれたので、転職後の具体的なイメージが湧いて、不安というより楽しみの方が大きい転職でした。</div>
-        </div>
-      </div>
-    </div>
-    <div class="detail-card-footer">
-      <a href="#" class="btn-official-lg">レバウェル看護 公式サイトへ ›</a>
-    </div>
-  </div>
-
-  <!-- 詳細カード 2 -->
-  <div class="detail-card" id="detail-2">
-    <div class="detail-card-header">
-      <div class="detail-rank-num">2</div>
-      <div class="detail-site-name" style="color:var(--pink);">🩺 ナース専科 転職</div>
-      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
-    </div>
-    <div class="detail-card-body">
-      <div class="detail-card-left">
-        <div class="detail-service-img" style="background:linear-gradient(135deg,#ffe8f4,#ffc8e4);">
-          <div style="font-size:2.5rem;">🩺</div>
-          <div><strong>ナース専科</strong> 転職</div>
-          <div class="service-count-badge">求人20万件以上</div>
-        </div>
-        <ul class="detail-points">
-          <li>業界最大規模の<a href="#">求人数約20万件</a></li>
-          <li>登録者限定のレア求人・非公開求人多数</li>
-          <li>常勤希望の看護師に特に強いサービス</li>
-        </ul>
-      </div>
-      <div class="detail-card-right">
-        <div class="detail-stats-grid">
-          <div class="stat-cell">
-            <div class="stat-cell-label">口コミ評価</div>
-            <div class="stat-cell-value rating" style="color:var(--pink);">4.5</div>
-            <div class="stars" style="font-size:0.65rem;">★★★★★</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">対応エリア</div>
-            <div class="stat-cell-value">全国</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">求人数</div>
-            <div class="stat-cell-value">20万件+</div>
-          </div>
-        </div>
-        <div class="detail-reviews-title">利用者の声</div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">👩</div>
-            <div class="review-meta"><div class="review-name">★★★★★ 30代／女性</div></div>
-          </div>
-          <div class="review-title">希望条件をすべて叶えてくれた</div>
-          <div class="review-text">「夜勤なし・土日休み・年収400万以上」という条件でも、希望に合う求人を複数紹介してくれました。担当さんの対応も丁寧で、内定まで安心してお任せできました。</div>
-        </div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">🧑</div>
-            <div class="review-meta"><div class="review-name">★★★★☆ 20代／男性</div></div>
-          </div>
-          <div class="review-title">男性看護師にも対応してくれた</div>
-          <div class="review-text">男性でも親身に対応してくれて、男性が働きやすい職場を重点的に紹介してもらえました。転職後も順調で満足しています。</div>
-        </div>
-      </div>
-    </div>
-    <div class="detail-card-footer">
-      <a href="#" class="btn-official-lg">ナース専科 公式サイトへ ›</a>
-    </div>
-  </div>
-
-  <!-- 詳細カード 3 -->
-  <div class="detail-card" id="detail-3">
-    <div class="detail-card-header">
-      <div class="detail-rank-num">3</div>
-      <div class="detail-site-name" style="color:var(--green);">🦘 看護roo!</div>
-      <a href="#" style="font-size:0.78rem; color:var(--text-muted);">›</a>
-    </div>
-    <div class="detail-card-body">
-      <div class="detail-card-left">
-        <div class="detail-service-img" style="background:linear-gradient(135deg,#e8f9ee,#c8f0d4);">
-          <div style="font-size:2.5rem;">🦘</div>
-          <div style="color:var(--green);"><strong>看護roo!</strong></div>
-          <div class="service-count-badge" style="background:var(--green);">累計160万人利用</div>
-        </div>
-        <ul class="detail-points">
-          <li>利用満足度<a href="#">90%以上</a>を誇る大手サービス</li>
-          <li>全国対応・あらゆる施設形態に対応</li>
-          <li>専任スタッフが転職を徹底サポート</li>
-        </ul>
-      </div>
-      <div class="detail-card-right">
-        <div class="detail-stats-grid">
-          <div class="stat-cell">
-            <div class="stat-cell-label">口コミ評価</div>
-            <div class="stat-cell-value rating" style="color:var(--pink);">4.2</div>
-            <div class="stars" style="font-size:0.65rem;">★★★★☆</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">対応エリア</div>
-            <div class="stat-cell-value">全国</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-cell-label">満足度</div>
-            <div class="stat-cell-value">90%+</div>
-          </div>
-        </div>
-        <div class="detail-reviews-title">利用者の声</div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">👩</div>
-            <div class="review-meta"><div class="review-name">★★★★★ 40代／女性</div></div>
-          </div>
-          <div class="review-title">ブランク明けでも丁寧に対応</div>
-          <div class="review-text">育児で5年のブランクがあって不安でしたが、ブランクに理解のある職場を多数紹介してもらいました。今は週3のクリニックで働けており、生活が安定しました。</div>
-        </div>
-        <div class="review-item">
-          <div class="review-header">
-            <div class="review-avatar">👩</div>
-            <div class="review-meta"><div class="review-name">★★★★☆ 30代／女性</div></div>
-          </div>
-          <div class="review-title">転職先での定着率が高い</div>
-          <div class="review-text">職場の内部情報をしっかり共有してくれるので、入職後のギャップが少なかったです。今の職場も長く続けられそうで満足しています。</div>
-        </div>
-      </div>
-    </div>
-    <div class="detail-card-footer">
-      <a href="#" class="btn-official-lg" style="background:var(--green);">看護roo! 公式サイトへ ›</a>
-    </div>
-  </div>
-
-  <!-- 詳細カード 4・5（コンパクト版） -->
-  <div class="detail-card" id="detail-4">
-    <div class="detail-card-header">
-      <div class="detail-rank-num">4</div>
-      <div class="detail-site-name" style="color:var(--pink);">💜 ナースではたらこ</div>
-    </div>
-    <div style="padding:16px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
-      <div style="flex:1; min-width:220px;">
-        <ul class="detail-points">
-          <li>年収・残業など交渉しにくいことも代行</li>
-          <li>パート・アルバイト求人も豊富</li>
-          <li>ライフスタイルに合わせた求人を提案</li>
-        </ul>
-      </div>
-      <div style="flex:1; min-width:220px;">
-        <div class="review-item">
-          <div class="review-title" style="color:var(--pink);">★★★★☆ 「給与交渉を代わりにやってくれた」</div>
-          <div class="review-text">自分では言いにくい給与面の交渉を担当さんがやってくれて、希望より月2万円アップで入職できました。</div>
-        </div>
-      </div>
-    </div>
-    <div class="detail-card-footer">
-      <a href="#" class="btn-official-lg">ナースではたらこ 公式サイトへ ›</a>
-    </div>
-  </div>
-
-  <div class="detail-card" id="detail-5">
-    <div class="detail-card-header">
-      <div class="detail-rank-num">5</div>
-      <div class="detail-site-name">🏥 看護師ワーカー</div>
-    </div>
-    <div style="padding:16px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
-      <div style="flex:1; min-width:220px;">
-        <ul class="detail-points">
-          <li>年間1万人以上の転職実績</li>
-          <li>地方・都市部ともに求人が充実</li>
-          <li>24時間LINEで相談できる</li>
-        </ul>
-      </div>
-      <div style="flex:1; min-width:220px;">
-        <div class="review-item">
-          <div class="review-title" style="color:var(--pink);">★★★★☆ 「LINEで気軽に相談できた」</div>
-          <div class="review-text">忙しくて電話できない時もLINEで質問できて助かりました。夜遅くでも返信が来てとても便利でした。</div>
-        </div>
-      </div>
-    </div>
-    <div class="detail-card-footer">
-      <a href="#" class="btn-official-lg">看護師ワーカー 公式サイトへ ›</a>
-    </div>
-  </div>
-
 </div>
 
-<!-- フッター -->
-<footer>
-  <div class="footer-links">
-    <a href="#">プライバシーポリシー</a>
-    <a href="#">利用規約</a>
-    <a href="#">運営会社</a>
-    <a href="#">お問い合わせ</a>
-    <a href="#">サイトマップ</a>
+
+<!-- ============================================
+     PAGE BODY
+============================================ -->
+<div class="page-body">
+
+  <!-- Trust ribbon -->
+  <div class="trust-ribbon">
+    <span class="trust-ribbon-title">🔍 当サイトについて</span>
+    <div class="trust-items">
+      <span class="trust-item"><span class="trust-item-icon">✓</span>実際の転職者データをもとに評価</span>
+      <span class="trust-item"><span class="trust-item-icon">✓</span>月1回データ更新</span>
+      <span class="trust-item"><span class="trust-item-icon">✓</span>すべて無料で登録・利用可</span>
+      <span class="trust-item"><span class="trust-item-icon">✓</span>プロモーション有・客観評価を維持</span>
+    </div>
   </div>
-  <p>当サイトはプロモーション・広告収入により運営されています。</p>
-  <p style="margin-top:8px; opacity:0.4;">© 2024 看護師転職サイト比較ナビ All Rights Reserved.</p>
+
+
+  <!-- ============================================
+       RANKING SECTION
+  ============================================ -->
+  <section id="ranking">
+    <div class="ranking-header">
+      <div class="ranking-title-group">
+        <div class="section-eyebrow"><span>RANKING TOP5</span></div>
+        <h2 class="section-title">口コミ・実績スコア<br>人気ランキング</h2>
+        <p class="section-sub">847件の口コミ・転職実績データをもとに算出</p>
+      </div>
+      <div>
+        <div class="tab-group">
+          <button class="tab-btn active" onclick="setTab(this,'recommend')">総合おすすめ</button>
+          <button class="tab-btn" onclick="setTab(this,'detail')">詳細スペック</button>
+        </div>
+        <div class="ranking-updated" style="text-align:right; margin-top:6px;">最終更新: 2024年12月</div>
+      </div>
+    </div>
+
+    <div class="rank-table-wrap">
+      <table class="rtable" id="rankTable">
+        <thead>
+          <tr>
+            <th style="width:52px;">順位</th>
+            <th style="text-align:left; padding-left:16px;">サービス名</th>
+            <th style="width:90px;">口コミ評価</th>
+            <th style="width:70px;">対応エリア</th>
+            <th style="width:190px; text-align:left;">特徴・強み</th>
+            <th style="width:100px;">詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rnum rnum-1">1</span></td>
+            <td class="td-name" style="padding-left:16px;">
+              <div class="service-name-wrap">
+                <span class="svc-name" style="color:#1a4a7a;">🔵 レバウェル看護</span>
+                <a href="#detail-1" class="svc-tag">詳細・口コミを見る ↓</a>
+              </div>
+            </td>
+            <td>
+              <span class="rating-val">4.6</span>
+              <div class="rating-stars">★★★★★</div>
+              <a href="#detail-1" class="rating-link">口コミ</a>
+            </td>
+            <td><span class="area-pill">全国</span></td>
+            <td class="td-feature">
+              <p class="feature-txt"><span class="feature-em">高給与・優良求人</span>が豊富。年収600万円超の求人あり</p>
+            </td>
+            <td><a href="#detail-1" class="tbl-cta">公式へ ›</a></td>
+          </tr>
+          <tr>
+            <td><span class="rnum rnum-2">2</span></td>
+            <td class="td-name" style="padding-left:16px;">
+              <div class="service-name-wrap">
+                <span class="svc-name" style="color:#be185d;">🩺 ナース専科 転職</span>
+                <a href="#detail-2" class="svc-tag">詳細・口コミを見る ↓</a>
+                <span style="font-size:.68rem; color:var(--text-muted);">※常勤のみ</span>
+              </div>
+            </td>
+            <td>
+              <span class="rating-val">4.5</span>
+              <div class="rating-stars">★★★★★</div>
+              <a href="#detail-2" class="rating-link">口コミ</a>
+            </td>
+            <td><span class="area-pill">全国</span></td>
+            <td class="td-feature">
+              <p class="feature-txt"><span class="feature-em">求人数20万件超</span>。登録者限定の非公開求人が多数</p>
+            </td>
+            <td><a href="#detail-2" class="tbl-cta">公式へ ›</a></td>
+          </tr>
+          <tr>
+            <td><span class="rnum rnum-3">3</span></td>
+            <td class="td-name" style="padding-left:16px;">
+              <div class="service-name-wrap">
+                <span class="svc-name" style="color:#065f46;">🦘 看護roo!</span>
+                <a href="#detail-3" class="svc-tag">詳細・口コミを見る ↓</a>
+              </div>
+            </td>
+            <td>
+              <span class="rating-val">4.2</span>
+              <div class="rating-stars">★★★★☆</div>
+              <a href="#detail-3" class="rating-link">口コミ</a>
+            </td>
+            <td><span class="area-pill">全国</span></td>
+            <td class="td-feature">
+              <p class="feature-txt">利用満足度<span class="feature-em">90%以上</span>。累計160万人の実績</p>
+            </td>
+            <td><a href="#detail-3" class="tbl-cta">公式へ ›</a></td>
+          </tr>
+          <tr>
+            <td><span class="rnum rnum-n">4</span></td>
+            <td class="td-name" style="padding-left:16px;">
+              <div class="service-name-wrap">
+                <span class="svc-name" style="color:#7c3aed;">💜 ナースではたらこ</span>
+                <a href="#detail-4" class="svc-tag">詳細・口コミを見る ↓</a>
+              </div>
+            </td>
+            <td>
+              <span class="rating-val">3.6</span>
+              <div class="rating-stars">★★★★☆</div>
+              <a href="#detail-4" class="rating-link">口コミ</a>
+            </td>
+            <td><span class="area-pill">全国</span></td>
+            <td class="td-feature">
+              <p class="feature-txt"><span class="feature-em">給与・残業交渉</span>を代行。条件改善に強い</p>
+            </td>
+            <td><a href="#detail-4" class="tbl-cta">公式へ ›</a></td>
+          </tr>
+          <tr>
+            <td><span class="rnum rnum-n">5</span></td>
+            <td class="td-name" style="padding-left:16px;">
+              <div class="service-name-wrap">
+                <span class="svc-name" style="color:#374151;">🏥 看護師ワーカー</span>
+                <a href="#detail-5" class="svc-tag">詳細・口コミを見る ↓</a>
+              </div>
+            </td>
+            <td>
+              <span class="rating-val">3.5</span>
+              <div class="rating-stars">★★★★☆</div>
+              <a href="#detail-5" class="rating-link">口コミ</a>
+            </td>
+            <td><span class="area-pill">全国</span></td>
+            <td class="td-feature">
+              <p class="feature-txt">年間<span class="feature-em">1万人以上</span>の転職実績。LINE相談可</p>
+            </td>
+            <td><a href="#detail-5" class="tbl-cta">公式へ ›</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="rank-table-foot">※2025年3月時点のデータ。口コミスコアは加重平均値。</div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       HOW TO — 転職成功のポイント
+  ============================================ -->
+  <section id="how-to">
+    <div class="section-eyebrow"><span>HOW TO USE</span></div>
+    <h2 class="section-title">転職サービスを<br>賢く使う4つのポイント</h2>
+    <p class="section-sub">転職成功率を高めるために知っておきたいことを整理しました</p>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-icon insight-icon-navy">🔐</div>
+        <h3>非公開求人にこそ好条件が集まる</h3>
+        <p>条件の良い求人は公開すると応募が殺到するため、<a href="#ranking">転職サービスに登録した人</a>だけが閲覧できる非公開求人として配信されます。まず登録することが第一歩です。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon insight-icon-sky">📊</div>
+        <h3>2〜3サービスを並行利用するのが定石</h3>
+        <p>求人は各サービスで異なります。1社だけでは見えない求人が多く存在するため、<a href="#multi-tip">複数サービスに登録</a>して比較することで、より良い条件の求人を見つけられます。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon insight-icon-amber">💬</div>
+        <h3>担当コンサルタントの質を見極める</h3>
+        <p>サービスの品質は担当者によって左右されます。レスポンスの速さ・提案の的確さ・交渉力を早めに確認し、合わない場合は担当変更や別サービスへの乗り換えも検討しましょう。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon insight-icon-green">📝</div>
+        <h3>条件の優先順位を明確にしてから相談</h3>
+        <p>「給与・勤務形態・診療科・立地・職場環境」のどれを最優先するかを整理してから相談すると、コンサルタントが的確な求人を提案しやすくなり、転職の成功率が上がります。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       MULTI-REGISTER TIP
+  ============================================ -->
+  <div class="multi-box" id="multi-tip">
+    <div class="multi-box-head">
+      <span class="multi-box-icon">📱</span>
+      <div>
+        <div class="multi-box-title"><em>複数サービスへの登録</em>が転職成功の近道</div>
+        <p class="multi-box-body">
+          求人を出す医療機関は特定のサービスにのみ掲載することが多く、1つのサービスだけでは優良求人を見逃すリスクがあります。<br>
+          <a href="#ranking">ランキング上位のサービスに2〜3社登録</a>して求人を比較することで、あなたの条件に最も合う職場を見つける確率が大幅に上がります。
+        </p>
+      </div>
+    </div>
+    <div class="multi-box-tip">
+      <span class="multi-box-tip-icon">💡</span>
+      <p class="multi-box-tip-text">
+        <em>2〜3サービスに登録して比較</em>することが、条件の良い職場を見つける最も確実な方法です。登録はすべて無料です。
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       DETAIL CARDS
+  ============================================ -->
+  <section class="detail-section">
+    <div class="section-eyebrow"><span>SERVICE DETAILS</span></div>
+    <h2 class="section-title">各サービスの詳細・口コミ</h2>
+    <p class="section-sub">実際に利用した看護師の声と客観的なデータをまとめました</p>
+
+    <!-- Card 1 -->
+    <div class="detail-card" id="detail-1">
+      <div class="dc-head">
+        <div class="dc-head-rank rank-gold">1</div>
+        <div class="dc-head-name">レバウェル看護</div>
+        <span class="dc-head-tag">総合スコア最高位</span>
+      </div>
+      <div class="dc-body">
+        <div class="dc-left">
+          <div class="dc-service-visual">
+            <span class="visual-icon">🏥</span>
+            <span class="visual-name">レバウェル看護</span>
+            <span class="visual-stat-badge">求人15万件+</span>
+          </div>
+          <ul class="dc-points">
+            <li><span class="dc-points-icon">✓</span><span>各エリア専任のキャリアアドバイザーが<a href="#">地域密着の求人</a>を紹介</span></li>
+            <li><span class="dc-points-icon">✓</span><span>求人票に載らない職場の内部情報を詳しく共有してくれる</span></li>
+            <li><span class="dc-points-icon">✓</span><span>過去の面接データをもとにした<a href="#">模擬面接で対策</a>が可能</span></li>
+            <li><span class="dc-points-icon">✓</span><span>引越し先の手配など転職に伴う生活サポートも対応</span></li>
+          </ul>
+        </div>
+        <div class="dc-right">
+          <div class="dc-stats">
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">口コミ評価</div>
+              <div class="dc-stat-val big" style="color:var(--navy);">4.6</div>
+              <div style="color:#f59e0b; font-size:.7rem;">★★★★★</div>
+            </div>
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">対応エリア</div>
+              <div class="dc-stat-val">全国</div>
+            </div>
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">求人数</div>
+              <div class="dc-stat-val">15万+</div>
+            </div>
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">勤務形態</div>
+              <div class="dc-stat-val" style="font-size:.75rem;">常勤・<br>非常勤</div>
+            </div>
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">相談方法</div>
+              <div class="dc-stat-val" style="font-size:.75rem;">電話・<br>Web</div>
+            </div>
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">利用料金</div>
+              <div class="dc-stat-val" style="color:var(--emerald);">無料</div>
+            </div>
+          </div>
+          <div class="dc-reviews-head">
+            <span>💬</span> 利用者の声（口コミ）
+          </div>
+          <div class="review-card">
+            <div class="rc-head">
+              <div class="rc-avatar">👩</div>
+              <div class="rc-meta">
+                <div class="rc-stars">★★★★★</div>
+                <div class="rc-name">30代・女性 / 急性期→訪問看護</div>
+              </div>
+            </div>
+            <div class="rc-title">引越し先の不動産まで紹介してもらいました</div>
+            <div class="rc-body">希望の病院に決まっただけでなく、引越し先の物件まで紹介してくれて、家賃が大幅に抑えられました。転職後の生活まで寄り添ってくれる対応に感動しました。</div>
+          </div>
+          <div class="review-card">
+            <div class="rc-head">
+              <div class="rc-avatar">👩</div>
+              <div class="rc-meta">
+                <div class="rc-stars">★★★★★</div>
+                <div class="rc-name">20代・女性 / 内科→ICU</div>
+              </div>
+            </div>
+            <div class="rc-title">転職の不安が期待に変わりました</div>
+            <div class="rc-body">転職後の職場環境・スタッフの雰囲気まで詳しく教えてもらえたので、入職前から具体的なイメージが持てて安心できました。不安より楽しみの方が大きかったです。</div>
+          </div>
+        </div>
+      </div>
+      <div class="dc-foot">
+        <a href="#" class="dc-cta">レバウェル看護 公式サイトで求人を見る →</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="detail-card" id="detail-2">
+      <div class="dc-head" style="background: linear-gradient(135deg, #831843, #9d174d);">
+        <div class="dc-head-rank rank-silver">2</div>
+        <div class="dc-head-name">ナース専科 転職</div>
+        <span class="dc-head-tag">求人数業界最大級</span>
+      </div>
+      <div class="dc-body">
+        <div class="dc-left">
+          <div class="dc-service-visual" style="background: linear-gradient(135deg,#fdf2f8,#fce7f3);">
+            <span class="visual-icon">🩺</span>
+            <span class="visual-name" style="color:#be185d;">ナース専科 転職</span>
+            <span class="visual-stat-badge" style="background:#be185d;">求人20万件+</span>
+          </div>
+          <ul class="dc-points">
+            <li><span class="dc-points-icon">✓</span><span>業界最大級の<a href="#">求人約20万件</a>。非公開求人も豊富</span></li>
+            <li><span class="dc-points-icon">✓</span><span>登録者限定のレアな求人情報をいち早く案内</span></li>
+            <li><span class="dc-points-icon">✓</span><span>常勤希望者に特に強い専門特化型サービス</span></li>
+          </ul>
+        </div>
+        <div class="dc-right">
+          <div class="dc-stats">
+            <div class="dc-stat-box">
+              <div class="dc-stat-label">口コミ評価</div>
+              <div class="dc-stat-val big" style="color:#be185d;">4.5</div>
+              <div style="color:#f59e0b; font-size:.7rem;">★★★★★</div>
+            </div>
+            <div class="dc-stat-box"><div class="dc-stat-label">エリア</div><div class="dc-stat-val">全国</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">求人数</div><div class="dc-stat-val">20万+</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">勤務形態</div><div class="dc-stat-val" style="font-size:.75rem;">常勤のみ</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">相談方法</div><div class="dc-stat-val" style="font-size:.75rem;">電話・Web</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">利用料金</div><div class="dc-stat-val" style="color:var(--emerald);">無料</div></div>
+          </div>
+          <div class="dc-reviews-head"><span>💬</span> 利用者の声</div>
+          <div class="review-card" style="border-left-color:#be185d;">
+            <div class="rc-head">
+              <div class="rc-avatar">👩</div>
+              <div class="rc-meta"><div class="rc-stars">★★★★★</div><div class="rc-name">30代・女性</div></div>
+            </div>
+            <div class="rc-title">希望条件をすべてクリアした職場に転職</div>
+            <div class="rc-body">「土日休み・日勤のみ・年収400万以上」という希望を全て満たした求人を複数紹介してもらえました。希望を言えばしっかり対応してくれます。</div>
+          </div>
+          <div class="review-card" style="border-left-color:#be185d;">
+            <div class="rc-head">
+              <div class="rc-avatar">🧑</div>
+              <div class="rc-meta"><div class="rc-stars">★★★★☆</div><div class="rc-name">20代・男性</div></div>
+            </div>
+            <div class="rc-title">男性看護師でも親身に対応してくれた</div>
+            <div class="rc-body">男性でも丁寧に対応してくれ、男性が働きやすい環境の職場を重点的に提案してもらえました。非常に心強かったです。</div>
+          </div>
+        </div>
+      </div>
+      <div class="dc-foot">
+        <a href="#" class="dc-cta" style="background:linear-gradient(135deg,#be185d,#9d174d); box-shadow:0 6px 20px rgba(190,24,93,.3);">ナース専科 転職 公式サイトで求人を見る →</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="detail-card" id="detail-3">
+      <div class="dc-head" style="background: linear-gradient(135deg, #064e3b, #065f46);">
+        <div class="dc-head-rank rank-bronze">3</div>
+        <div class="dc-head-name">看護roo!</div>
+        <span class="dc-head-tag">利用満足度90%以上</span>
+      </div>
+      <div class="dc-body">
+        <div class="dc-left">
+          <div class="dc-service-visual" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
+            <span class="visual-icon">🦘</span>
+            <span class="visual-name" style="color:#065f46;">看護roo!</span>
+            <span class="visual-stat-badge" style="background:#065f46;">累計160万人</span>
+          </div>
+          <ul class="dc-points">
+            <li><span class="dc-points-icon">✓</span><span>業界トップクラスの<a href="#">満足度90%超</a>の実績</span></li>
+            <li><span class="dc-points-icon">✓</span><span>ブランクや転科希望にも柔軟に対応</span></li>
+            <li><span class="dc-points-icon">✓</span><span>転職後の定着率が高く、職場との相性マッチングに定評</span></li>
+          </ul>
+        </div>
+        <div class="dc-right">
+          <div class="dc-stats">
+            <div class="dc-stat-box"><div class="dc-stat-label">口コミ評価</div><div class="dc-stat-val big" style="color:#065f46;">4.2</div><div style="color:#f59e0b; font-size:.7rem;">★★★★☆</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">エリア</div><div class="dc-stat-val">全国</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">満足度</div><div class="dc-stat-val" style="color:#065f46;">90%+</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">勤務形態</div><div class="dc-stat-val" style="font-size:.75rem;">常勤・<br>非常勤</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">相談方法</div><div class="dc-stat-val" style="font-size:.75rem;">電話・Web</div></div>
+            <div class="dc-stat-box"><div class="dc-stat-label">利用料金</div><div class="dc-stat-val" style="color:var(--emerald);">無料</div></div>
+          </div>
+          <div class="dc-reviews-head"><span>💬</span> 利用者の声</div>
+          <div class="review-card" style="border-left-color:#065f46;">
+            <div class="rc-head">
+              <div class="rc-avatar">👩</div>
+              <div class="rc-meta"><div class="rc-stars">★★★★★</div><div class="rc-name">40代・女性 / 育休明け復帰</div></div>
+            </div>
+            <div class="rc-title">5年のブランクでも丁寧に対応してもらえた</div>
+            <div class="rc-body">育児で5年のブランクがあり不安でしたが、ブランクに理解のある職場を複数紹介してもらいました。今は週3日のクリニックで無理なく働けています。</div>
+          </div>
+          <div class="review-card" style="border-left-color:#065f46;">
+            <div class="rc-head">
+              <div class="rc-avatar">👩</div>
+              <div class="rc-meta"><div class="rc-stars">★★★★☆</div><div class="rc-name">30代・女性</div></div>
+            </div>
+            <div class="rc-title">入職後のギャップがほとんどなかった</div>
+            <div class="rc-body">担当者が職場の実態を正直に伝えてくれたおかげで、転職後のミスマッチがありませんでした。長く続けられそうな職場に出会えて満足しています。</div>
+          </div>
+        </div>
+      </div>
+      <div class="dc-foot">
+        <a href="#" class="dc-cta" style="background:linear-gradient(135deg,#059669,#047857); box-shadow:0 6px 20px rgba(5,150,105,.3);">看護roo! 公式サイトで求人を見る →</a>
+      </div>
+    </div>
+
+    <!-- Cards 4 & 5 — Compact -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;" class="compact-cards">
+      <!-- Card 4 -->
+      <div class="detail-card" id="detail-4" style="margin-bottom:0;">
+        <div class="dc-head" style="background:linear-gradient(135deg,#4c1d95,#5b21b6);">
+          <div class="dc-head-rank rnum-n" style="background:rgba(255,255,255,.2); width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.1rem;">4</div>
+          <div class="dc-head-name">ナースではたらこ</div>
+        </div>
+        <div style="padding:18px;">
+          <ul class="dc-points">
+            <li><span class="dc-points-icon">✓</span><span>給与・残業交渉を代行してくれる</span></li>
+            <li><span class="dc-points-icon">✓</span><span>パート・時短勤務の求人も充実</span></li>
+            <li><span class="dc-points-icon">✓</span><span>育児・家庭と両立しやすい職場に強い</span></li>
+          </ul>
+          <div class="review-card" style="border-left-color:#7c3aed; margin-top:14px;">
+            <div class="rc-title" style="color:#7c3aed;">★★★★☆「給与交渉で月2万円アップ」</div>
+            <div class="rc-body">自分では言いにくい給与の交渉を代わりにやってもらい、希望より月2万円高い条件で入職できました。</div>
+          </div>
+        </div>
+        <div class="dc-foot" style="padding:12px;">
+          <a href="#" class="dc-cta" style="background:linear-gradient(135deg,#7c3aed,#5b21b6); box-shadow:0 4px 14px rgba(124,58,237,.3); padding:12px 20px; font-size:.88rem;">公式サイトへ →</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="detail-card" id="detail-5" style="margin-bottom:0;">
+        <div class="dc-head" style="background:linear-gradient(135deg,#1e293b,#334155);">
+          <div class="dc-head-rank rnum-n" style="background:rgba(255,255,255,.2); width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.1rem;">5</div>
+          <div class="dc-head-name">看護師ワーカー</div>
+        </div>
+        <div style="padding:18px;">
+          <ul class="dc-points">
+            <li><span class="dc-points-icon">✓</span><span>年間1万人以上の転職実績がある大手</span></li>
+            <li><span class="dc-points-icon">✓</span><span>LINEで気軽に相談・連絡が取れる</span></li>
+            <li><span class="dc-points-icon">✓</span><span>地方・地域密着の求人が豊富</span></li>
+          </ul>
+          <div class="review-card" style="border-left-color:#64748b; margin-top:14px;">
+            <div class="rc-title" style="color:#475569;">★★★★☆「LINEで夜間も返信が来た」</div>
+            <div class="rc-body">忙しくて電話できない時間帯でも、LINEで質問すると迅速に返信が来ました。連絡のしやすさがとても助かりました。</div>
+          </div>
+        </div>
+        <div class="dc-foot" style="padding:12px;">
+          <a href="#" class="dc-cta" style="background:linear-gradient(135deg,#334155,#1e293b); box-shadow:0 4px 14px rgba(30,41,59,.3); padding:12px 20px; font-size:.88rem;">公式サイトへ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FAQ
+  ============================================ -->
+  <div class="faq-section">
+    <div class="faq-head">
+      <div style="font-size:.75rem; color:rgba(255,255,255,.6); letter-spacing:.1em; margin-bottom:4px;">FAQ</div>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">転職サービスは本当に無料で使えますか？</span>
+        <span class="faq-q-icon">＋</span>
+      </button>
+      <div class="faq-ans">はい、求職者（看護師）の方は完全無料です。採用した医療機関がサービス会社に紹介料を支払う仕組みのため、求職者側に費用は発生しません。求人紹介・面接対策・条件交渉・アフターフォローもすべて無料です。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">在職中でも転職活動できますか？</span>
+        <span class="faq-q-icon">＋</span>
+      </button>
+      <div class="faq-ans">もちろん可能です。在職中の方が大多数です。現在の職場に知られることはなく、面談は平日夜間・土日にも対応しているサービスがほとんどです。まずは情報収集だけでも気軽に登録できます。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">ブランクがあっても登録できますか？</span>
+        <span class="faq-q-icon">＋</span>
+      </button>
+      <div class="faq-ans">はい、ブランクのある方の転職実績を持つサービスも多数あります。ブランク期間をどのようにアピールするかも含めて、コンサルタントがサポートします。まずは現状を正直に伝えて相談してみてください。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">転職を急いでいなくても登録してよいですか？</span>
+        <span class="faq-q-icon">＋</span>
+      </button>
+      <div class="faq-ans">まったく問題ありません。「まず求人情報を見たい」「半年〜1年後に転職を考えている」という方も多く登録しています。今の転職市場の情報を把握しておくことは、いざ動く際に非常に役立ちます。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q-btn" onclick="toggleFaq(this)">
+        <span class="faq-q-text">なぜ複数のサービスへの登録を勧めているのですか？</span>
+        <span class="faq-q-icon">＋</span>
+      </button>
+      <div class="faq-ans">各サービスが保有する求人は重複していないことが多く、1社だけでは優良求人を見逃す可能性があります。また、複数社のコンサルタントを比較することで、より自分に合ったサポートを受けられます。全サービスへの登録・利用は無料です。</div>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       FINAL CTA
+  ============================================ -->
+  <div class="final-cta">
+    <h2>まず2〜3サービスに<br>無料登録してみましょう</h2>
+    <p>登録60秒・しつこい勧誘なし・いつでも退会可能</p>
+    <div class="final-cta-btns">
+      <a href="#detail-1" class="btn btn-primary btn-lg">🔵 レバウェル看護を見る</a>
+      <a href="#detail-2" class="btn btn-lg" style="background:white; color:var(--navy);">🩺 ナース専科を見る</a>
+    </div>
+    <p class="final-note">※本サイトはプロモーション・広告を含みます。評価データは客観的な収集情報に基づきます。</p>
+  </div>
+
+
+</div><!-- /page-body -->
+
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NurseSelect</div>
+      <p class="footer-desc">看護師専門の転職サービス比較メディア。実際の転職者口コミ・実績データをもとに、中立的な情報をお届けします。</p>
+      <div class="footer-promo" style="margin-top:10px; display:inline-block;">※本サイトはプロモーション・広告収入により運営しています</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">利用規約</a>
+      <a href="#">運営会社</a>
+      <a href="#">お問い合わせ</a>
+      <a href="#">サイトマップ</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2024 NurseSelect. All Rights Reserved.</p>
 </footer>
 
-<!-- トップに戻る -->
-<a href="#" class="back-top" id="backTop">↑</a>
+
+<!-- Floating CTA -->
+<div class="float-cta" id="floatCta">
+  <a href="#ranking" class="float-btn">ランキングを見る ↑</a>
+  <span class="float-note">無料で登録できます</span>
+</div>
+
 
 <script>
-  // トップに戻るボタン
-  const backTop = document.getElementById('backTop');
-  window.addEventListener('scroll', () => {
-    backTop.classList.toggle('visible', window.scrollY > 300);
+  // FAQ toggle
+  function toggleFaq(btn) {
+    btn.closest('.faq-item').classList.toggle('open');
+  }
+
+  // Chip filter (UI only)
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
   });
+
+  // Tab switch (UI only)
+  function setTab(btn, mode) {
+    btn.closest('.tab-group').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // Floating CTA visibility
+  const floatCta = document.getElementById('floatCta');
+  window.addEventListener('scroll', () => {
+    floatCta.classList.toggle('show', window.scrollY > 500);
+  });
+
+  // Compact cards grid → single col on mobile
+  function adjustCompactCards() {
+    const wrap = document.querySelector('.compact-cards');
+    if (!wrap) return;
+    if (window.innerWidth < 640) {
+      wrap.style.gridTemplateColumns = '1fr';
+    } else {
+      wrap.style.gridTemplateColumns = '1fr 1fr';
+    }
+  }
+  window.addEventListener('resize', adjustCompactCards);
+  adjustCompactCards();
 </script>
 </body>
 </html>
