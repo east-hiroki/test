@@ -1,623 +1,326 @@
 <style>
-#nurse-nav-wrap,
-#nurse-nav-wrap table,
-#nurse-nav-wrap td,
-#nurse-nav-wrap th,
-#nurse-nav-wrap p,
-#nurse-nav-wrap span,
-#nurse-nav-wrap font,
-#nurse-nav-wrap a,
-#nurse-nav-wrap img {
-  box-sizing: border-box !important;
-}
-#nurse-nav-wrap table {
-  border-spacing: 0 !important;
-  max-width: 100% !important;
-}
-#nurse-nav-wrap p {
-  line-height: inherit !important;
-}
-#nurse-nav-wrap td, #nurse-nav-wrap th {
-  word-break: normal !important;
-}
-#nurse-nav-wrap a {
-  text-decoration: none !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
+
+#nnw *{box-sizing:border-box; margin:0; padding:0; border:0; font-family:'Noto Sans JP',sans-serif;}
+#nnw a{text-decoration:none; color:inherit;}
+#nnw table{border-collapse:collapse;}
+#nnw .nnw-star{display:inline-block; position:relative; white-space:nowrap; font-size:1.1em; line-height:1;}
+#nnw .nnw-star::before{content:"★★★★★"; color:#dcdcdc;}
+#nnw .nnw-star::after{content:"★★★★★"; color:#f7931e; position:absolute; left:0; top:0; overflow:hidden;}
+#nnw .s46::after{width:92%;} #nnw .s45::after{width:90%;} #nnw .s44::after{width:88%;}
+#nnw .s42::after{width:84%;} #nnw .s39::after{width:78%;} #nnw .s35::after{width:70%;}
+#nnw .nnw-cta{transition:all .2s;}
+#nnw .nnw-cta:hover{box-shadow:none !important; transform:translateY(6px);}
+@keyframes nnwYell{0%{transform:rotateY(360deg);}30%{transform:rotateY(0deg);}}
+@keyframes nnwSlide{0%{opacity:0; transform:translateX(40px) skewX(-12deg);}100%{opacity:1; transform:none;}}
+@keyframes nnwBounce{0%{opacity:0; transform:scale(.3);}60%{opacity:1; transform:scale(1.05);}100%{transform:scale(1);}}
+@keyframes nnwBlink{0%{opacity:1;}50%{opacity:.35;}100%{opacity:1;}}
+#nnw .nnw-spin{display:inline-block; animation:nnwYell 3s ease infinite;}
+#nnw .nnw-card{animation:nnwBounce .8s ease both;}
+#nnw .nnw-head{animation:nnwSlide .8s ease both;}
+#nnw .nnw-blink{animation:nnwBlink 3s ease-in infinite;}
 </style>
 
-<div id="nurse-nav-wrap" style="max-width:800px !important; margin:0 auto !important; background-color:#ffffff !important; font-family:'MS PGothic','ＭＳ Ｐゴシック',Arial,sans-serif !important;">
+<div id="nnw" style="max-width:800px; margin:0 auto; background:#fff3e0; color:#333; font-size:14px; line-height:1.6;">
 
-<!-- ※プロモーション -->
-<div style="text-align:right !important; padding:5px 14px !important; background-color:#ffffff !important; font-size:11px !important; color:#999999 !important; font-family:Arial,sans-serif !important;">
-  ※プロモーションを含みます
+<div style="text-align:right; padding:6px 12px; font-size:10px; color:#999;">※当サイトはプロモーションを含んでいます。</div>
+
+<!-- ヒーロー -->
+<div style="background:#ff6767; padding:24px 16px; text-align:center;">
+  <div style="display:inline-block; background:#fff; color:#ff6767; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:13px; padding:3px 16px; border-radius:20px; margin-bottom:12px;">＼ ここを使っておけば ◎！ ／</div>
+  <div style="color:#fff; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:30px; line-height:1.3; text-shadow:0 2px 0 #e23131;">看護師転職サイト <span style="font-size:42px; color:#fff8e8;">5</span>選</div>
+  <div style="margin-top:14px;"><span class="nnw-spin" style="font-size:46px;">👩‍⚕️</span></div>
 </div>
 
-<!-- HEADER -->
-<div style="text-align:center !important; padding:10px 0 12px !important; background-color:#ffffff !important; border-bottom:2px solid #f0d8e4 !important;">
-  <span style="font-size:12px !important; color:#cccccc !important; font-family:Arial,sans-serif !important;">///////&nbsp;</span><span style="font-size:16px !important; font-weight:bold !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">看護師</span><span style="font-size:16px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">転職サイト比較ナビ</span><span style="font-size:12px !important; color:#cccccc !important; font-family:Arial,sans-serif !important;">&nbsp;///////</span>
-</div>
+<!-- 比較表 -->
+<div style="background:#f5f5f5;">
+  <div style="background:#ff9a9a; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:22px; letter-spacing:.2em; padding:12px 0; border-radius:16px 16px 0 0;">転職サイト比較表</div>
 
-<!-- HERO -->
-<div style="background-color:#d8eef6 !important; padding:0 !important;">
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#d8eef6 !important; border-collapse:collapse !important;">
-    <tr>
-      <td width="55%" valign="middle" style="padding:30px 28px 30px 32px !important; background-color:#d8eef6 !important; vertical-align:middle !important;">
-        <div style="margin-bottom:12px !important;">
-          <span style="font-size:14px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">転職経験者の&nbsp;</span><span style="display:inline-block !important; border:2px solid #26c6da !important; border-radius:16px !important; padding:3px 12px !important; background-color:#ffffff !important; font-size:13px !important; font-weight:bold !important; color:#26c6da !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#9734; 口コミ</span><span style="font-size:14px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&nbsp;で見つかる！</span>
-        </div>
-        <div style="font-size:38px !important; font-weight:900 !important; line-height:1.15 !important; margin:0 0 14px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-          <span style="color:#e84d8a !important;">看護師</span><span style="color:#333333 !important;">転職サイト</span>
-        </div>
-        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-          <tr>
-            <td style="width:66px !important; height:66px !important; background-color:#b8860b !important; border-radius:33px !important; text-align:center !important; vertical-align:middle !important;"><span style="font-size:20px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">一</span></td>
-            <td width="5"></td>
-            <td style="width:66px !important; height:66px !important; background-color:#b8860b !important; border-radius:33px !important; text-align:center !important; vertical-align:middle !important;"><span style="font-size:20px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">括</span></td>
-            <td width="5"></td>
-            <td style="width:66px !important; height:66px !important; background-color:#b8860b !important; border-radius:33px !important; text-align:center !important; vertical-align:middle !important;"><span style="font-size:20px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">比</span></td>
-            <td width="5"></td>
-            <td style="width:66px !important; height:66px !important; background-color:#b8860b !important; border-radius:33px !important; text-align:center !important; vertical-align:middle !important;"><span style="font-size:20px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">較</span></td>
-          </tr>
-        </table>
-      </td>
-      <td valign="bottom" style="background-color:#bae0ef !important; text-align:center !important; padding:20px 10px 0 !important; vertical-align:bottom !important;">
-        <div style="font-size:80px !important; line-height:1 !important; margin:0 !important;">&#128105;&#8205;&#9877;&#65039;</div>
-        <div style="font-size:10px !important; color:#999999 !important; margin:4px 0 0 0 !important; font-family:Arial,sans-serif !important;">看護師</div>
-      </td>
-    </tr>
-  </table>
-</div>
+  <div style="border-top:10px solid #ff6767; padding:14px 12px 18px; background:#fff;">
+    <div style="text-align:center; padding:6px 0 14px;">
+      <span class="nnw-blink" style="font-size:15px; font-weight:700; color:#333;">／ 昨日 <span style="color:#ff6767; font-size:30px; font-weight:900;">470</span>人 が登録に進みました ＼</span>
+    </div>
 
-<!-- SEARCH -->
-<div style="padding:14px 20px !important; background-color:#ffffff !important;">
-  <div style="border:2px solid #f9a8c9 !important; border-radius:30px !important; padding:0 !important;">
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-      <tr valign="middle">
-        <td style="padding:11px 18px !important; font-size:14px !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128269;&nbsp;条件から看護師転職サイトを探す</td>
-        <td width="50" style="padding:8px 10px 8px 0 !important; text-align:right !important;"><span style="display:inline-block !important; width:34px !important; height:34px !important; background-color:#f9a8c9 !important; border-radius:17px !important; text-align:center !important; line-height:34px !important; font-size:14px !important; color:#ffffff !important; font-family:Arial,sans-serif !important;">&#10148;</span></td>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:-2px;">
+      <tr valign="bottom">
+        <td width="33.3%" style="background:#fff; border-top:3px solid #ff6767; color:#ff6767; text-align:center; font-weight:700; font-size:14px; padding:11px 0; border-radius:10px 10px 0 0;">総合</td>
+        <td width="2"></td>
+        <td width="33.3%" style="background:linear-gradient(0deg,#ff8483 20%,#ffb7b6 94%); color:#fff; text-align:center; font-weight:700; font-size:14px; padding:11px 0; border-radius:10px 10px 0 0;">取り扱い求人</td>
+        <td width="2"></td>
+        <td width="33.3%" style="background:linear-gradient(0deg,#ff8483 20%,#ffb7b6 94%); color:#fff; text-align:center; font-weight:700; font-size:14px; padding:11px 0; border-radius:10px 10px 0 0;">サービス内容</td>
       </tr>
     </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff; border:1px solid #d2d2d2;">
+      <tr style="background:#f5f5f5;">
+        <th style="border:1px solid #d2d2d2; font-weight:400; font-size:12px; padding:8px 4px;">転職サイト名</th>
+        <th style="border:1px solid #d2d2d2; font-weight:400; font-size:12px; padding:8px 4px;">オススメ度▼</th>
+        <th style="border:1px solid #d2d2d2; font-weight:400; font-size:12px; padding:8px 4px;">求人数▼</th>
+        <th style="border:1px solid #d2d2d2; font-weight:400; font-size:12px; padding:8px 4px;">特徴</th>
+        <th style="border:1px solid #d2d2d2; font-weight:400; font-size:12px; padding:8px 4px;">詳細</th>
+      </tr>
+
+      <tr>
+        <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
+          <div style="font-size:24px; line-height:1;">🥇</div>
+          <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">レバウェル看護</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
+          <span class="nnw-star s46"></span><div style="color:#e75e52; font-weight:700; font-size:18px;">4.6</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle; font-size:13px;">◎<br>230,000</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 6px; font-size:11px; line-height:1.5;"><b>業界最大級の非公開求人数！</b>ここにしかない求人は要チェック◎</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 5px; text-align:center; vertical-align:middle;">
+          <a href="https://kango-oshigoto.jp/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; background:#ff6767; color:#fff; font-weight:700; font-size:12px; padding:14px 4px; border-radius:7px; box-shadow:0 5px 0 0 #cc5252;">詳細<br>を見る</a>
+        </td>
+      </tr>
+
+      <tr style="background:#fffafa;">
+        <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
+          <div style="font-size:24px; line-height:1;">🥈</div>
+          <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">ナースではたらこ</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
+          <span class="nnw-star s45"></span><div style="color:#e75e52; font-weight:700; font-size:18px;">4.5</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle; font-size:13px;">◎<br>170,000</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 6px; font-size:11px; line-height:1.5;"><b>聞きづらい条件交渉もおまかせ！</b>逆指名で希望の病院も狙える</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 5px; text-align:center; vertical-align:middle;">
+          <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; background:#ff6767; color:#fff; font-weight:700; font-size:12px; padding:14px 4px; border-radius:7px; box-shadow:0 5px 0 0 #cc5252;">詳細<br>を見る</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
+          <div style="font-size:24px; line-height:1;">🥉</div>
+          <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">ナース専科 転職</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
+          <span class="nnw-star s44"></span><div style="color:#e75e52; font-weight:700; font-size:18px;">4.4</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle; font-size:13px;">◎<br>240,000</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 6px; font-size:11px; line-height:1.5;"><b>登録者限定のレア求人が豊富！</b>業界トップクラスの求人数</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 5px; text-align:center; vertical-align:middle;">
+          <a href="https://www.nursejinzaibank.com/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; background:#ff6767; color:#fff; font-weight:700; font-size:12px; padding:14px 4px; border-radius:7px; box-shadow:0 5px 0 0 #cc5252;">詳細<br>を見る</a>
+        </td>
+      </tr>
+
+      <tr style="background:#fffafa;">
+        <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
+          <div style="font-size:16px; color:#888;">4位</div>
+          <div style="color:#2ab552; font-weight:700; font-size:13px; margin-top:2px;">看護roo! 転職</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
+          <span class="nnw-star s42"></span><div style="color:#e75e52; font-weight:700; font-size:18px;">4.2</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle; font-size:13px;">◎<br>240,000</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 6px; font-size:11px; line-height:1.5;">1年以内の転職に人気！厳選求人を紹介してくれる</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 5px; text-align:center; vertical-align:middle;">
+          <span style="display:block; background:#ccc; color:#fff; font-weight:700; font-size:12px; padding:14px 4px; border-radius:7px;">詳細<br>情報</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
+          <div style="font-size:16px; color:#888;">5位</div>
+          <div style="color:#333; font-weight:700; font-size:13px; margin-top:2px;">🔴看護師ワーカー</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
+          <span class="nnw-star s35"></span><div style="color:#e75e52; font-weight:700; font-size:18px;">3.5</div>
+        </td>
+        <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle; font-size:13px;">◯<br>65,000</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 6px; font-size:11px; line-height:1.5;">月給40万/年休120日のホワイト求人を探すならここ</td>
+        <td style="border:1px solid #d2d2d2; padding:10px 5px; text-align:center; vertical-align:middle;">
+          <span style="display:block; background:#ccc; color:#fff; font-weight:700; font-size:12px; padding:14px 4px; border-radius:7px;">詳細<br>情報</span>
+        </td>
+      </tr>
+    </table>
+    <div style="font-size:10px; color:#64748b; margin-top:8px;">※2026年3月時点の情報をもとに編集部が独自調査</div>
   </div>
 </div>
 
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
+<!-- ミニコラム -->
+<div style="background:#fff3e0; padding:24px 14px;">
+  <div style="text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:20px; color:#333; margin-bottom:16px;">失敗しない！転職成功のポイント</div>
 
-<!-- RANKING TITLE -->
-<div style="padding:28px 20px 16px !important; background-color:#ffffff !important; text-align:center !important;">
-  <div style="font-size:14px !important; color:#333333 !important; margin:0 0 8px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-    転職したいすべての<span style="color:#e84d8a !important; font-weight:bold !important;">看護師</span>さんにおすすめ！
-  </div>
-  <div>
-    <span style="display:inline-block !important; border:2px solid #26c6da !important; border-radius:16px !important; padding:4px 14px !important; background-color:#ffffff !important; font-size:13px !important; font-weight:bold !important; color:#26c6da !important; font-family:'MS PGothic',Arial,sans-serif !important; margin-right:8px !important;">&#9734; 口コミ</span><span style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">人気ランキング&nbsp;TOP5</span>
-  </div>
-</div>
-
-<!-- TAB -->
-<div style="padding:0 20px 12px !important; background-color:#ffffff !important;">
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-    <tr>
-      <td width="50%" style="background-color:#e84d8a !important; padding:12px !important; text-align:center !important;"><span style="font-size:15px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">おすすめ</span></td>
-      <td width="50%" style="background-color:#ede0e5 !important; padding:12px !important; text-align:center !important; border:1px solid #d8c8d0 !important;"><span style="font-size:15px !important; font-weight:bold !important; color:#aaaaaa !important; font-family:'MS PGothic',Arial,sans-serif !important;">サービス内容</span></td>
-    </tr>
-  </table>
-</div>
-
-<!-- RANKING TABLE -->
-<div style="padding:0 20px 16px !important; background-color:#ffffff !important;">
-  <table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#e8d0d8" style="border-collapse:collapse !important;">
-    <tr style="background-color:#f9f0f4 !important;">
-      <td width="185" style="padding:9px 10px !important; font-size:11px !important; font-weight:bold !important; color:#555555 !important; text-align:center !important; border:1px solid #e8d0d8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">サイト名</td>
-      <td width="80" style="padding:9px 6px !important; font-size:11px !important; font-weight:bold !important; color:#555555 !important; text-align:center !important; border:1px solid #e8d0d8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミ評価</td>
-      <td width="65" style="padding:9px 6px !important; font-size:11px !important; font-weight:bold !important; color:#555555 !important; text-align:center !important; border:1px solid #e8d0d8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">エリア</td>
-      <td style="padding:9px 10px !important; font-size:11px !important; font-weight:bold !important; color:#555555 !important; text-align:center !important; border:1px solid #e8d0d8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">特徴</td>
-      <td width="85" style="padding:9px 6px !important; font-size:11px !important; font-weight:bold !important; color:#555555 !important; text-align:center !important; border:1px solid #e8d0d8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">詳細</td>
-    </tr>
-    <!-- 1位 レバウェル看護 -->
-    <tr style="background-color:#fff8fb !important;">
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; vertical-align:middle !important;">
-        <div style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:9px !important; font-weight:bold !important; padding:1px 6px !important; border-radius:2px !important; margin-bottom:4px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129351; 1位</div>
-        <div style="font-size:14px !important; font-weight:bold !important; color:#1a7cbf !important; margin:0 0 3px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">レバウェル看護</div>
-        <div style="font-size:11px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミを見る</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;">
-        <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.6</div>
-        <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div style="font-size:10px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128172; 口コミ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; border:1px solid #d0d0d0 !important; padding:8px 6px !important; font-size:11px !important; font-weight:bold !important; color:#666666 !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</span></td>
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">年収600万円など<strong style="color:#333333 !important;">高給与の優良求人が豊富</strong></td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><a href="https://kango-oshigoto.jp/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:5px !important; padding:9px 12px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">公式サイト &rsaquo;</a></td>
-    </tr>
-    <!-- 2位 ナースではたらこ -->
-    <tr style="background-color:#ffffff !important;">
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; vertical-align:middle !important;">
-        <div style="display:inline-block !important; background-color:#aaaaaa !important; color:#ffffff !important; font-size:9px !important; font-weight:bold !important; padding:1px 6px !important; border-radius:2px !important; margin-bottom:4px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129352; 2位</div>
-        <div style="font-size:14px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 3px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナースではたらこ</div>
-        <div style="font-size:11px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミを見る</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;">
-        <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.5</div>
-        <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div style="font-size:10px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128172; 口コミ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; border:1px solid #d0d0d0 !important; padding:8px 6px !important; font-size:11px !important; font-weight:bold !important; color:#666666 !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</span></td>
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">年収・残業など<strong style="color:#333333 !important;">聞きづらい条件交渉もお任せ</strong></td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:5px !important; padding:9px 12px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">公式サイト &rsaquo;</a></td>
-    </tr>
-    <!-- 3位 ナース専科 -->
-    <tr style="background-color:#fdf8fa !important;">
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; vertical-align:middle !important;">
-        <div style="display:inline-block !important; background-color:#b8860b !important; color:#ffffff !important; font-size:9px !important; font-weight:bold !important; padding:1px 6px !important; border-radius:2px !important; margin-bottom:4px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129353; 3位</div>
-        <div style="font-size:13px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナース専科&nbsp;<span style="background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; padding:1px 5px !important; border-radius:2px !important;">転職</span></div>
-        <div style="font-size:11px !important; color:#26c6da !important; margin:0 0 2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミを見る</div>
-        <div style="font-size:10px !important; color:#999999 !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">※常勤のみ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;">
-        <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.4</div>
-        <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <div style="font-size:10px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128172; 口コミ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; border:1px solid #d0d0d0 !important; padding:8px 6px !important; font-size:11px !important; font-weight:bold !important; color:#666666 !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</span></td>
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">求人数約20万件、<strong style="color:#333333 !important;">登録者限定のレア求人多数</strong><br><span style="color:#999999 !important; font-size:11px !important;">（常勤のみ）</span></td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><a href="https://www.nursejinzaibank.com/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:5px !important; padding:9px 12px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">公式サイト &rsaquo;</a></td>
-    </tr>
-    <!-- 4位 看護roo! -->
-    <tr style="background-color:#ffffff !important;">
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; vertical-align:middle !important;">
-        <div style="font-size:14px !important; font-weight:bold !important; color:#2ab552 !important; margin:0 0 1px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">看護roo!</div>
-        <div style="font-size:10px !important; color:#888888 !important; margin:0 0 2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">-カンゴルー 転職-</div>
-        <div style="font-size:11px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミを見る</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;">
-        <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.2</div>
-        <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <div style="font-size:10px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128172; 口コミ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; border:1px solid #d0d0d0 !important; padding:8px 6px !important; font-size:11px !important; font-weight:bold !important; color:#666666 !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</span></td>
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">利用満足度90%、累計160万人が使用するサイト</td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; background-color:#cccccc !important; border-radius:5px !important; padding:9px 12px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">公式サイト &rsaquo;</span></td>
-    </tr>
-    <!-- 5位 看護師ワーカー -->
-    <tr style="background-color:#fdf8fa !important;">
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; vertical-align:middle !important;">
-        <div style="font-size:13px !important; font-weight:bold !important; color:#333333 !important; margin:0 0 3px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128308; 看護師ワーカー</div>
-        <div style="font-size:11px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミを見る</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;">
-        <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">3.5</div>
-        <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
-        <div style="font-size:10px !important; color:#26c6da !important; margin:0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128172; 口コミ</div>
-      </td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; border:1px solid #d0d0d0 !important; padding:8px 6px !important; font-size:11px !important; font-weight:bold !important; color:#666666 !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</span></td>
-      <td style="padding:13px 10px !important; border:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">年間1万人以上の転職実績あり</td>
-      <td style="padding:13px 6px !important; border:1px solid #f0e0e8 !important; text-align:center !important; vertical-align:middle !important;"><span style="display:inline-block !important; background-color:#cccccc !important; border-radius:5px !important; padding:9px 12px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">公式サイト &rsaquo;</span></td>
-    </tr>
-    <tr>
-      <td colspan="5" style="padding:5px 10px !important; background-color:#f9f0f4 !important; border:1px solid #e8d0d8 !important; font-size:10px !important; color:#aaaaaa !important; text-align:right !important; font-family:'MS PGothic',Arial,sans-serif !important;">※2025年3月時点</td>
-    </tr>
-  </table>
-</div>
-
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
-
-<!-- PickUp! おすすめ求人 -->
-<div style="padding:28px 20px 24px !important; background-color:#fff8fb !important;">
-  <div style="text-align:center !important; margin-bottom:20px !important;">
-    <span style="font-size:22px !important; vertical-align:middle !important; margin-right:4px !important;">&#128269;</span>
-    <span style="font-size:16px !important; font-weight:bold !important; color:#e84d8a !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">PickUp!&nbsp;</span>
-    <span style="font-size:20px !important; font-weight:900 !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">おすすめの看護師求人</span>
-    <span style="display:inline-block !important; background-color:#f0f0f0 !important; color:#999999 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; vertical-align:middle !important; margin-left:6px !important; font-family:Arial,sans-serif !important; border:1px solid #dddddd !important;">広告</span>
-  </div>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important; border-spacing:10px 0 !important;">
-    <tr valign="top">
-      <!-- card 1: レバウェル -->
-      <td width="32%" style="background-color:#ffffff !important; border:2px solid #e84d8a !important; border-radius:10px !important; padding:16px !important; vertical-align:top !important;">
-        <div style="text-align:center !important; margin-bottom:8px !important;"><span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 16px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#9733; 編集部イチオシ</span></div>
-        <div style="margin-bottom:12px !important;">
-          <span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">正看護師</span>
-          <span style="display:inline-block !important; background-color:#26c6da !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">常勤</span>
-          <span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">夜勤あり</span>
-        </div>
-        <table width="100%" cellpadding="3" cellspacing="0" border="0" style="margin-bottom:12px !important; border-collapse:collapse !important;">
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#9679; 年 収</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">680万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&nbsp;&nbsp;月 給</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">45万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128205; 勤務地</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">埼玉県</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#127963; 施　設</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">一般病院</td></tr>
-        </table>
-        <div style="margin-bottom:14px !important;">
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">一般病院</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">昇給あり</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">産休育休あり</span>
-        </div>
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-          <tr valign="middle">
-            <td style="font-size:11px !important; font-weight:bold !important; color:#1a7cbf !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#11044; レバウェル看護</td>
-            <td align="right"><a href="https://kango-oshigoto.jp/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:20px !important; padding:8px 14px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important; white-space:nowrap !important;">詳細をみる</a></td>
-          </tr>
-        </table>
-      </td>
-      <!-- card 2: ナースではたらこ -->
-      <td width="36%" style="background-color:#ffffff !important; border:1px solid #f0d8e4 !important; border-radius:10px !important; padding:16px !important; vertical-align:top !important;">
-        <div style="margin-bottom:12px !important;">
-          <span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">正看護師</span>
-          <span style="display:inline-block !important; background-color:#26c6da !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">常勤</span>
-          <span style="display:inline-block !important; background-color:#f5a623 !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">日勤のみ</span>
-        </div>
-        <table width="100%" cellpadding="3" cellspacing="0" border="0" style="margin-bottom:12px !important; border-collapse:collapse !important;">
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#9679; 年 収</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">520万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&nbsp;&nbsp;月 給</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">36万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128205; 勤務地</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">東京都</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#127963; 施　設</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">クリニック</td></tr>
-        </table>
-        <div style="margin-bottom:14px !important;">
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">クリニック</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">昇給あり</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">産休育休あり</span>
-        </div>
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-          <tr valign="middle">
-            <td style="font-size:11px !important; font-weight:bold !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128084; ナースではたらこ</td>
-            <td align="right"><a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:20px !important; padding:8px 14px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important; white-space:nowrap !important;">詳細をみる</a></td>
-          </tr>
-        </table>
-      </td>
-      <!-- card 3: ナース専科 -->
-      <td width="32%" style="background-color:#ffffff !important; border:1px solid #f0d8e4 !important; border-radius:10px !important; padding:16px !important; vertical-align:top !important;">
-        <div style="margin-bottom:12px !important;">
-          <span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">正看護師</span>
-          <span style="display:inline-block !important; background-color:#26c6da !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-right:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">常勤</span>
-          <span style="display:inline-block !important; background-color:#e84d8a !important; color:#ffffff !important; font-size:10px !important; font-weight:bold !important; padding:3px 8px !important; border-radius:3px !important; margin-bottom:3px !important; font-family:'MS PGothic',Arial,sans-serif !important;">夜勤あり</span>
-        </div>
-        <table width="100%" cellpadding="3" cellspacing="0" border="0" style="margin-bottom:12px !important; border-collapse:collapse !important;">
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#9679; 年 収</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">490万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&nbsp;&nbsp;月 給</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:14px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">30万円〜</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128205; 勤務地</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">大阪府</td></tr>
-          <tr><td style="font-size:11px !important; color:#888888 !important; white-space:nowrap !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#127963; 施　設</td><td style="font-size:11px !important; color:#555555 !important; font-family:'MS PGothic',Arial,sans-serif !important;">：</td><td style="font-size:12px !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">クリニック</td></tr>
-        </table>
-        <div style="margin-bottom:14px !important;">
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">クリニック</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 2px 2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">昇給あり</span>
-          <span style="display:inline-block !important; background-color:#f5f5f5 !important; color:#555555 !important; font-size:10px !important; padding:2px 7px !important; border-radius:3px !important; margin:2px 0 !important; border:1px solid #e0e0e0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">車通勤可</span>
-        </div>
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-          <tr valign="middle">
-            <td style="font-size:11px !important; font-weight:bold !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128084; ナース専科</td>
-            <td align="right"><a href="https://www.nursejinzaibank.com/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:20px !important; padding:8px 14px !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important; white-space:nowrap !important;">詳細をみる</a></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-  <div style="margin-top:12px !important; text-align:center !important;">
-    <div style="font-size:10px !important; color:#aaaaaa !important; font-family:'MS PGothic',Arial,sans-serif !important;">※実際の求人情報を参考に提載しております。現在取り扱いの無い求人情報がある可能性がございます。</div>
-    <div style="font-size:10px !important; color:#aaaaaa !important; font-family:'MS PGothic',Arial,sans-serif !important;">※最新の情報は各求人サイトにてご確認ください。</div>
-  </div>
-</div>
-
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
-
-<!-- カギ SECTION -->
-<div style="padding:28px 20px 20px !important; background-color:#ffffff !important;">
-  <div style="font-size:20px !important; font-weight:900 !important; color:#333333 !important; margin:0 0 18px 0 !important; text-align:center !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-    転職を成功させる&nbsp;<span style="background-color:#e84d8a !important; color:#ffffff !important; font-size:14px !important; font-weight:bold !important; padding:3px 12px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128273; カギ</span>
-  </div>
-  <div style="background-color:#fff5f8 !important; border-left:4px solid #e84d8a !important; padding:16px 18px !important;">
-    <div style="font-size:14px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 10px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#128274;&nbsp;好条件の求人は<span style="font-size:17px !important;">非公開</span>の中にあり！</div>
-    <div style="font-size:13px !important; color:#333333 !important; line-height:1.85 !important; margin:0 0 14px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-      魅力的な求人が公開されると応募者が殺到し、採用する企業も対応しきれなくなってしまいます。<br>
-      そのため、<span style="text-decoration:underline !important; color:#e84d8a !important; font-weight:bold !important;">このような求人は転職サイトに登録している人のみが見られる非公開求人として提供されることが多い</span>のです。
-    </div>
-    <div style="border:1px solid #f9a8c9 !important; border-radius:5px !important; background-color:#ffffff !important; padding:13px 16px !important;">
-      <span style="font-size:26px !important; margin-right:10px !important;">&#127926;</span><span style="font-size:13px !important; font-weight:bold !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">まずは転職サイトに登録するところからスタートです！</span>
+  <div style="background:#fff; border:2px solid #ff6767; border-radius:10px; overflow:hidden; margin-bottom:14px;">
+    <div style="background:#ffefef; color:#eb6461; font-weight:700; font-size:16px; padding:10px 14px;">① 登録者限定の求人を紹介してもらう</div>
+    <div style="padding:14px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top">
+        <td width="70" style="padding-right:12px;"><div style="font-size:48px; text-align:center;">💼</div></td>
+        <td style="font-size:13px; line-height:1.7;"><b style="background:linear-gradient(transparent 55%,#fafc93 0);">転職サイトにしか載っていない求人</b>や、<b style="background:linear-gradient(transparent 55%,#fafc93 0);">登録者だけに公開される好条件の求人</b>が多数あります。迷っているなら登録するのがおすすめです！</td>
+      </tr></table>
     </div>
   </div>
+
+  <div style="background:#fff; border:2px solid #ff6767; border-radius:10px; overflow:hidden; margin-bottom:14px;">
+    <div style="background:#ffefef; color:#eb6461; font-weight:700; font-size:16px; padding:10px 14px;">② 2〜3サイトに登録して比較する</div>
+    <div style="padding:14px; font-size:13px; line-height:1.7;">取り扱い<b>求人は転職サイトごとに異なります</b>。理想の職場を見逃さないよう、<b style="background:linear-gradient(transparent 55%,#fafc93 0);">2〜3サイトの登録がおすすめ</b>。担当者との相性も比較できます。</div>
+  </div>
+
+  <div style="background:#fff; border:2px solid #ff6767; border-radius:10px; overflow:hidden;">
+    <div style="background:#ffefef; color:#eb6461; font-weight:700; font-size:16px; padding:10px 14px;">③ 専属アドバイザーを活用する</div>
+    <div style="padding:14px; font-size:13px; line-height:1.7;">多くのサイトで<b>専属アドバイザーが無料</b>でつき、<b>応募書類の添削・面接対策・条件交渉</b>まで代行。職場の内部情報を教えてくれるところもあるので積極的に活用しましょう。</div>
+  </div>
 </div>
 
-<!-- 複数登録 -->
-<div style="padding:0 20px 24px !important; background-color:#ffffff !important;">
-  <div style="background-color:#fce8f0 !important; border-radius:8px !important; padding:22px 24px !important;">
-    <div style="font-size:17px !important; font-weight:900 !important; color:#333333 !important; margin:0 0 6px 0 !important; text-align:center !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-      複数サイトに<span style="color:#e84d8a !important;">登録して比較</span>しよう
+<!-- ランキング -->
+<div style="background:#ff6767; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:22px; padding:16px;">転職サイト人気ランキング</div>
+
+<div style="background:#fff; padding:0 0 10px;">
+
+  <!-- 1位 -->
+  <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px;">
+    <div class="nnw-head" style="margin-bottom:6px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
+        <td width="52"><div style="font-size:40px; line-height:1;">🥇</div></td>
+        <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">レバウェル看護</div></td>
+        <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.6</div></div></td>
+      </tr></table>
     </div>
-    <div style="font-size:30px !important; text-align:center !important; margin:0 0 12px 0 !important;">&#128241;</div>
-    <div style="font-size:13px !important; color:#333333 !important; line-height:1.85 !important; margin:0 0 14px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-      求人を出す企業は<strong style="color:#333333 !important;">1つの転職サイトにしか掲載しない</strong>ことがしばしばあります。複数の転職サイトと連携して求人を出すのは大変なためです。<br>
-      なので、1つの転職サイトしか利用しないと、他のサイトにある<span style="text-decoration:underline !important; color:#e84d8a !important; font-weight:bold !important;">より良い条件の求人を見逃してしまう</span>かもしれません。
+    <div style="color:#e23131; font-weight:700; font-size:15px; margin-bottom:12px;">非公開求人の数が業界トップクラス！</div>
+
+    <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">レバウェル看護の特徴</span></div>
+      <div style="font-size:13px; line-height:1.8;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><b>非公開求人が業界トップクラス</b>。登録者だけが見られる特別な求人が多数</td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><span style="color:#ff6767; font-weight:700;">給与や勤務時間の交渉を代行</span>してくれる</td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>人間関係など<span style="color:#ff6767; font-weight:700;">病院の内部事情を事前に教えてくれる</span></td></tr></table>
+      </div>
     </div>
-    <div style="border:1px solid #f9a8c9 !important; border-radius:6px !important; background-color:#ffffff !important; padding:14px 18px !important;">
-      <div style="text-align:center !important; margin-bottom:8px !important;"><span style="background-color:#e84d8a !important; color:#ffffff !important; font-size:11px !important; font-weight:bold !important; padding:3px 16px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">登録はすべて無料</span></div>
-      <div style="font-size:13px !important; font-weight:bold !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">
-        <span style="color:#e84d8a !important;">2〜3サイト登録し、求人を比較する</span>ことが、転職成功のカギとなります！
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #ff6767; margin-bottom:12px;">
+      <tr>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">オススメ度</div><div style="color:#e75e52; font-weight:700; font-size:16px; margin-top:6px;">★4.6</div></td>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">求人数</div><div style="font-weight:700; font-size:15px; margin-top:6px;">◎ 23万件</div></td>
+        <td width="33.3%" style="text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">対応エリア</div><div style="font-weight:700; font-size:15px; margin-top:6px;">全国</div></td>
+      </tr>
+    </table>
+
+    <a href="https://kango-oshigoto.jp/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
+      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <span style="font-size:18px; font-weight:700;">レバウェル看護の詳細を見る</span><br><span style="font-size:11px;">（公式サイトへ）</span>
+      <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
+    </a>
+
+    <div style="background:#fff3e0; border-radius:12px; padding:14px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">レバウェル看護の口コミ</span></div>
+      <div style="margin-bottom:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">非公開求人が多い！</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">30代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">一般求人だけでは見つけられない好条件の非公開求人が多く、登録だけでもする価値があると思います。</div>
+      </div>
+      <div style="border-top:1px dotted #cbd5e1; padding-top:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">人間関係に悩まされなくなりました</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">40代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">施設の雰囲気や師長の人柄まで事前に教えてもらえ、人間関係の良い職場へ転職できました。</div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
+  <!-- 2位 -->
+  <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:25px;">
+    <div class="nnw-head">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
+        <td width="52"><div style="font-size:40px; line-height:1;">🥈</div></td>
+        <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナースではたらこ</div></td>
+        <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.5</div></div></td>
+      </tr></table>
+    </div>
+    <div style="color:#e23131; font-weight:700; font-size:15px; margin:6px 0 12px;">『バイトル』のディップ社が運営する安心サービス</div>
 
-<!-- ===== DETAIL CARD 1: レバウェル看護 ===== -->
-<div style="padding:26px 20px 20px !important; background-color:#ffffff !important;">
-  <div style="border:1px solid #e0e0e0 !important; border-radius:6px !important; overflow:hidden !important;">
-    <div style="background-color:#f5f5f5 !important; padding:11px 14px !important; border-bottom:1px solid #e0e0e0 !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="middle">
-          <td style="width:34px !important; height:34px !important; background-color:#e84d8a !important; text-align:center !important; vertical-align:middle !important; border-radius:4px !important; font-size:17px !important; font-weight:900 !important; color:#ffffff !important; font-family:Arial,sans-serif !important;">1</td>
-          <td style="padding-left:12px !important; font-size:17px !important; font-weight:900 !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">レバウェル看護</td>
-          <td align="right"><span style="display:inline-block !important; background-color:#fff0f5 !important; border:1px solid #e84d8a !important; color:#e84d8a !important; font-size:10px !important; font-weight:bold !important; padding:2px 10px !important; border-radius:12px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129351; 総合1位</span></td>
-        </tr>
-      </table>
+    <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナースではたらこの特徴</span></div>
+      <div style="font-size:13px; line-height:1.8;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>給与・残業など<span style="color:#ff6767; font-weight:700;">聞きづらい条件交渉を代行</span>してくれる</td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><span style="color:#ff6767; font-weight:700;">逆指名が可能</span>だから希望の病院を指定できる</td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>東証プライム上場企業の運営で<span style="color:#ff6767; font-weight:700;">安心して利用できる</span></td></tr></table>
+      </div>
     </div>
-    <div style="padding:18px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="210" style="padding-right:18px !important; vertical-align:top !important;">
-            <div style="background-color:#fce8f0 !important; border-radius:6px !important; padding:18px !important; text-align:center !important; margin-bottom:10px !important;">
-              <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 3px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">看護師転職なら</div>
-              <div style="font-size:15px !important; font-weight:900 !important; color:#e84d8a !important; margin:0 0 6px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">レバウェル看護</div>
-              <div style="display:inline-block !important; border:1px solid #e84d8a !important; border-radius:10px !important; padding:2px 8px !important; font-size:9px !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important; margin-bottom:4px !important;">看護師求人数</div>
-              <div style="font-size:20px !important; font-weight:900 !important; color:#e84d8a !important; font-family:Arial,sans-serif !important;">15万件+</div>
-            </div>
-            <a href="https://kango-oshigoto.jp/" target="_blank" style="display:block !important; background-color:#2ab552 !important; border-radius:14px !important; padding:8px 0 !important; text-align:center !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">無料登録する &rsaquo;</a>
-          </td>
-          <td style="vertical-align:top !important;">
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>各エリアに特化したキャリアアドバイザーが、<span style="color:#e84d8a !important; font-weight:bold !important;">地域ならではの求人</span>を紹介</div>
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>求人票に載っていない情報まで詳細に教えてもらえる</div>
-            <div style="padding:7px 0 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>過去の面接をもとにした模擬面接で対策もバッチリ</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 16px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#e0e0e0" style="border-collapse:collapse !important;">
-        <tr style="background-color:#f9a8c9 !important;">
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミ評価</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応エリア</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">求人数</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">勤務形態</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応職種</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応施設</td>
-        </tr>
-        <tr valign="top">
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; vertical-align:middle !important;">
-            <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.6</div>
-            <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </td>
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:12px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</td>
-          <td style="padding:10px 6px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">150,000件<br>以上</td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">常</span>&nbsp;常勤(夜勤あり)</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">常</span>&nbsp;常勤(日勤のみ)</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f0f8 !important; color:#26c6da !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">非</span>&nbsp;非常勤</div>
-          </td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">正</span>&nbsp;正看護師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f0f8 !important; color:#26c6da !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">准</span>&nbsp;准看護師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f5e4 !important; color:#2ab552 !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">保</span>&nbsp;保健師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#fff5d8 !important; color:#d4a017 !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">助</span>&nbsp;助産師</div>
-          </td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; line-height:1.7 !important; vertical-align:top !important; font-family:'MS PGothic',Arial,sans-serif !important;">病院<br>クリニック<br>介護施設<br>一般企業</td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important;">
-      <div style="text-align:center !important; margin:0 0 12px 0 !important;"><span style="background-color:#f9a8c9 !important; color:#ffffff !important; font-size:13px !important; font-weight:bold !important; padding:5px 22px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">利用者の声</span></div>
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">30代 / 女性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">引っ越し先までお世話になりました</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">希望条件の病院に決まっただけでなく、引越し先の不動産屋まで紹介してくれて、家賃が大幅に下がりました。転職後の生活まで寄り添ってくれる対応に感動しました。</div>
-          </td>
-          <td width="2%"></td>
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">20代 / 女性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">転職の不安が楽しみに変わりました</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">職場の雰囲気や周辺環境まで詳しく教えてもらい、転職後の具体的なイメージが湧きました。不安より楽しみの方が大きい転職でした。</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important; text-align:center !important;">
-      <a href="https://kango-oshigoto.jp/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:7px !important; padding:14px 60px !important; text-align:center !important; text-decoration:none !important;">
-        <div style="font-size:15px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">レバウェル看護</div>
-        <div style="font-size:13px !important; font-weight:bold !important; color:#ffffff !important; margin-top:2px !important; font-family:'MS PGothic',Arial,sans-serif !important;">公式サイトへ &rsaquo;</div>
-      </a>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #ff6767; margin-bottom:12px;">
+      <tr>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">オススメ度</div><div style="color:#e75e52; font-weight:700; font-size:16px; margin-top:6px;">★4.5</div></td>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">求人数</div><div style="font-weight:700; font-size:15px; margin-top:6px;">◎ 17万件</div></td>
+        <td width="33.3%" style="text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">対応エリア</div><div style="font-weight:700; font-size:15px; margin-top:6px;">全国</div></td>
+      </tr>
+    </table>
+
+    <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
+      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <span style="font-size:18px; font-weight:700;">ナースではたらこの詳細を見る</span><br><span style="font-size:11px;">（公式サイトへ）</span>
+      <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
+    </a>
+
+    <div style="background:#fff3e0; border-radius:12px; padding:14px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナースではたらこの口コミ</span></div>
+      <div style="margin-bottom:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">聞きにくいことを全部確認してくれた</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">20代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">残業や有休の取りやすさなど自分では聞けないことを全部確認してくれ、入職後のギャップがありませんでした。</div>
+      </div>
+      <div style="border-top:1px dotted #cbd5e1; padding-top:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">コンサルタントがよかった</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★☆ <span style="color:#888;">40代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">こちらの希望や不安な気持ちに寄り添って丁寧にサポートしてくれて、安心してお願いできました。</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
+  <!-- 3位 -->
+  <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:25px;">
+    <div class="nnw-head">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
+        <td width="52"><div style="font-size:40px; line-height:1;">🥉</div></td>
+        <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナース専科 転職</div></td>
+        <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.4</div></div></td>
+      </tr></table>
+    </div>
+    <div style="color:#e23131; font-weight:700; font-size:15px; margin:6px 0 12px;">求人数は業界最大級！レア求人も豊富</div>
 
-<!-- ===== DETAIL CARD 2: ナースではたらこ ===== -->
-<div style="padding:26px 20px 20px !important; background-color:#ffffff !important;">
-  <div style="border:1px solid #e0e0e0 !important; border-radius:6px !important; overflow:hidden !important;">
-    <div style="background-color:#f5f5f5 !important; padding:11px 14px !important; border-bottom:1px solid #e0e0e0 !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="middle">
-          <td style="width:34px !important; height:34px !important; background-color:#aaaaaa !important; text-align:center !important; vertical-align:middle !important; border-radius:4px !important; font-size:17px !important; font-weight:900 !important; color:#ffffff !important; font-family:Arial,sans-serif !important;">2</td>
-          <td style="padding-left:12px !important; font-size:17px !important; font-weight:900 !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナースではたらこ</td>
-          <td align="right"><span style="display:inline-block !important; background-color:#f5f5f5 !important; border:1px solid #aaaaaa !important; color:#888888 !important; font-size:10px !important; font-weight:bold !important; padding:2px 10px !important; border-radius:12px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129352; 総合2位</span></td>
-        </tr>
-      </table>
+    <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナース専科 転職の特徴</span></div>
+      <div style="font-size:13px; line-height:1.8;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><b>約24万件の圧倒的な求人数</b>。会員限定のレア求人も多数</td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>看護師専門メディア運営だからこその<span style="color:#ff6767; font-weight:700;">深い業界知識</span></td></tr></table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><span style="color:#ff6767; font-weight:700;">LINEでも手軽にやり取り</span>できる丁寧でスピーディーな対応</td></tr></table>
+      </div>
     </div>
-    <div style="padding:18px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="210" style="padding-right:18px !important; vertical-align:top !important;">
-            <div style="background-color:#fff5f8 !important; border-radius:6px !important; padding:18px !important; text-align:center !important; margin-bottom:10px !important; border:1px solid #f9d0e0 !important;">
-              <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 3px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">看護師転職専門</div>
-              <div style="font-size:15px !important; font-weight:900 !important; color:#e84d8a !important; margin:0 0 6px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナースではたらこ</div>
-              <div style="display:inline-block !important; border:1px solid #e84d8a !important; border-radius:10px !important; padding:2px 8px !important; font-size:9px !important; color:#e84d8a !important; font-family:'MS PGothic',Arial,sans-serif !important; margin-bottom:4px !important;">全国の看護師求人</div>
-              <div style="font-size:20px !important; font-weight:900 !important; color:#e84d8a !important; font-family:Arial,sans-serif !important;">17万件+</div>
-            </div>
-            <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" style="display:block !important; background-color:#2ab552 !important; border-radius:14px !important; padding:8px 0 !important; text-align:center !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">無料登録する &rsaquo;</a>
-          </td>
-          <td style="vertical-align:top !important;">
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>年収・残業・有休など<span style="color:#e84d8a !important; font-weight:bold !important;">聞きにくい条件交渉</span>もすべてお任せ</div>
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>全国に170か所以上の拠点を持つ大手で安心のサポート</div>
-            <div style="padding:7px 0 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>看護師・准看護師・保健師・助産師まで幅広く対応</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 16px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#e0e0e0" style="border-collapse:collapse !important;">
-        <tr style="background-color:#f9a8c9 !important;">
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミ評価</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応エリア</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">求人数</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">勤務形態</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応職種</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応施設</td>
-        </tr>
-        <tr valign="top">
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; vertical-align:middle !important;">
-            <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.5</div>
-            <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </td>
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:12px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</td>
-          <td style="padding:10px 6px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">170,000件<br>以上</td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">常</span>&nbsp;常勤(夜勤あり)</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">常</span>&nbsp;常勤(日勤のみ)</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f0f8 !important; color:#26c6da !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">非</span>&nbsp;非常勤</div>
-          </td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">正</span>&nbsp;正看護師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f0f8 !important; color:#26c6da !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">准</span>&nbsp;准看護師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f5e4 !important; color:#2ab552 !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">保</span>&nbsp;保健師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#fff5d8 !important; color:#d4a017 !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">助</span>&nbsp;助産師</div>
-          </td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; line-height:1.7 !important; vertical-align:top !important; font-family:'MS PGothic',Arial,sans-serif !important;">病院<br>クリニック<br>介護施設<br>訪問看護</td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important;">
-      <div style="text-align:center !important; margin:0 0 12px 0 !important;"><span style="background-color:#f9a8c9 !important; color:#ffffff !important; font-size:13px !important; font-weight:bold !important; padding:5px 22px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">利用者の声</span></div>
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">30代 / 女性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">条件交渉を全部やってくれました</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">残業の有無や有休の取りやすさなど自分では聞けなかったことを全て確認してくれました。おかげで入職後のギャップが全くありませんでした。</div>
-          </td>
-          <td width="2%"></td>
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9734;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">40代 / 女性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">地方でも豊富な求人が見つかった</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">地方在住なのに求人数が多く驚きました。担当者が地元の病院の内情まで教えてくれて、安心して転職先を決めることができました。</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important; text-align:center !important;">
-      <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:7px !important; padding:14px 60px !important; text-align:center !important; text-decoration:none !important;">
-        <div style="font-size:15px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナースではたらこ</div>
-        <div style="font-size:13px !important; font-weight:bold !important; color:#ffffff !important; margin-top:2px !important; font-family:'MS PGothic',Arial,sans-serif !important;">公式サイトへ &rsaquo;</div>
-      </a>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #ff6767; margin-bottom:12px;">
+      <tr>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">オススメ度</div><div style="color:#e75e52; font-weight:700; font-size:16px; margin-top:6px;">★4.4</div></td>
+        <td width="33.3%" style="border-right:1px dotted #d2d2d2; text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">求人数</div><div style="font-weight:700; font-size:15px; margin-top:6px;">◎ 24万件</div></td>
+        <td width="33.3%" style="text-align:center; padding:10px 4px;"><div style="background:#ffd1d0; font-size:12px; padding:4px; border-radius:3px;">対応エリア</div><div style="font-weight:700; font-size:15px; margin-top:6px;">全国</div></td>
+      </tr>
+    </table>
+
+    <a href="https://www.nursejinzaibank.com/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
+      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <span style="font-size:18px; font-weight:700;">ナース専科 転職の詳細を見る</span><br><span style="font-size:11px;">（公式サイトへ）</span>
+      <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
+    </a>
+
+    <div style="background:#fff3e0; border-radius:12px; padding:14px;">
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナース専科 転職の口コミ</span></div>
+      <div style="margin-bottom:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">とても親切で早い対応</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">30代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">とても親切で早い対応をしてくださり、子育てと仕事を両立できる環境を紹介してもらえて感謝しています。</div>
+      </div>
+      <div style="border-top:1px dotted #cbd5e1; padding-top:12px;">
+        <div style="font-weight:700; color:#e23131; font-size:13px;">思い切って利用してよかった</div>
+        <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">20代/女性</span></div>
+        <div style="font-size:12px; line-height:1.7; margin-top:3px;">家庭状況や些細なこともきちんと聞いてくれ、相手方にも状況を伝えてくれて本当に安心できました。</div>
+      </div>
     </div>
   </div>
+
 </div>
 
-<!-- PINK DIVIDER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
-
-<!-- ===== DETAIL CARD 3: ナース専科 ===== -->
-<div style="padding:26px 20px 20px !important; background-color:#ffffff !important;">
-  <div style="border:1px solid #e0e0e0 !important; border-radius:6px !important; overflow:hidden !important;">
-    <div style="background-color:#f5f5f5 !important; padding:11px 14px !important; border-bottom:1px solid #e0e0e0 !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="middle">
-          <td style="width:34px !important; height:34px !important; background-color:#b8860b !important; text-align:center !important; vertical-align:middle !important; border-radius:4px !important; font-size:17px !important; font-weight:900 !important; color:#ffffff !important; font-family:Arial,sans-serif !important;">3</td>
-          <td style="padding-left:12px !important; font-size:17px !important; font-weight:900 !important; color:#333333 !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナース専科 転職</td>
-          <td align="right"><span style="display:inline-block !important; background-color:#fffbf0 !important; border:1px solid #b8860b !important; color:#b8860b !important; font-size:10px !important; font-weight:bold !important; padding:2px 10px !important; border-radius:12px !important; font-family:'MS PGothic',Arial,sans-serif !important;">&#129353; 総合3位</span></td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:18px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="210" style="padding-right:18px !important; vertical-align:top !important;">
-            <img src="nurse-senka.jpg" width="192" alt="ナース専科 転職 - 4年連続看護師転職No.1" style="display:block !important; width:192px !important; max-width:192px !important; border-radius:6px !important; margin-bottom:10px !important;">
-            <a href="https://www.nursejinzaibank.com/" target="_blank" style="display:block !important; background-color:#2ab552 !important; border-radius:14px !important; padding:8px 0 !important; text-align:center !important; font-size:12px !important; font-weight:bold !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important; text-decoration:none !important;">無料登録する &rsaquo;</a>
-          </td>
-          <td style="vertical-align:top !important;">
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>業界最大規模の<span style="color:#e84d8a !important; font-weight:bold !important;">求人数約20万件</span>、非公開求人も多数</div>
-            <div style="padding:7px 0 !important; border-bottom:1px solid #f0e0e8 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>4年連続看護師転職No.1の実績と信頼</div>
-            <div style="padding:7px 0 !important; font-size:12px !important; color:#333333 !important; line-height:1.65 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="color:#2ab552 !important; font-weight:bold !important;">&#10003;&nbsp;</span>常勤希望の看護師に特に強い専門特化型サービス</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 16px !important;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#e0e0e0" style="border-collapse:collapse !important;">
-        <tr style="background-color:#f9a8c9 !important;">
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">口コミ評価</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応エリア</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">求人数</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">勤務形態</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応職種</td>
-          <td style="padding:8px 6px !important; text-align:center !important; font-size:10px !important; font-weight:bold !important; color:#ffffff !important; border:1px solid #f0b0c8 !important; font-family:'MS PGothic',Arial,sans-serif !important;">対応施設</td>
-        </tr>
-        <tr valign="top">
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; vertical-align:middle !important;">
-            <div style="font-size:22px !important; font-weight:900 !important; color:#333333 !important; margin:0 !important; line-height:1.1 !important; font-family:Arial,sans-serif !important;">4.4</div>
-            <div style="font-size:12px !important; color:#f5a623 !important; margin:0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          </td>
-          <td style="padding:10px 8px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:12px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">全国</td>
-          <td style="padding:10px 6px !important; text-align:center !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; vertical-align:middle !important; font-family:'MS PGothic',Arial,sans-serif !important;">200,000件<br>以上</td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; vertical-align:middle !important; text-align:center !important; font-family:'MS PGothic',Arial,sans-serif !important;">常勤のみ</td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#f0e0e8 !important; color:#e84d8a !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">正</span>&nbsp;正看護師</div>
-            <div style="font-size:11px !important; color:#333333 !important; margin:2px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;"><span style="background-color:#d8f0f8 !important; color:#26c6da !important; font-size:9px !important; font-weight:bold !important; padding:1px 4px !important;">准</span>&nbsp;准看護師</div>
-          </td>
-          <td style="padding:10px 6px !important; border:1px solid #e8e8e8 !important; font-size:11px !important; color:#333333 !important; line-height:1.7 !important; vertical-align:top !important; font-family:'MS PGothic',Arial,sans-serif !important;">病院<br>クリニック<br>介護施設</td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important;">
-      <div style="text-align:center !important; margin:0 0 12px 0 !important;"><span style="background-color:#f9a8c9 !important; color:#ffffff !important; font-size:13px !important; font-weight:bold !important; padding:5px 22px !important; border-radius:14px !important; font-family:'MS PGothic',Arial,sans-serif !important;">利用者の声</span></div>
-      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse !important;">
-        <tr valign="top">
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">30代 / 女性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">希望条件をすべて叶えてくれた</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">「土日休み・日勤のみ・年収400万以上」という希望を全て満たした求人を複数紹介してもらえました。担当者の対応も丁寧でした。</div>
-          </td>
-          <td width="2%"></td>
-          <td width="49%" style="background-color:#fff5f8 !important; border:1px solid #f9d0e0 !important; border-radius:6px !important; padding:14px !important; vertical-align:top !important;">
-            <div style="font-size:11px !important; color:#f5a623 !important; margin:0 0 3px 0 !important; font-family:Arial,sans-serif !important;">&#9733;&#9733;&#9733;&#9733;&#9734;&nbsp;<span style="color:#888888 !important; font-family:'MS PGothic',Arial,sans-serif !important;">20代 / 男性</span></div>
-            <div style="font-size:12px !important; font-weight:bold !important; color:#e84d8a !important; margin:0 0 5px 0 !important; font-family:'MS PGothic',Arial,sans-serif !important;">男性看護師にも親身に対応</div>
-            <div style="font-size:11px !important; color:#333333 !important; line-height:1.7 !important; font-family:'MS PGothic',Arial,sans-serif !important;">男性でも丁寧に対応してもらえ、男性が働きやすい職場を重点的に紹介してもらえました。転職後も順調です。</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="padding:0 18px 18px !important; text-align:center !important;">
-      <a href="https://www.nursejinzaibank.com/" target="_blank" style="display:inline-block !important; background-color:#2ab552 !important; border-radius:7px !important; padding:14px 60px !important; text-align:center !important; text-decoration:none !important;">
-        <div style="font-size:15px !important; font-weight:900 !important; color:#ffffff !important; font-family:'MS PGothic',Arial,sans-serif !important;">ナース専科 転職</div>
-        <div style="font-size:13px !important; font-weight:bold !important; color:#ffffff !important; margin-top:2px !important; font-family:'MS PGothic',Arial,sans-serif !important;">公式サイトへ &rsaquo;</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<div style="height:6px !important; background-color:#f9a8c9 !important; font-size:1px !important; line-height:1px !important;">&nbsp;</div>
-<div style="background-color:#f8f0f4 !important; padding:20px !important; text-align:center !important;">
-  <div style="font-size:13px !important; color:#cccccc !important; margin:0 0 10px 0 !important; font-family:Arial,sans-serif !important;">///////&nbsp;<span style="color:#e84d8a !important; font-weight:bold !important; font-family:'MS PGothic',Arial,sans-serif !important;">看護師</span><span style="color:#555555 !important; font-weight:bold !important; font-family:'MS PGothic',Arial,sans-serif !important;">転職サイト比較ナビ</span>&nbsp;///////</div>
-  <div style="margin-bottom:8px !important;">
-    <span style="padding:0 10px !important; font-size:11px !important; color:#aaaaaa !important; border-right:1px solid #dddddd !important; font-family:'MS PGothic',Arial,sans-serif !important;">プライバシーポリシー</span>
-    <span style="padding:0 10px !important; font-size:11px !important; color:#aaaaaa !important; border-right:1px solid #dddddd !important; font-family:'MS PGothic',Arial,sans-serif !important;">利用規約</span>
-    <span style="padding:0 10px !important; font-size:11px !important; color:#aaaaaa !important; border-right:1px solid #dddddd !important; font-family:'MS PGothic',Arial,sans-serif !important;">運営会社</span>
-    <span style="padding:0 10px !important; font-size:11px !important; color:#aaaaaa !important; font-family:'MS PGothic',Arial,sans-serif !important;">お問い合わせ</span>
-  </div>
-  <div style="font-size:10px !important; color:#cccccc !important; font-family:Arial,sans-serif !important;">&#169; 2024 看護師転職サイト比較ナビ All Rights Reserved.</div>
+<div style="background:#ff6767; color:#fff; text-align:center; padding:18px; font-size:12px;">
+  <div style="margin-bottom:6px;">看護師転職サイト比較ナビ</div>
+  <div style="font-size:10px; opacity:.85; line-height:1.7;">当サイトはプロモーションを含んでいます。<br>掲載情報は2026年3月時点のものです。最新情報は各公式サイトをご確認ください。</div>
 </div>
 
 </div>
