@@ -1,0 +1,605 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
+
+#ncw{max-width:800px; margin:0 auto; background:#fff0f1; color:#333; font-family:'Noto Sans JP',sans-serif; font-size:14px; line-height:1.7;}
+#ncw *{box-sizing:border-box; margin:0; padding:0; border:0;}
+#ncw img{max-width:100%; height:auto; display:block;}
+#ncw a{text-decoration:none; color:inherit;}
+#ncw ul{list-style:none;}
+#ncw .ncw-cta{transition:all .2s;}
+#ncw .ncw-cta:hover{filter:brightness(1.04);}
+
+/* FV */
+#ncw .fv{position:relative; background:#ff6767; text-align:center; padding-bottom:14px;}
+#ncw .fv .pr{font-size:10px; color:#fff; text-align:center; padding:5px; opacity:.92;}
+#ncw .fv-img{position:relative;}
+#ncw .fv .year{display:inline-block; margin:12px auto 0; background:#fff; color:#ff6767; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:15px; padding:4px 22px; border-radius:30px;}
+#ncw .looplogo{overflow:hidden; white-space:nowrap; margin-top:12px; opacity:.9;}
+#ncw .looplogo img{display:inline-block; width:auto; height:26px; vertical-align:middle; animation:ncwLoop 18s linear infinite;}
+@keyframes ncwLoop{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+/* section common */
+#ncw .sec{padding:24px 14px;}
+#ncw .sec-ttl{text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:21px; color:#e23131; margin-bottom:4px;}
+#ncw .sec-sub{text-align:center; font-size:13px; color:#ff6767; font-weight:700; margin-bottom:16px;}
+#ncw .notice{font-size:10px; color:#888; margin-top:8px; line-height:1.6;}
+
+/* 比較表 */
+#ncw .cmpHead{background:#ff9a9a; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; letter-spacing:.15em; padding:12px 0; border-radius:16px 16px 0 0;}
+#ncw .cmpBody{background:#fff; border-top:8px solid #ff6767; padding:14px 12px 18px;}
+#ncw .cmp input{display:none;}
+#ncw .cmp-tabs{display:flex; gap:4px; margin-bottom:-1px;}
+#ncw .cmp-tabs label{flex:1; text-align:center; padding:11px 4px; font-weight:700; font-size:14px; color:#fff; background:linear-gradient(0deg,#ff8483 20%,#ffb7b6 94%); border-radius:10px 10px 0 0; cursor:pointer;}
+#ncw #ncw-ct1:checked~.cmp-tabs label[for=ncw-ct1],
+#ncw #ncw-ct2:checked~.cmp-tabs label[for=ncw-ct2]{background:#fff; color:#ff6767; border-top:3px solid #ff6767;}
+#ncw .cmp-pane{display:none;}
+#ncw #ncw-ct1:checked~.cmp-pane.pane1{display:block;}
+#ncw #ncw-ct2:checked~.cmp-pane.pane2{display:block;}
+#ncw .cmpTbl{width:100%; border-collapse:collapse; background:#fff; border:1px solid #e0c9c9;}
+#ncw .cmpTbl th{background:#fff5f5; border:1px solid #e7d2d2; font-weight:500; font-size:11px; padding:8px 4px; color:#a85; text-align:center;}
+#ncw .cmpTbl td{border:1px solid #e7d2d2; padding:10px 5px; text-align:center; vertical-align:middle; font-size:12px;}
+#ncw .cmpTbl .siteCell{position:relative;}
+#ncw .cmpTbl .siteCell .logo{font-weight:700; color:#1a7cbf; font-size:13px;}
+#ncw .cmpTbl .baloon{display:inline-block; margin-top:5px; font-size:10px; color:#fff; background:#ff6767; border-radius:10px; padding:2px 8px;}
+#ncw .cmpTbl .no1{position:absolute; top:-8px; left:-6px; background:#e23131; color:#fff; font-size:10px; font-weight:700; border-radius:50%; width:26px; height:26px; line-height:26px;}
+#ncw .score{color:#e75e52; font-weight:700; font-size:18px;}
+#ncw .amount span{color:#e23131; font-weight:700; font-size:15px;}
+#ncw .lic{display:flex; flex-wrap:wrap; gap:3px; justify-content:center;}
+#ncw .lic li{font-size:10px; border:1px solid #ff9a9a; color:#ff6767; border-radius:4px; padding:1px 5px;}
+#ncw .lic li.off{color:#c9c9c9; border-color:#e3e3e3; text-decoration:line-through;}
+#ncw .cmpBtn{display:block; background:#ff6767; color:#fff; font-weight:700; font-size:11px; line-height:1.3; padding:11px 3px; border-radius:7px; box-shadow:0 4px 0 #cc5252;}
+#ncw .tag{display:inline-flex; flex-wrap:wrap; gap:3px; justify-content:center;}
+#ncw .tag li{font-size:10px; background:#fff0f1; border:1px solid #ffd1d0; border-radius:4px; padding:1px 5px;}
+#ncw .star{display:inline-block; position:relative; font-size:15px; line-height:1; white-space:nowrap;}
+#ncw .star::before{content:"★★★★★"; color:#e2e2e2;}
+#ncw .star::after{content:"★★★★★"; color:#ff9f1c; position:absolute; left:0; top:0; overflow:hidden; white-space:nowrap;}
+#ncw .s48::after{width:96%;} #ncw .s42::after{width:84%;} #ncw .s39::after{width:78%;} #ncw .s36::after{width:72%;}
+
+/* カルーセル（JS不要・スワイプ） */
+#ncw .scroller{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 14px 14px; scrollbar-width:thin;}
+#ncw .scroller::-webkit-scrollbar{height:6px;}
+#ncw .scroller::-webkit-scrollbar-thumb{background:#ffb7b6; border-radius:3px;}
+#ncw .swipeHint{text-align:center; font-size:11px; color:#ff6767; margin-bottom:2px;}
+
+/* PickUp */
+#ncw .pickCard{flex:0 0 76%; max-width:300px; scroll-snap-align:center; background:#fff; border:2px solid #ffd1d0; border-radius:12px; overflow:hidden;}
+#ncw .pickCard dt{background:#ff6767; color:#fff; font-weight:700; font-size:14px; padding:8px 10px;}
+#ncw .pickCard .pimg{aspect-ratio:16/10; background:#f4e4e4; overflow:hidden;}
+#ncw .pickCard .pimg img{width:100%; height:100%; object-fit:cover;}
+#ncw .pickCard .ico{display:inline-block; background:#fff0f1; color:#ff6767; border:1px solid #ffb7b6; border-radius:4px; font-size:11px; padding:1px 8px; margin:8px 10px 0;}
+#ncw .pickCard .fee{padding:4px 10px 0; font-size:13px;}
+#ncw .pickCard .fee strong{color:#e23131; font-size:24px;}
+#ncw .pickCard .pt{display:inline-block; margin:6px 4px 0 10px; font-size:11px; color:#555; background:#fffae8; border:1px solid #f1e0a8; border-radius:4px; padding:1px 6px;}
+#ncw .pickCard .pbtn{display:block; margin:12px 10px; background:#ff6767; color:#fff; text-align:center; font-weight:700; font-size:13px; padding:11px; border-radius:8px; box-shadow:0 4px 0 #cc5252;}
+
+/* タイプ別（アコーディオン） */
+#ncw .typeList details{background:#fff; border:2px solid #ff9a9a; border-radius:12px; margin-bottom:12px; overflow:hidden;}
+#ncw .typeList summary{list-style:none; cursor:pointer; padding:14px 16px; font-weight:700; font-size:15px; color:#333; display:flex; align-items:center; gap:10px; position:relative;}
+#ncw .typeList summary::-webkit-details-marker{display:none;}
+#ncw .typeList summary::after{content:"＋"; position:absolute; right:16px; color:#ff6767; font-weight:900;}
+#ncw .typeList details[open] summary::after{content:"－";}
+#ncw .typeList summary .num{flex:0 0 30px; height:30px; line-height:30px; text-align:center; background:#ff6767; color:#fff; border-radius:50%; font-size:13px;}
+#ncw .typeBody{padding:0 16px 16px;}
+#ncw .typeBody .ttl{text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; color:#e23131; font-size:17px; margin-bottom:8px;}
+#ncw .typeBody p{font-size:13px; margin:10px 0;}
+#ncw .typeBody .tbtn{display:block; text-align:center; background:#ff6767; color:#fff; font-weight:700; padding:11px; border-radius:8px; box-shadow:0 4px 0 #cc5252;}
+
+/* 月 */
+#ncw .month{background:#fff8e8; padding:24px 14px;}
+#ncw .month h2{text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:22px; color:#e23131; margin-bottom:12px;}
+#ncw .month h2 strong{font-size:30px;}
+#ncw .monthBox{background:#fff; border:2px solid #ff9a9a; border-radius:14px; padding:16px;}
+#ncw .monthBox .mt{text-align:center; font-weight:900; font-size:16px; color:#e23131; margin-bottom:10px;}
+#ncw .yel{background:linear-gradient(transparent 55%,#fff170 0);}
+#ncw .red{color:#e23131; font-weight:700;}
+#ncw .monthCmt{margin-top:12px; background:#ffefef; border-radius:12px; padding:14px; font-size:13px;}
+
+/* ランキング */
+#ncw .rankWrap{background:#fff0f1; padding:8px 14px 24px;}
+#ncw .rankHead{background:#ff6767; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:20px; padding:16px; border-radius:0;}
+#ncw .rankCard{background:#fff; border:2px solid #ffd1d0; border-top:8px solid #ff6767; border-radius:0 0 14px 14px; padding:16px; margin-bottom:22px;}
+#ncw .rankTop{display:flex; align-items:center; gap:10px; margin-bottom:10px;}
+#ncw .rankNo{flex:0 0 auto; font-size:30px;}
+#ncw .rankName{font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif; flex:1;}
+#ncw .rankVal{flex:0 0 86px; text-align:center; background:#fff0f1; border-radius:10px; padding:5px;}
+#ncw .rankVal .lbl{font-size:11px; color:#666;}
+#ncw .rankVal .pt{font-size:24px; font-weight:700; color:#e75e52; line-height:1;}
+#ncw .rankCatch{color:#e23131; font-weight:700; font-size:15px; margin-bottom:12px;}
+#ncw .rankBanner{margin-bottom:12px; border-radius:8px; overflow:hidden;}
+#ncw .terms{border:1px solid #ffd1d0; border-radius:10px; overflow:hidden; margin-bottom:12px;}
+#ncw .terms dl{display:flex; border-bottom:1px solid #ffe1e1; font-size:12px;}
+#ncw .terms dl:last-child{border-bottom:0;}
+#ncw .terms dt{flex:0 0 96px; background:#fff5f5; color:#a85; font-weight:700; padding:8px 10px;}
+#ncw .terms dd{flex:1; padding:8px 10px;}
+#ncw .terms dd strong{color:#333;}
+#ncw .facility{display:flex; flex-wrap:wrap; gap:4px;}
+#ncw .facility li{font-size:11px; background:#fff0f1; border:1px solid #ffd1d0; border-radius:4px; padding:1px 6px;}
+#ncw .points{background:#fff8e8; border-radius:12px; padding:14px; margin-bottom:12px;}
+#ncw .points .ph{text-align:center; font-weight:700; color:#e23131; margin-bottom:8px;}
+#ncw .points li{position:relative; padding-left:24px; font-size:13px; margin-top:8px; line-height:1.6;}
+#ncw .points li::before{content:"✓"; position:absolute; left:0; top:2px; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;}
+#ncw .rankCta{display:block; position:relative; background:#ff6767; color:#fff; text-align:center; font-weight:700; font-size:16px; padding:15px; border-radius:14px; box-shadow:0 5px 0 #cc5252; margin-bottom:14px;}
+#ncw .rankCta small{display:block; font-size:11px; font-weight:400; margin-top:2px;}
+#ncw .voicesTtl{text-align:center; font-weight:700; color:#e23131; margin-bottom:8px;}
+#ncw .voicesTtl span{display:inline-block; background:#ff6767; color:#fff; font-size:11px; padding:1px 8px; border-radius:10px; margin-right:6px;}
+#ncw .voiceCard{flex:0 0 84%; max-width:340px; scroll-snap-align:center; background:#fff8e8; border-radius:12px; padding:14px;}
+#ncw .voiceCard .vh{font-weight:700; color:#e23131; font-size:13px;}
+#ncw .voiceCard .vm{color:#ff9f1c; font-size:12px; margin:2px 0 4px;}
+#ncw .voiceCard .vm em{color:#888; font-style:normal;}
+#ncw .voiceCard p{font-size:12px; line-height:1.7;}
+#ncw .rankNote{font-size:10px; color:#888; margin-top:4px;}
+
+/* カテゴリ */
+#ncw .cat{background:#fff; padding:24px 14px;}
+#ncw .cat h3{font-size:15px; color:#e23131; font-weight:700; margin:14px 0 8px; padding-left:10px; border-left:5px solid #ff6767;}
+#ncw .catWrap{display:flex; flex-wrap:wrap; gap:8px;}
+#ncw .catWrap a{flex:1 1 28%; text-align:center; background:#fff0f1; border:1px solid #ffb7b6; color:#e23131; font-size:13px; font-weight:700; padding:10px 4px; border-radius:8px;}
+
+/* 詳細検索 */
+#ncw .search{background:#ffefef; padding:20px 14px;}
+#ncw .search .stitle{text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:18px; color:#e23131; margin-bottom:12px;}
+#ncw .search select{width:100%; padding:11px; border:1px solid #ffb7b6; border-radius:8px; background:#fff; font-size:13px; margin-bottom:8px; color:#333;}
+#ncw .search input[type=submit]{width:100%; background:#ff6767; color:#fff; font-weight:700; font-size:15px; padding:13px; border-radius:8px; box-shadow:0 4px 0 #cc5252; cursor:pointer;}
+
+/* jobchange */
+#ncw .jobchange{padding:24px 14px; display:grid; gap:14px;}
+#ncw .jobchange .two{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+
+/* combination */
+#ncw .combi{background:#fff8e8; padding:24px 14px;}
+#ncw .combi .lead{font-size:13px; text-align:center; margin-bottom:16px;}
+#ncw .combiWrap{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+#ncw .combiCard{background:#fff; border:2px solid #ffd1d0; border-radius:12px; padding:14px; text-align:center;}
+#ncw .combiCard h2{font-size:16px; color:#e23131; margin-bottom:8px;}
+#ncw .combiCard dl{display:flex; justify-content:space-between; font-size:12px; border-bottom:1px dotted #ddd; padding:4px 0;}
+#ncw .combiCard p{font-size:12px; margin:8px 0;}
+#ncw .combiCard .cbtn{display:block; background:#ff6767; color:#fff; font-weight:700; padding:10px; border-radius:8px; box-shadow:0 4px 0 #cc5252;}
+
+/* footer */
+#ncw .foot{background:#ff6767; color:#fff; text-align:center; padding:18px; font-size:11px;}
+#ncw .foot .ftiny{font-size:10px; opacity:.85; line-height:1.7; margin-top:6px;}
+
+@media(max-width:480px){
+  #ncw .catWrap a{flex:1 1 44%;}
+  #ncw .jobchange .two{grid-template-columns:1fr;}
+}
+</style>
+
+<div id="ncw">
+
+  <!-- FV -->
+  <section class="fv">
+    <div class="pr">当サイトはプロモーションを含みます</div>
+    <div class="fv-img"><img src="image/mv_mens.png" alt="看護師転職サイト比較"></div>
+    <div class="year">2026年版</div>
+    <div class="looplogo">
+      <img src="image/kg_fv_logo01.png" alt="">
+      <img src="image/kg_fv_logo01.png" alt="">
+    </div>
+  </section>
+
+  <!-- 比較表 -->
+  <section>
+    <div class="cmpHead">転職サイト比較表</div>
+    <div class="cmpBody">
+      <div class="cmp">
+        <input type="radio" name="ncw-cmp" id="ncw-ct1" checked>
+        <input type="radio" name="ncw-cmp" id="ncw-ct2">
+        <div class="cmp-tabs">
+          <label for="ncw-ct1">総合比較</label>
+          <label for="ncw-ct2">取り扱い求人</label>
+        </div>
+
+        <!-- 総合比較 -->
+        <div class="cmp-pane pane1">
+          <table class="cmpTbl">
+            <tr><th>転職サイト</th><th>総合評価</th><th>求人数</th><th>勤務形態</th><th>公式サイト</th></tr>
+            <tr>
+              <td class="siteCell"><span class="no1">1</span><div class="logo">レバウェル看護</div><span class="baloon">20代・30代に人気</span></td>
+              <td><span class="star s48"></span><div class="score">4.8</div></td>
+              <td class="amount">約<span>23.0万</span><br>件</td>
+              <td><ul class="lic"><li>常勤</li><li>パート</li><li class="off">派遣</li></ul></td>
+              <td><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cmpBtn ncw-cta">公式<br>サイト</a></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">看護roo</div><span class="baloon">全国対応の定番</span></td>
+              <td><span class="star s42"></span><div class="score">4.2</div></td>
+              <td class="amount">約<span>24.0万</span><br>件<sup>※</sup></td>
+              <td><ul class="lic"><li>常勤</li><li>パート</li><li class="off">派遣</li></ul></td>
+              <td><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=u5736fb6&amp;param2=kangoroo&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cmpBtn ncw-cta">公式<br>サイト</a></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">ナース専科 転職</div><span class="baloon">常勤求人が中心</span></td>
+              <td><span class="star s39"></span><div class="score">3.9</div></td>
+              <td class="amount">約<span>10.0万</span><br>件</td>
+              <td><ul class="lic"><li>常勤</li><li class="off">パート</li><li class="off">派遣</li></ul></td>
+              <td><a href="https://ad.presco.asia/cl/?b_id=Wb1Zph07&amp;t_id=1&amp;afad_param_2=nursejinzaibank&amp;afad_param_4=17079339560&amp;afad_param_5=185114265804&amp;afad_param_1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cmpBtn ncw-cta">公式<br>サイト</a></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">看護師ワーカー</div><span class="baloon">3か月以内入職も可</span></td>
+              <td><span class="star s36"></span><div class="score">3.6</div></td>
+              <td class="amount">約<span>11.7万</span><br>件<sup>※</sup></td>
+              <td><ul class="lic"><li>常勤</li><li class="off">パート</li><li class="off">派遣</li></ul></td>
+              <td><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=2986II4e&amp;param2=iryoworker&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cmpBtn ncw-cta">公式<br>サイト</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 取り扱い求人 -->
+        <div class="cmp-pane pane2">
+          <table class="cmpTbl">
+            <tr><th>転職サイト</th><th>対応地域</th><th>対応資格</th><th>連絡手段</th></tr>
+            <tr>
+              <td class="siteCell"><div class="logo">レバウェル看護</div><span class="baloon">20代・30代に人気</span></td>
+              <td>全国</td>
+              <td><ul class="tag"><li>正看護師</li><li>准看護師</li><li>保健師</li><li>助産師</li></ul></td>
+              <td><ul class="tag"><li>電話</li><li>メール</li><li>LINE</li></ul></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">看護roo</div><span class="baloon">全国対応の定番</span></td>
+              <td>全国</td>
+              <td><ul class="tag"><li>正看護師</li><li>准看護師</li><li>保健師</li><li>助産師</li></ul></td>
+              <td><ul class="tag"><li>電話</li><li>メール</li><li>LINE</li></ul></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">ナース専科 転職</div><span class="baloon">常勤求人が中心</span></td>
+              <td>全国</td>
+              <td><ul class="tag"><li>正看護師</li><li>准看護師</li><li>保健師</li><li>助産師</li></ul></td>
+              <td><ul class="tag"><li>電話</li><li>メール</li><li>LINE</li></ul></td>
+            </tr>
+            <tr>
+              <td class="siteCell"><div class="logo">看護師ワーカー</div><span class="baloon">3か月以内入職も可</span></td>
+              <td>全国</td>
+              <td><ul class="tag"><li>正看護師</li><li>准看護師</li><li>保健師</li><li>助産師</li></ul></td>
+              <td><ul class="tag"><li>電話</li><li>メール</li></ul></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <p class="notice"><b>■看護師ワーカー</b><br>※トライトキャリア合算数値</p>
+    </div>
+  </section>
+
+  <!-- PickUp -->
+  <section class="sec">
+    <div class="sec-ttl">PickUp求人</div>
+    <div class="sec-sub">6月の新着求人も続々</div>
+    <div class="swipeHint">▶ 横にスワイプできます</div>
+    <div class="scroller">
+      <div class="pickCard"><dl>
+        <dt>病院【常勤】</dt>
+        <dd class="pimg"><img src="image/kg_sample_hospital_01.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>40</strong>万円</dd>
+        <dd><span class="pt">託児所・住宅補助</span><span class="pt">ボーナス3回</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+      <div class="pickCard"><dl>
+        <dt>クリニック【常勤】</dt>
+        <dd class="pimg"><img src="image/kg_sample_clinic_02.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>42</strong>万円</dd>
+        <dd><span class="pt">年間休日125日以上</span><span class="pt">賞与4.0ヵ月支給</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+      <div class="pickCard"><dl>
+        <dt>保育園</dt>
+        <dd class="pimg"><img src="image/kg_sample_childcare_01.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>34</strong>万円</dd>
+        <dd><span class="pt">土日祝日休み</span><span class="pt">未経験OK</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+      <div class="pickCard"><dl>
+        <dt>美容クリニック</dt>
+        <dd class="pimg"><img src="image/kg_sample_beauty_01.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>40</strong>万円</dd>
+        <dd><span class="pt">残業ほぼなし</span><span class="pt">研修制度充実</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+      <div class="pickCard"><dl>
+        <dt>老健【常勤】</dt>
+        <dd class="pimg"><img src="image/kg_sample_visit_01.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>40</strong>万円</dd>
+        <dd><span class="pt">夜勤・オンコールなし</span><span class="pt">駅近徒歩5分</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+      <div class="pickCard"><dl>
+        <dt>デイサービス【常勤】</dt>
+        <dd class="pimg"><img src="image/kg_sample_visit_03.jpg" alt=""></dd>
+        <dd class="ico">看護師</dd>
+        <dd class="fee">月給 <strong>38</strong>万円</dd>
+        <dd><span class="pt">未経験OK</span><span class="pt">住宅補助あり</span></dd>
+      </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    </div>
+    <p class="notice" style="text-align:center;">※上記は求人例となります。最新の求人についてはサービス公式サイトでご確認ください。</p>
+  </section>
+
+  <!-- タイプ別 -->
+  <section class="sec">
+    <div class="sec-ttl">タイプ別診断</div>
+    <div class="sec-sub">ピッタリの転職サイトがわかる</div>
+    <div class="typeList">
+      <details open>
+        <summary><span class="num">1</span>なるべく早く転職したい</summary>
+        <div class="typeBody">
+          <div class="ttl">レバウェル看護</div>
+          <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="ncw-cta"><img src="image/banner_oshigoto.jpg" alt="" style="border-radius:8px; margin-bottom:8px;"></a>
+          <p>看護転職サイトの中でも抜群の転職実績と豊富な求人数を持ち、スピード転職でも「とりあえず転職」にさせない確かな提案力と転職サポートが受けられます。</p>
+          <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="tbtn ncw-cta">公式サイトへ</a>
+        </div>
+      </details>
+      <details>
+        <summary><span class="num">2</span>企業など他業種で働きたい</summary>
+        <div class="typeBody">
+          <div class="ttl">ビズリーチ</div>
+          <a href="https://www.rentracks.jp/adx/r.html?idx=0.45339.360747.1176.1902&amp;dna=31137&amp;uix=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="ncw-cta"><img src="image/banner_bizreach.jpg" alt="" style="border-radius:8px; margin-bottom:8px;"></a>
+          <p>看護師資格を持つ方向けに、医療施設から民間企業まで幅広い求人の提案が可能で、企業への転職やジョブチェンジも視野に入れる方は登録必須です。</p>
+          <a href="https://www.rentracks.jp/adx/r.html?idx=0.45339.360747.1176.1902&amp;dna=31137&amp;uix=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="tbtn ncw-cta">公式サイトへ</a>
+        </div>
+      </details>
+      <details>
+        <summary><span class="num">3</span>派遣で働きたい</summary>
+        <div class="typeBody">
+          <div class="ttl">レバウェル看護派遣</div>
+          <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=64d18V71&amp;param2=oshigotohaken&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="ncw-cta"><img src="image/banner_oshigoto-haken.jpg" alt="" style="border-radius:8px; margin-bottom:8px;"></a>
+          <p>まず派遣の求人数が非常に多く全国各地の求人が揃っています。派遣先の情報も充実しているので希望の働き方に合うか事前に確認できる点も高評価の理由です。</p>
+          <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=64d18V71&amp;param2=oshigotohaken&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="tbtn ncw-cta">公式サイトへ</a>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 月の転職動向 -->
+  <section class="month">
+    <h2><strong>6</strong>月の転職動向</h2>
+    <div class="monthBox">
+      <div class="mt"><span class="yel">6月は転職活動におすすめ！</span></div>
+      <p>4～5月と比べ<b>例年6月は求人数が増加</b>する傾向にあります。同時に<b>転職者も多くなっていく時期</b>になるので、好条件の転職先に出会うなら<span class="yel red"><b>早めのスタートダッシュが成功の秘訣</b></span>です。</p>
+    </div>
+    <div class="monthCmt">
+      <span class="red">好条件求人は早い者勝ち！</span><br>
+      求人がなくなる前に転職エージェントに登録して紹介してもらいましょう。
+    </div>
+  </section>
+
+  <!-- ランキング -->
+  <div class="rankHead">看護師転職サイト おすすめランキング</div>
+  <div class="rankWrap">
+
+    <!-- rank01 -->
+    <div class="rankCard">
+      <div class="rankTop">
+        <div class="rankNo">🥇</div>
+        <div class="rankName">レバウェル看護</div>
+        <div class="rankVal"><div class="lbl">総合評価</div><div class="pt">4.8</div></div>
+      </div>
+      <div class="rankBanner"><img src="image/banner_wide_oshigoto.png" alt="レバウェル看護"></div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta">「レバウェル看護」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <div class="terms">
+        <dl><dt>対応エリア</dt><dd><strong>全国</strong></dd></dl>
+        <dl><dt>求人数</dt><dd>約<strong>230,000</strong>件</dd></dl>
+        <dl><dt>対応職種</dt><dd><strong>看護師/准看護師/保健師/助産師</strong></dd></dl>
+        <dl><dt>勤務形態</dt><dd><ul class="lic" style="justify-content:flex-start;"><li>正社員/常勤</li><li>パート/非常勤</li><li class="off">派遣</li></ul></dd></dl>
+        <dl><dt>対応施設</dt><dd><ul class="facility"><li>病院</li><li>クリニック</li><li>訪問看護</li><li>一般企業</li><li>美容クリニック</li><li>介護施設</li><li>保育園/幼稚園</li><li>検診センター</li></ul></dd></dl>
+      </div>
+      <div class="points">
+        <div class="ph">ここがすごい！3つのポイント</div>
+        <ul>
+          <li>業界最大級の非公開求人（好条件求人）を保有</li>
+          <li>やりとりはLINEでOK！隙間時間で転職活動ができる</li>
+          <li>給与交渉による年収アップ実績多数</li>
+        </ul>
+      </div>
+      <div class="voicesTtl"><span>VOICES</span>レバウェル看護のクチコミ</div>
+      <div class="scroller" style="padding-left:0; padding-right:0;">
+        <div class="voiceCard"><div class="vh">何一つ不満はありませんでした</div><div class="vm">★★★★★ <em>20代/看護師</em></div><p>コンサルタントの方が私の出す条件を丁寧に確認してくれたおかげで、希望に合う職場をピックアップしてくれました。何一つ不満はありませんでした。</p></div>
+        <div class="voiceCard"><div class="vh">無事複数の内定をゲットしました</div><div class="vm">★★★★★ <em>20代/看護師</em></div><p>初めての転職だったのでこのサービスしか使った事がないですが、転職の流れをイチから教えてもらい無事複数の内定をゲットしました。また転職する際は（ないほうが良いですが笑）使いたいと思います。</p></div>
+        <div class="voiceCard"><div class="vh">求人紹介スピードに感動しました</div><div class="vm">★★★★★ <em>40代/看護師</em></div><p>出産の時に前の病院を退職しブランク明けの職探しで今回このサービスを使ってみました。すぐに非公開求人を複数紹介していただき、求人紹介スピードに感動しました。</p></div>
+        <div class="voiceCard"><div class="vh">良いエージェントだと思います</div><div class="vm">★★★★★ <em>30代/助産師</em></div><p>良いエージェントだと思います！スタッフの方も丁寧でベテランというかんじでした！助産師向け求人がすごく多かったです。</p></div>
+        <div class="voiceCard"><div class="vh">保健所や企業の求人数が多くてびっくり</div><div class="vm">★★★★★ <em>30代/保健師</em></div><p>保健所や企業の求人数が多くてびっくりしました。以前は小さなサービス会社を利用していましたが、やっぱり大手を使った方がいいなと改めて思いました。</p></div>
+      </div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta" style="margin-top:12px;">「レバウェル看護」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+    </div>
+
+    <!-- rank02 -->
+    <div class="rankCard">
+      <div class="rankTop">
+        <div class="rankNo">🥈</div>
+        <div class="rankName">看護roo</div>
+        <div class="rankVal"><div class="lbl">総合評価</div><div class="pt">4.2</div></div>
+      </div>
+      <div class="rankBanner"><img src="image/banner_wide_roo.png" alt="看護roo"></div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=u5736fb6&amp;param2=kangoroo&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta">「看護roo」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <div class="terms">
+        <dl><dt>対応エリア</dt><dd><strong>全国</strong></dd></dl>
+        <dl><dt>求人数</dt><dd>約<strong>240,000</strong>件<sup>※</sup></dd></dl>
+        <dl><dt>対応職種</dt><dd><strong>看護師/准看護師/保健師/助産師</strong></dd></dl>
+        <dl><dt>勤務形態</dt><dd><ul class="lic" style="justify-content:flex-start;"><li>正社員/常勤</li><li>パート/非常勤</li><li class="off">派遣</li></ul></dd></dl>
+        <dl><dt>対応施設</dt><dd><ul class="facility"><li>病院</li><li>クリニック</li><li>訪問看護</li><li>一般企業</li><li>美容クリニック</li><li>介護施設</li><li>保育園/幼稚園</li><li>検診センター</li></ul></dd></dl>
+      </div>
+      <div class="points">
+        <div class="ph">ここがすごい！3つのポイント</div>
+        <ul>
+          <li>サービス開始から10年以上で累計利用者は50万人超え</li>
+          <li>20代・30代向け求人数◎高待遇なレア求人も</li>
+          <li>スピード転職実績多数、急ぎの転職も歓迎</li>
+        </ul>
+      </div>
+      <div class="voicesTtl"><span>VOICES</span>看護rooのクチコミ</div>
+      <div class="scroller" style="padding-left:0; padding-right:0;">
+        <div class="voiceCard"><div class="vh">とにかくサポートが充実していました</div><div class="vm">★★★★★ <em>30代/看護師</em></div><p>案件数でいえばもっと多いサイトもあるかもしれませんが、メインの求人はそんなにどこも変わりはないのでスタッフさんの質で選んで間違いなかったと思っています。オススメです。</p></div>
+        <div class="voiceCard"><div class="vh">納得いく条件で転職できました</div><div class="vm">★★★★★ <em>20代/看護師</em></div><p>無事転職成功したので報告させていただきます！時期がすごく微妙だったので不安でしたが複数内定から納得のいく条件の病院を見つけることができました。</p></div>
+        <div class="voiceCard"><div class="vh">丁寧に対応頂いた担当者さんに感謝です</div><div class="vm">★★★★★ <em>30代/看護師</em></div><p>転職を意識しはじめてから使ってました、転職考えている人とかの声も載っているので。病院の評判とかも教えてくれたのでサイトでわかる情報だけで決める事はできないと思いました。</p></div>
+        <div class="voiceCard"><div class="vh">求人の質、スピードどちらも大満足です</div><div class="vm">★★★★★ <em>20代/助産師</em></div><p>助産師免許を取ったので産婦人科希望でお伝えしました。とても親切なスタッフの方で、求人の条件、スピードどちらも大満足です！</p></div>
+        <div class="voiceCard"><div class="vh">担当者の対応が良かったです</div><div class="vm">★★★★★ <em>40代/保健師</em></div><p>担当者の対応が良かったです。友人感覚のような形で相談することができたことが転職成功にも繋がったと思います。</p></div>
+      </div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=u5736fb6&amp;param2=kangoroo&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta" style="margin-top:12px;">「看護roo」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <p class="rankNote">※2026年3月24日時点 雇用形態/勤務形態/職種別（サイト未掲載も含む）</p>
+    </div>
+
+    <!-- rank03 -->
+    <div class="rankCard">
+      <div class="rankTop">
+        <div class="rankNo">🥉</div>
+        <div class="rankName">ナース専科 転職</div>
+        <div class="rankVal"><div class="lbl">総合評価</div><div class="pt">3.9</div></div>
+      </div>
+      <div class="rankBanner"><img src="image/banner_wide_nursesenka.png" alt="ナース専科 転職"></div>
+      <a href="https://ad.presco.asia/cl/?b_id=Wb1Zph07&amp;t_id=1&amp;afad_param_2=nursejinzaibank&amp;afad_param_4=17079339560&amp;afad_param_5=185114265804&amp;afad_param_1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta">「ナース専科 転職」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <div class="terms">
+        <dl><dt>対応エリア</dt><dd><strong>全国</strong></dd></dl>
+        <dl><dt>求人数</dt><dd>約<strong>100,000</strong>件</dd></dl>
+        <dl><dt>対応職種</dt><dd><strong>看護師/准看護師/保健師/助産師</strong></dd></dl>
+        <dl><dt>勤務形態</dt><dd><ul class="lic" style="justify-content:flex-start;"><li>正社員/常勤</li><li class="off">パート/非常勤</li><li class="off">派遣</li></ul></dd></dl>
+        <dl><dt>対応施設</dt><dd><ul class="facility"><li>病院</li><li>クリニック</li><li>訪問看護</li><li>一般企業</li><li>美容クリニック</li><li>介護施設</li><li>保育園/幼稚園</li><li>検診センター</li></ul></dd></dl>
+      </div>
+      <div class="points">
+        <div class="ph">ここがすごい！3つのポイント</div>
+        <ul>
+          <li>約20万件の求人数！希望の求人を見つけるならココ</li>
+          <li>自分のペースで転職なら！ブラック求人の紹介は×</li>
+          <li>20~40代に人気の好条件求人が充実</li>
+        </ul>
+      </div>
+      <div class="voicesTtl"><span>VOICES</span>ナース専科 転職のクチコミ</div>
+      <div class="scroller" style="padding-left:0; padding-right:0;">
+        <div class="voiceCard"><div class="vh">わがまま条件でも見つかりました！</div><div class="vm">★★★★★ <em>30代/看護師</em></div><p>とても丁寧に対応してくださり、お声がけも温かく話しやすい方で安心して関わることができました。土日祝休み、夜勤なしというわがままな条件でしたが、真摯に対応してくださいました。</p></div>
+        <div class="voiceCard"><div class="vh">転職サイトのなかで1番よかったです！</div><div class="vm">★★★★★ <em>20代/看護師</em></div><p>小さな相談にも迅速に返答頂けて安心して転職活動をすることができました！本当に感謝しています！ナース人材バンクさんが転職サイト3つめの利用でしたが1番よかったです。</p></div>
+        <div class="voiceCard"><div class="vh">年収のアップ幅も大きく交渉力がある</div><div class="vm">★★★★★ <em>40代/看護師</em></div><p>看護師として今まで３回転職を経験していますが、今まで活用した求人サイトで一番サポートが丁寧でした。年収のアップ幅も大きく交渉力もあるのかなと思います。</p></div>
+        <div class="voiceCard"><div class="vh">求人数の多さにびっくりしました</div><div class="vm">★★★★★ <em>30代/助産師</em></div><p>子供ができてからしばらく仕事から離れてましたが、ようやく落ちついたので転職を考え始めました。一番大手のサイトということで登録しましたが、助産師の求人数の多さにびっくりしました。</p></div>
+        <div class="voiceCard"><div class="vh">担当のかたがとても親切でした</div><div class="vm">★★★★★ <em>30代/保健師</em></div><p>担当のかたがとても親切でした。相性もあると思いますが、サービスレベルは高いです。保健師や看護師の転職希望ならまず登録してほしい転職サイトです。</p></div>
+      </div>
+      <a href="https://ad.presco.asia/cl/?b_id=Wb1Zph07&amp;t_id=1&amp;afad_param_2=nursejinzaibank&amp;afad_param_4=17079339560&amp;afad_param_5=185114265804&amp;afad_param_1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta" style="margin-top:12px;">「ナース専科 転職」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+    </div>
+
+    <!-- rank04 -->
+    <div class="rankCard">
+      <div class="rankTop">
+        <div class="rankNo">4位</div>
+        <div class="rankName">看護師ワーカー</div>
+        <div class="rankVal"><div class="lbl">総合評価</div><div class="pt">3.6</div></div>
+      </div>
+      <div class="rankBanner"><img src="image/banner_wide_iryoworker.gif" alt="看護師ワーカー"></div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=2986II4e&amp;param2=iryoworker&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta">「看護師ワーカー」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <div class="terms">
+        <dl><dt>対応エリア</dt><dd><strong>全国</strong></dd></dl>
+        <dl><dt>求人数</dt><dd>約<strong>117,000</strong>件<sup>※</sup></dd></dl>
+        <dl><dt>対応職種</dt><dd><strong>看護師/准看護師/保健師/助産師</strong></dd></dl>
+        <dl><dt>勤務形態</dt><dd><ul class="lic" style="justify-content:flex-start;"><li>正社員/常勤</li><li class="off">パート/非常勤</li><li class="off">派遣</li></ul></dd></dl>
+        <dl><dt>対応施設</dt><dd><ul class="facility"><li>病院</li><li>クリニック</li><li>訪問看護</li><li>一般企業</li><li>美容クリニック</li><li>介護施設</li><li>保育園/幼稚園</li><li>検診センター</li></ul></dd></dl>
+      </div>
+      <div class="points">
+        <div class="ph">ここがすごい！3つのポイント</div>
+        <ul>
+          <li>3ヶ月以内の転職実績が豊富</li>
+          <li>面接から内定後の給与交渉まで全部お任せ</li>
+          <li>希望に合わせて全国各地の好条件求人を紹介</li>
+        </ul>
+      </div>
+      <div class="voicesTtl"><span>VOICES</span>看護師ワーカーのクチコミ</div>
+      <div class="scroller" style="padding-left:0; padding-right:0;">
+        <div class="voiceCard"><div class="vh">全部サポートしてくれました</div><div class="vm">★★★★★ <em>30代/看護師</em></div><p>初めての転職活動でしたが、履歴書の書き方から面接まで全部サポートしてくれました。これで無料なのでどうやってビジネスが成り立っているのか気になります。</p></div>
+        <div class="voiceCard"><div class="vh">担当者さんの質も高い気がします</div><div class="vm">★★★★★ <em>20代/看護師</em></div><p>Youtubeを見ているときにたまたま広告をみて登録してみました。知らなかったんですが有名なサービスらしく、担当者さんの質も高い気がします。</p></div>
+        <div class="voiceCard"><div class="vh">転職事例をたくさん教えてくれました</div><div class="vm">★★★★★ <em>40代/看護師</em></div><p>子供が小学生になったので復職を考え、登録しました。同じような悩みを持つ看護師さんの転職事例をたくさん教えてくれてとても参考になりました。</p></div>
+        <div class="voiceCard"><div class="vh">3社使いましたが一番よかった</div><div class="vm">★★★★★ <em>30代/助産師</em></div><p>今まで３社サービス使いましたが一番よかったです！関東あたりで転職希望の看護師・保健師・助産師にはすごくオススメです！</p></div>
+        <div class="voiceCard"><div class="vh">とにかく早く転職したい人にオススメ</div><div class="vm">★★★★★ <em>40代/保健師</em></div><p>保健所の非公開求人をすぐに紹介してもらい、次の週には面接してあっという間に内定をいただくことができました。早く別の職場に移りたい人にはオススメです。</p></div>
+      </div>
+      <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=2986II4e&amp;param2=iryoworker&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="rankCta ncw-cta" style="margin-top:12px;">「看護師ワーカー」公式サイトで無料登録<small>（公式サイトへ）</small></a>
+      <p class="rankNote">※トライトキャリア合算数値</p>
+    </div>
+
+  </div>
+
+  <!-- カテゴリ検索 -->
+  <section class="cat">
+    <div class="sec-ttl">こだわり条件で探す</div>
+    <h3>職種別に探す</h3>
+    <div class="catWrap">
+      <a href="https://nurse-career.biz/cp001/index.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">正看護師</a>
+      <a href="https://nurse-career.biz/cp001/lp_hokenshi.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">保健師</a>
+      <a href="https://nurse-career.biz/cp001/lp_josanshi.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">助産師</a>
+    </div>
+    <h3>施設別に探す</h3>
+    <div class="catWrap">
+      <a href="https://nurse-career.biz/cp001/lp_hospital.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">病院</a>
+      <a href="https://nurse-career.biz/cp001/lp_clinic.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">クリニック</a>
+      <a href="https://nurse-career.biz/cp001/lp_houmonkango.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">訪問看護</a>
+      <a href="https://nurse-career.biz/cp001/lp_company.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">一般企業</a>
+      <a href="https://nurse-career.biz/cp001/lp_kaigo.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">介護施設</a>
+      <a href="https://nurse-career.biz/cp001/lp_beauty.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">美容クリニック</a>
+      <a href="https://nurse-career.biz/cp001/lp_hoiku.php?default=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned">保育施設</a>
+    </div>
+  </section>
+
+  <!-- 詳細検索 -->
+  <section class="search">
+    <div class="stitle">詳細検索</div>
+    <form action="search.php" method="post" id="ncw-form">
+      <select name="area" form="ncw-form">
+        <option value="00" selected disabled>希望する勤務地</option>
+        <option value="01">北海道</option><option value="02">青森県</option><option value="03">岩手県</option><option value="04">宮城県</option><option value="05">秋田県</option><option value="06">山形県</option><option value="07">福島県</option><option value="08">茨城県</option><option value="09">栃木県</option><option value="10">群馬県</option><option value="11">埼玉県</option><option value="12">千葉県</option><option value="13">東京都</option><option value="14">神奈川県</option><option value="15">新潟県</option><option value="16">富山県</option><option value="17">石川県</option><option value="18">福井県</option><option value="19">山梨県</option><option value="20">長野県</option><option value="21">岐阜県</option><option value="22">静岡県</option><option value="23">愛知県</option><option value="24">三重県</option><option value="25">滋賀県</option><option value="26">京都府</option><option value="27">大阪府</option><option value="28">兵庫県</option><option value="29">奈良県</option><option value="30">和歌山県</option><option value="31">鳥取県</option><option value="32">島根県</option><option value="33">岡山県</option><option value="34">広島県</option><option value="35">山口県</option><option value="36">徳島県</option><option value="37">香川県</option><option value="38">愛媛県</option><option value="39">高知県</option><option value="40">福岡県</option><option value="41">佐賀県</option><option value="42">長崎県</option><option value="43">熊本県</option><option value="44">大分県</option><option value="45">宮崎県</option><option value="46">鹿児島県</option><option value="47">沖縄県</option>
+      </select>
+      <select name="workstyle" form="ncw-form">
+        <option value="00" selected disabled>勤務形態</option>
+        <option value="01">常勤(夜勤あり)</option><option value="02">常勤(夜勤なし)</option><option value="03">非常勤（パート）</option><option value="04">派遣</option>
+      </select>
+      <select name="occupation" form="ncw-form">
+        <option value="00" selected disabled>職種</option>
+        <option value="01">正看護師</option><option value="02">准看護師</option><option value="03">保健師</option><option value="04">助産師</option>
+      </select>
+      <select name="facility" form="ncw-form">
+        <option value="00" selected disabled>施設</option>
+        <option value="01">病院</option><option value="02">クリニック</option><option value="03">訪問看護</option><option value="04">一般企業</option><option value="05">美容クリニック</option><option value="06">介護施設</option><option value="07">保育園/幼稚園</option><option value="08">健診センター</option>
+      </select>
+      <select name="age" form="ncw-form">
+        <option value="00" selected disabled>現在のご年齢</option>
+        <option value="10">10代～20代（学生）</option><option value="20">20代</option><option value="30">30代</option><option value="40">40代</option><option value="50">50代</option><option value="60">60歳以上</option>
+      </select>
+      <select name="status" form="ncw-form">
+        <option value="00" selected disabled>現在のご状況</option>
+        <option value="01">転職活動中</option><option value="02">情報収集している ※転職時期は未定</option><option value="03">就職活動中 ※現在は学生</option>
+      </select>
+      <input type="submit" value="検索する" form="ncw-form">
+    </form>
+  </section>
+
+  <!-- jobchange -->
+  <section class="jobchange">
+    <div><img src="image/title_jobchange.png" alt="看護師転職のコツ"></div>
+    <div><img src="image/img_jobchangeCatch.png" alt="転職成功者の8割が2〜3サイト登録しています。"></div>
+    <div class="two">
+      <div><img src="image/img_jobchange01.png" alt=""></div>
+      <div><img src="image/img_jobchange02.png" alt=""></div>
+    </div>
+    <div><img src="image/img_jobchange03.png" alt=""></div>
+  </section>
+
+  <!-- 組み合わせ -->
+  <section class="combi">
+    <div class="sec-ttl">まずはこの2サイト</div>
+    <p class="lead">看護師さんの転職ならまずはこの王道2サイトがオススメです。<br>『看護師専門の転職サイト』として転職成功実績が豊富で、どちらも非公開の好条件求人を独自に揃えています！</p>
+    <div class="combiWrap">
+      <div class="combiCard">
+        <h2>レバウェル看護</h2>
+        <div class="rankBanner"><img src="image/banner_oshigoto.jpg" alt=""></div>
+        <dl><dt>求人数</dt><dd>約230,000件</dd></dl>
+        <dl><dt>対応エリア</dt><dd>全国</dd></dl>
+        <p>レア求人探すなら！非公開求人も多数保有する看護師転職サイト</p>
+        <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cbtn ncw-cta">公式サイト</a>
+      </div>
+      <div class="combiCard">
+        <h2>看護roo</h2>
+        <div class="rankBanner"><img src="image/banner_roo.png" alt=""></div>
+        <dl><dt>求人数</dt><dd>約240,000件</dd></dl>
+        <dl><dt>対応エリア</dt><dd>全国</dd></dl>
+        <p>累計利用者数50万人以上！登録必須な看護師向け転職エージェント</p>
+        <a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=u5736fb6&amp;param2=kangoroo&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="cbtn ncw-cta">公式サイト</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <div class="foot">
+    看護師転職サイト比較ナビ
+    <div class="ftiny">当サイトはプロモーションを含んでいます。<br>掲載情報は2026年3月時点のものです。最新情報は各公式サイトをご確認ください。</div>
+  </div>
+
+</div>
