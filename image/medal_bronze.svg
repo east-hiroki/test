@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 56" width="44" height="56" role="img" aria-label="3位">
+  <path d="M14 3 L21 30 L13 30 Z" fill="#ff9a9a"/>
+  <path d="M30 3 L23 30 L31 30 Z" fill="#ff6767"/>
+  <circle cx="22" cy="38" r="16" fill="#b5713f"/>
+  <circle cx="22" cy="38" r="13.5" fill="#d49363"/>
+  <circle cx="22" cy="38" r="13.5" fill="none" stroke="#eec4a3" stroke-width="1.5"/>
+  <text x="22" y="44.5" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif" font-size="17" font-weight="900" fill="#6f3f1c" text-anchor="middle">3</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="看護師イラスト">
+  <!-- 肩・body -->
+  <path d="M28 120 Q28 84 60 84 Q92 84 92 120 Z" fill="#ffffff" stroke="#ffd1d0" stroke-width="2"/>
+  <!-- 襟 -->
+  <path d="M51 87 L60 100 L69 87" fill="none" stroke="#ff9a9a" stroke-width="3" stroke-linejoin="round"/>
+  <!-- 聴診器 -->
+  <path d="M51 88 Q46 108 60 110 Q74 108 69 88" fill="none" stroke="#7fb1c9" stroke-width="2.4"/>
+  <circle cx="60" cy="112" r="3.4" fill="#7fb1c9"/>
+  <!-- 首 -->
+  <rect x="54" y="72" width="12" height="15" rx="6" fill="#ffe0c8"/>
+  <!-- 顔 -->
+  <circle cx="60" cy="55" r="22" fill="#ffe0c8"/>
+  <!-- 髪 -->
+  <path d="M37 55 Q39 30 60 30 Q81 30 83 55 Q83 43 60 41 Q37 43 37 55 Z" fill="#6b4a3a"/>
+  <!-- ナースキャップ -->
+  <path d="M43 38 Q60 25 77 38 L73 45 Q60 36 47 45 Z" fill="#ffffff" stroke="#ffd1d0" stroke-width="1.5"/>
+  <rect x="58" y="32" width="4" height="11" rx="1" fill="#ff6767"/>
+  <rect x="54.5" y="35.5" width="11" height="4" rx="1" fill="#ff6767"/>
+  <!-- 目 -->
+  <circle cx="52" cy="57" r="2.6" fill="#5a3a2a"/>
+  <circle cx="68" cy="57" r="2.6" fill="#5a3a2a"/>
+  <!-- ほっぺ -->
+  <circle cx="47" cy="63" r="3.2" fill="#ffc1bd" opacity=".75"/>
+  <circle cx="73" cy="63" r="3.2" fill="#ffc1bd" opacity=".75"/>
+  <!-- 口 -->
+  <path d="M54 65 Q60 71 66 65" fill="none" stroke="#cc7a5a" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

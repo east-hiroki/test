@@ -15,7 +15,9 @@
 @keyframes nnwSlide{0%{opacity:0; transform:translateX(40px) skewX(-12deg);}100%{opacity:1; transform:none;}}
 @keyframes nnwBounce{0%{opacity:0; transform:scale(.3);}60%{opacity:1; transform:scale(1.05);}100%{transform:scale(1);}}
 @keyframes nnwBlink{0%{opacity:1;}50%{opacity:.35;}100%{opacity:1;}}
-#nnw .nnw-spin{display:inline-block; animation:nnwYell 3s ease infinite;}
+@keyframes nnwFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+#nnw .nnw-spin{display:inline-block; animation:nnwFloat 3s ease-in-out infinite;}
+#nnw .nnw-medal{display:inline-block; vertical-align:middle;}
 #nnw .nnw-card{animation:nnwBounce .8s ease both;}
 #nnw .nnw-head{animation:nnwSlide .8s ease both;}
 #nnw .nnw-blink{animation:nnwBlink 3s ease-in infinite;}
@@ -30,7 +32,7 @@
   <div style="display:inline-block; background:#fff; color:#ff6767; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:13px; padding:3px 16px; border-radius:20px; margin-bottom:12px;">＼ 2026年6月 最新版・完全無料 ／</div>
   <div style="color:#fff; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:30px; line-height:1.3; text-shadow:0 2px 0 #e23131;">プロが選ぶ<br>看護師転職サイト <span style="font-size:42px; color:#fff8e8;">5</span>選</div>
   <div style="color:#fff8e8; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14px; margin-top:8px;">＼ 登録はかんたん1分・スマホで完結 ／</div>
-  <div style="margin-top:10px;"><span class="nnw-spin" style="font-size:46px;">👩‍⚕️</span></div>
+  <div style="margin-top:10px;"><img class="nnw-spin" src="image/illust_nurse.svg" alt="看護師" style="width:74px; height:auto; margin:0 auto;"></div>
 </div>
 
 <!-- 比較表 -->
@@ -63,7 +65,7 @@
 
       <tr>
         <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
-          <div style="font-size:24px; line-height:1;">🥇</div>
+          <img class="nnw-medal" src="image/medal_gold.svg" alt="1位" style="width:30px; margin:0 auto;">
           <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">レバウェル看護</div>
         </td>
         <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
@@ -78,7 +80,7 @@
 
       <tr style="background:#fffafa;">
         <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
-          <div style="font-size:24px; line-height:1;">🥈</div>
+          <img class="nnw-medal" src="image/medal_silver.svg" alt="2位" style="width:30px; margin:0 auto;">
           <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">ナースではたらこ</div>
         </td>
         <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
@@ -93,7 +95,7 @@
 
       <tr>
         <td style="border:1px solid #d2d2d2; padding:12px 6px; text-align:center; vertical-align:middle;">
-          <div style="font-size:24px; line-height:1;">🥉</div>
+          <img class="nnw-medal" src="image/medal_bronze.svg" alt="3位" style="width:30px; margin:0 auto;">
           <div style="color:#1a7cbf; font-weight:700; font-size:13px; margin-top:4px;">ナース専科 転職</div>
         </td>
         <td style="border:1px solid #d2d2d2; padding:10px 4px; text-align:center; vertical-align:middle;">
@@ -143,7 +145,7 @@
 <!-- 時期訴求（今がチャンス） -->
 <div style="background:#fff3e0; padding:22px 14px 0;">
   <div style="background:#fff; border:2px solid #ff6767; border-radius:14px; overflow:hidden;">
-    <div style="background:#ff6767; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:18px; padding:10px;">📈 6月は転職の狙い目シーズン！</div>
+    <div style="background:#ff6767; color:#fff; text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:18px; padding:10px;">6月は転職の狙い目シーズン！</div>
     <div style="padding:16px; font-size:13px; line-height:1.8;">
       例年<b style="background:linear-gradient(transparent 55%,#fafc93 0);">6月は求人数が増える時期</b>。一方で動き出す看護師さんも増えるため、<b style="color:#e23131;">好条件の求人は早い者勝ち</b>です。気になるサイトは<b style="background:linear-gradient(transparent 55%,#fafc93 0);">求人がなくなる前に無料登録</b>して、まずは紹介してもらうのが成功のコツです◎
     </div>
@@ -158,7 +160,7 @@
     <div style="background:#ffefef; color:#eb6461; font-weight:700; font-size:16px; padding:10px 14px;">① 登録者限定の求人を紹介してもらう</div>
     <div style="padding:14px;">
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top">
-        <td width="70" style="padding-right:12px;"><div style="font-size:48px; text-align:center;">💼</div></td>
+        <td width="70" style="padding-right:12px;"><img src="image/illust_point.svg" alt="" style="width:56px; margin:0 auto;"></td>
         <td style="font-size:13px; line-height:1.7;"><b style="background:linear-gradient(transparent 55%,#fafc93 0);">転職サイトにしか載っていない求人</b>や、<b style="background:linear-gradient(transparent 55%,#fafc93 0);">登録者だけに公開される好条件の求人</b>が多数あります。迷っているなら登録するのがおすすめです！</td>
       </tr></table>
     </div>
@@ -184,7 +186,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px;">
     <div class="nnw-head" style="margin-bottom:6px;">
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
-        <td width="52"><div style="font-size:40px; line-height:1;">🥇</div></td>
+        <td width="52"><img class="nnw-medal" src="image/medal_gold.svg" alt="1位" style="width:42px;"></td>
         <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">レバウェル看護</div></td>
         <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.6</div></div></td>
       </tr></table>
@@ -192,7 +194,7 @@
     <div style="color:#e23131; font-weight:700; font-size:15px; margin-bottom:12px;">非公開求人の数が業界トップクラス！年収アップ交渉もおまかせ◎</div>
 
     <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">レバウェル看護の特徴</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">レバウェル看護の特徴</span></div>
       <div style="font-size:13px; line-height:1.8;">
         <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><b>非公開求人が業界トップクラス</b>。登録者だけが見られる特別な求人が多数</td></tr></table>
         <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>やりとりは<span style="color:#ff6767; font-weight:700;">LINEでOK</span>！スキマ時間で転職活動ができる</td></tr></table>
@@ -209,13 +211,13 @@
     </table>
 
     <a href="https://kango-oshigoto.jp/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
-      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <img class="nnw-spin" src="image/illust_nurse.svg" alt="" style="position:absolute; left:6px; bottom:2px; width:48px; height:auto;">
       <span style="font-size:18px; font-weight:700;">レバウェル看護の詳細を見る</span><br><span style="font-size:11px;">＼ 登録かんたん1分・完全無料 ／</span>
       <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
     </a>
 
     <div style="background:#fff3e0; border-radius:12px; padding:14px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">レバウェル看護の口コミ</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">レバウェル看護の口コミ</span></div>
       <div style="margin-bottom:12px;">
         <div style="font-weight:700; color:#e23131; font-size:13px;">非公開求人が多い！</div>
         <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">30代/女性</span></div>
@@ -233,7 +235,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:25px;">
     <div class="nnw-head">
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
-        <td width="52"><div style="font-size:40px; line-height:1;">🥈</div></td>
+        <td width="52"><img class="nnw-medal" src="image/medal_silver.svg" alt="2位" style="width:42px;"></td>
         <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナースではたらこ</div></td>
         <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.5</div></div></td>
       </tr></table>
@@ -241,7 +243,7 @@
     <div style="color:#e23131; font-weight:700; font-size:15px; margin:6px 0 12px;">『バイトル』のディップ社が運営する安心サービス</div>
 
     <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナースではたらこの特徴</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナースではたらこの特徴</span></div>
       <div style="font-size:13px; line-height:1.8;">
         <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>給与・残業など<span style="color:#ff6767; font-weight:700;">聞きづらい条件交渉を代行</span>してくれる</td></tr></table>
         <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><span style="color:#ff6767; font-weight:700;">逆指名が可能</span>だから希望の病院を指定できる</td></tr></table>
@@ -258,13 +260,13 @@
     </table>
 
     <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
-      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <img class="nnw-spin" src="image/illust_nurse.svg" alt="" style="position:absolute; left:6px; bottom:2px; width:48px; height:auto;">
       <span style="font-size:18px; font-weight:700;">ナースではたらこの詳細を見る</span><br><span style="font-size:11px;">＼ 登録かんたん1分・完全無料 ／</span>
       <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
     </a>
 
     <div style="background:#fff3e0; border-radius:12px; padding:14px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナースではたらこの口コミ</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナースではたらこの口コミ</span></div>
       <div style="margin-bottom:12px;">
         <div style="font-weight:700; color:#e23131; font-size:13px;">聞きにくいことを全部確認してくれた</div>
         <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">20代/女性</span></div>
@@ -282,7 +284,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:25px;">
     <div class="nnw-head">
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
-        <td width="52"><div style="font-size:40px; line-height:1;">🥉</div></td>
+        <td width="52"><img class="nnw-medal" src="image/medal_bronze.svg" alt="3位" style="width:42px;"></td>
         <td><div style="font-size:22px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナース専科 転職</div></td>
         <td width="92" style="text-align:center;"><div style="background:#f9f0f0; border-radius:10px; padding:5px;"><div style="font-size:11px; color:#666;">総合評価</div><div style="color:#f7931e; font-size:13px;">★</div><div style="font-size:24px; font-weight:700; line-height:1;">4.4</div></div></td>
       </tr></table>
@@ -290,7 +292,7 @@
     <div style="color:#e23131; font-weight:700; font-size:15px; margin:6px 0 12px;">求人数は業界最大級！レア求人も豊富</div>
 
     <div style="background:#fff3e0; border-radius:14px; padding:16px; margin-bottom:12px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="font-size:20px;">🌟</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナース専科 転職の特徴</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:8px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:17px;">ナース専科 転職の特徴</span></div>
       <div style="font-size:13px; line-height:1.8;">
         <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td><b>約24万件の圧倒的な求人数</b>。会員限定のレア求人も多数</td></tr></table>
         <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:6px;"><tr valign="top"><td width="26" style="padding-top:4px;"><span style="display:inline-block; width:18px; height:18px; background:#ff6767; color:#fff; border-radius:50%; text-align:center; font-size:11px; line-height:18px;">✓</span></td><td>看護師専門メディア運営だからこその<span style="color:#ff6767; font-weight:700;">深い業界知識</span></td></tr></table>
@@ -307,13 +309,13 @@
     </table>
 
     <a href="https://www.nursejinzaibank.com/" target="_blank" rel="nofollow noopener" class="nnw-cta" style="display:block; position:relative; background:#ff6767; border-radius:15px; box-shadow:0 6px 0 0 #cc5252; text-align:center; padding:16px; color:#fff; margin-bottom:14px;">
-      <span class="nnw-spin" style="position:absolute; left:10px; bottom:0; font-size:40px;">👩‍⚕️</span>
+      <img class="nnw-spin" src="image/illust_nurse.svg" alt="" style="position:absolute; left:6px; bottom:2px; width:48px; height:auto;">
       <span style="font-size:18px; font-weight:700;">ナース専科 転職の詳細を見る</span><br><span style="font-size:11px;">＼ 登録かんたん1分・完全無料 ／</span>
       <span style="position:absolute; right:18px; top:50%; transform:translateY(-50%); width:24px; height:24px; background:#fff; color:#ff6767; border-radius:50%; line-height:24px; font-size:14px;">›</span>
     </a>
 
     <div style="background:#fff3e0; border-radius:12px; padding:14px;">
-      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="font-size:20px;">💬</span> <span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナース専科 転職の口コミ</span></div>
+      <div style="text-align:center; font-weight:700; margin-bottom:10px;"><span style="background:linear-gradient(transparent 60%,#ff9a9a 60%); font-size:16px;">ナース専科 転職の口コミ</span></div>
       <div style="margin-bottom:12px;">
         <div style="font-weight:700; color:#e23131; font-size:13px;">とても親切で早い対応</div>
         <div style="color:#f7931e; font-size:12px;">★★★★★ <span style="color:#888;">30代/女性</span></div>
