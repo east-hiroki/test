@@ -10,8 +10,8 @@
 @keyframes nnwBounce{0%{opacity:0; transform:scale(.3);}60%{opacity:1; transform:scale(1.05);}100%{transform:scale(1);}}
 @keyframes nnwBlink{0%{opacity:1;}50%{opacity:.35;}100%{opacity:1;}}
 @keyframes nnwFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
-#nnw .nnw-spin{display:inline-block; object-fit:contain; animation:nnwFloat 3s ease-in-out infinite;}
-#nnw .nnw-medal{display:inline-block; vertical-align:middle; object-fit:contain;}
+#nnw .nnw-spin{display:inline-block; animation:nnwFloat 3s ease-in-out infinite;}
+#nnw .nnw-medal{display:inline-block; vertical-align:middle;}
 #nnw .nnw-card{animation:nnwBounce .8s ease both;}
 #nnw .nnw-head{animation:nnwSlide .8s ease both;}
 #nnw .nnw-blink{animation:nnwBlink 3s ease-in infinite;}
@@ -27,7 +27,25 @@
   <div style="display:inline-block; background:#fff; color:#ff6767; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:13px; padding:3px 16px; border-radius:20px; margin-bottom:12px;">＼ 2026年6月 最新版・完全無料 ／</div>
   <div style="color:#fff; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:30px; line-height:1.3; text-shadow:0 2px 0 #e23131;">プロが選ぶ<br>看護師転職サイト <span style="font-size:42px; color:#fff8e8;">5</span>選</div>
   <div style="color:#fff8e8; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14px; margin-top:8px;">＼ 登録はかんたん1分・スマホで完結 ／</div>
-  <div style="margin-top:10px;"><img class="nnw-spin" src="image/illust_nurse.svg" alt="看護師" style="width:84px; height:84px; object-fit:contain; margin:0 auto;"></div>
+  <div style="margin-top:10px;">
+    <svg class="nnw-spin" width="84" height="84" viewBox="0 0 120 120" role="img" aria-label="看護師">
+      <path d="M28 120 Q28 84 60 84 Q92 84 92 120 Z" fill="#ffffff" stroke="#ffd1d0" stroke-width="2"/>
+      <path d="M51 87 L60 100 L69 87" fill="none" stroke="#ff9a9a" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M51 88 Q46 108 60 110 Q74 108 69 88" fill="none" stroke="#7fb1c9" stroke-width="2.4"/>
+      <circle cx="60" cy="112" r="3.4" fill="#7fb1c9"/>
+      <rect x="54" y="72" width="12" height="15" rx="6" fill="#ffe0c8"/>
+      <circle cx="60" cy="55" r="22" fill="#ffe0c8"/>
+      <path d="M37 55 Q39 30 60 30 Q81 30 83 55 Q83 43 60 41 Q37 43 37 55 Z" fill="#6b4a3a"/>
+      <path d="M43 38 Q60 25 77 38 L73 45 Q60 36 47 45 Z" fill="#ffffff" stroke="#ffd1d0" stroke-width="1.5"/>
+      <rect x="58" y="32" width="4" height="11" rx="1" fill="#ff6767"/>
+      <rect x="54.5" y="35.5" width="11" height="4" rx="1" fill="#ff6767"/>
+      <circle cx="52" cy="57" r="2.6" fill="#5a3a2a"/>
+      <circle cx="68" cy="57" r="2.6" fill="#5a3a2a"/>
+      <circle cx="47" cy="63" r="3.2" fill="#ffc1bd" opacity=".75"/>
+      <circle cx="73" cy="63" r="3.2" fill="#ffc1bd" opacity=".75"/>
+      <path d="M54 65 Q60 71 66 65" fill="none" stroke="#cc7a5a" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+  </div>
 </div>
 
 <!-- カウンター -->
@@ -54,7 +72,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:16px;">
     <div class="nnw-head">
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;"><tr valign="middle">
-        <td width="50"><img class="nnw-medal" src="image/medal_gold.svg" alt="1位" style="width:44px; height:44px; object-fit:contain;"></td>
+        <td width="50"><svg class="nnw-medal" width="44" height="44" viewBox="0 0 44 56" role="img" aria-label="1位"><path d="M14 3 L21 30 L13 30 Z" fill="#ff9a9a"/><path d="M30 3 L23 30 L31 30 Z" fill="#ff6767"/><circle cx="22" cy="38" r="16" fill="#e0a82e"/><circle cx="22" cy="38" r="13.5" fill="#f4c64e"/><circle cx="22" cy="38" r="13.5" fill="none" stroke="#ffe39a" stroke-width="1.5"/><text x="22" y="44.5" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif" font-size="17" font-weight="900" fill="#9a6a00" text-anchor="middle">1</text></svg></td>
         <td><div style="font-size:21px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">レバウェル看護</div></td>
       </tr></table>
     </div>
@@ -69,7 +87,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:22px;">
     <div class="nnw-head">
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;"><tr valign="middle">
-        <td width="50"><img class="nnw-medal" src="image/medal_silver.svg" alt="2位" style="width:44px; height:44px; object-fit:contain;"></td>
+        <td width="50"><svg class="nnw-medal" width="44" height="44" viewBox="0 0 44 56" role="img" aria-label="2位"><path d="M14 3 L21 30 L13 30 Z" fill="#ff9a9a"/><path d="M30 3 L23 30 L31 30 Z" fill="#ff6767"/><circle cx="22" cy="38" r="16" fill="#9aa3af"/><circle cx="22" cy="38" r="13.5" fill="#cdd3db"/><circle cx="22" cy="38" r="13.5" fill="none" stroke="#eef1f5" stroke-width="1.5"/><text x="22" y="44.5" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif" font-size="17" font-weight="900" fill="#5b6471" text-anchor="middle">2</text></svg></td>
         <td><div style="font-size:21px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナース専科 転職</div></td>
       </tr></table>
     </div>
@@ -84,7 +102,7 @@
   <div class="nnw-card" style="border-top:10px solid #ff6767; padding:14px; margin-top:22px;">
     <div class="nnw-head">
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;"><tr valign="middle">
-        <td width="50"><img class="nnw-medal" src="image/medal_bronze.svg" alt="3位" style="width:44px; height:44px; object-fit:contain;"></td>
+        <td width="50"><svg class="nnw-medal" width="44" height="44" viewBox="0 0 44 56" role="img" aria-label="3位"><path d="M14 3 L21 30 L13 30 Z" fill="#ff9a9a"/><path d="M30 3 L23 30 L31 30 Z" fill="#ff6767"/><circle cx="22" cy="38" r="16" fill="#b5713f"/><circle cx="22" cy="38" r="13.5" fill="#d49363"/><circle cx="22" cy="38" r="13.5" fill="none" stroke="#eec4a3" stroke-width="1.5"/><text x="22" y="44.5" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif" font-size="17" font-weight="900" fill="#6f3f1c" text-anchor="middle">3</text></svg></td>
         <td><div style="font-size:21px; font-weight:700; font-family:'Zen Maru Gothic',sans-serif;">ナースではたらこ</div></td>
       </tr></table>
     </div>
@@ -136,7 +154,7 @@
     <div style="background:#ffefef; color:#eb6461; font-weight:700; font-size:16px; padding:10px 14px;">① 登録者限定の求人を紹介してもらう</div>
     <div style="padding:14px;">
       <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top">
-        <td width="70" style="padding-right:12px;"><img src="image/illust_point.svg" alt="" style="width:56px; height:56px; object-fit:contain; margin:0 auto;"></td>
+        <td width="70" style="padding-right:12px; text-align:center;"><svg width="56" height="56" viewBox="0 0 64 64" role="img" aria-label="ポイント"><path d="M24 21 V16 a4 4 0 0 1 4-4 h8 a4 4 0 0 1 4 4 V21" fill="none" stroke="#e98484" stroke-width="3" stroke-linecap="round"/><rect x="9" y="21" width="46" height="31" rx="6" fill="#ff9a9a"/><rect x="9" y="21" width="46" height="31" rx="6" fill="none" stroke="#e98484" stroke-width="2"/><rect x="9" y="32" width="46" height="7" fill="#ffffff" opacity=".55"/><rect x="28" y="30" width="8" height="11" rx="2" fill="#ffffff"/></svg></td>
         <td style="font-size:13px; line-height:1.7;"><b style="background:linear-gradient(transparent 55%,#fafc93 0);">転職サイトにしか載っていない求人</b>や、<b style="background:linear-gradient(transparent 55%,#fafc93 0);">登録者だけに公開される好条件の求人</b>が多数あります。迷っているなら登録するのがおすすめです！</td>
       </tr></table>
     </div>
