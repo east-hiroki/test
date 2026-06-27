@@ -26,6 +26,40 @@
 #nnw .nnw-blink{animation:nnwBlink 3s ease-in infinite;}
 #nnw .cmpThumb{display:block; width:100%; max-width:150px; height:auto; margin:6px auto; border-radius:4px;}
 #nnw .rankLogo{display:block; width:100%; height:auto; border-radius:10px; margin:4px 0 14px;}
+#nnw .ncw-cta{transition:all .2s;}
+/* PickUp求人 */
+#nnw .sec{padding:24px 14px;}
+#nnw .sec-ttl{text-align:center; font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:21px; color:#e23131; margin-bottom:4px;}
+#nnw .sec-sub{text-align:center; font-size:13px; color:#ff6767; font-weight:700; margin-bottom:14px;}
+#nnw .notice{font-size:10px; color:#888; margin-top:8px; line-height:1.6;}
+#nnw .swipeHint{text-align:center; font-size:11px; color:#ff6767; margin-bottom:2px;}
+#nnw .scroller{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 4px 14px;}
+#nnw .scroller::-webkit-scrollbar{height:6px;}
+#nnw .scroller::-webkit-scrollbar-thumb{background:#ffb7b6; border-radius:3px;}
+#nnw .pickCard{flex:0 0 78%; max-width:300px; scroll-snap-align:center; background:#fff; border:2px solid #ffd1d0; border-radius:12px; overflow:hidden;}
+#nnw .pickCard dt{background:#ff6767; color:#fff; font-weight:700; font-size:14px; padding:8px 10px;}
+#nnw .pickCard .pimg{aspect-ratio:16/10; background:#f4e4e4; overflow:hidden;}
+#nnw .pickCard .pimg img{width:100%; height:100%; object-fit:cover;}
+#nnw .pickCard .ico{display:inline-block; background:#fff0f1; color:#ff6767; border:1px solid #ffb7b6; border-radius:4px; font-size:11px; padding:1px 8px; margin:8px 10px 0;}
+#nnw .pickCard .fee{padding:4px 10px 0; font-size:13px;}
+#nnw .pickCard .fee strong{color:#e23131; font-size:24px;}
+#nnw .pickCard .pt{display:inline-block; margin:6px 4px 0 10px; font-size:11px; color:#555; background:#fffae8; border:1px solid #f1e0a8; border-radius:4px; padding:1px 6px;}
+#nnw .pickCard .pbtn{display:block; margin:12px 10px; background:#ff6767; color:#fff; text-align:center; font-weight:700; font-size:13px; padding:11px; border-radius:8px; box-shadow:0 4px 0 #cc5252;}
+/* おすすめの組み合わせ */
+#nnw .combi{background:#fff8e8; padding:24px 14px;}
+#nnw .combi .lead{font-size:14px; font-weight:700; text-align:center; line-height:1.8; margin-bottom:12px;}
+#nnw .combiDots{text-align:center; color:#bbb; letter-spacing:6px; font-weight:900; margin-bottom:18px;}
+#nnw .combiWrap{position:relative; display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+#nnw .combiPlus{position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); width:38px; height:38px; line-height:38px; text-align:center; background:#5fc0e0; color:#fff; border-radius:50%; font-size:24px; font-weight:700; z-index:2; box-shadow:0 2px 4px rgba(0,0,0,.12);}
+#nnw .combiCard{background:#fff; border:1px solid #ece2cb; border-radius:12px; padding:14px 12px;}
+#nnw .combiCard h3{font-size:17px; color:#333; text-align:center; margin-bottom:10px; font-family:'Zen Maru Gothic',sans-serif;}
+#nnw .combiCard .cimg{display:block; border-radius:8px; overflow:hidden; margin-bottom:12px;}
+#nnw .combiCard .cimg img{display:block; width:100%; height:auto;}
+#nnw .combiCard dl{display:flex; font-size:12px; margin-bottom:4px; border-radius:4px; overflow:hidden;}
+#nnw .combiCard dt{flex:0 0 70px; background:#a9d9ea; color:#fff; padding:7px 4px; font-weight:700; text-align:center;}
+#nnw .combiCard dd{flex:1; background:#f3f3f3; padding:7px 6px; text-align:center;}
+#nnw .combiCard p{font-size:12px; text-align:left; line-height:1.6; margin:10px 0 12px;}
+#nnw .combiCard .cbtn{display:block; background:#3cb37e; color:#fff; font-weight:700; text-align:center; padding:12px; border-radius:30px; box-shadow:0 4px 0 #2e8c61;}
 </style>
 
 <div id="nnw" style="max-width:800px; margin:0 auto; background:#fff3e0; color:#333; font-size:14px; line-height:1.6;">
@@ -166,6 +200,58 @@
     <div style="font-size:10px; color:#64748b; margin-top:8px;">※2026年3月時点の情報をもとに編集部が独自調査</div>
   </div>
 </div>
+
+<!-- PickUp求人 -->
+<section class="sec">
+  <div class="sec-ttl">PickUp求人</div>
+  <div class="sec-sub">6月の新着求人も続々</div>
+  <div class="swipeHint">▶ 横にスワイプできます</div>
+  <div class="scroller">
+    <div class="pickCard"><dl>
+      <dt>病院【常勤】</dt>
+      <dd class="pimg"><img src="image/kg_sample_hospital_01.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>40</strong>万円</dd>
+      <dd><span class="pt">託児所・住宅補助</span><span class="pt">ボーナス3回</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    <div class="pickCard"><dl>
+      <dt>クリニック【常勤】</dt>
+      <dd class="pimg"><img src="image/kg_sample_clinic_02.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>42</strong>万円</dd>
+      <dd><span class="pt">年間休日125日以上</span><span class="pt">賞与4.0ヵ月支給</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    <div class="pickCard"><dl>
+      <dt>保育園</dt>
+      <dd class="pimg"><img src="image/kg_sample_childcare_01.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>34</strong>万円</dd>
+      <dd><span class="pt">土日祝日休み</span><span class="pt">未経験OK</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    <div class="pickCard"><dl>
+      <dt>美容クリニック</dt>
+      <dd class="pimg"><img src="image/kg_sample_beauty_01.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>40</strong>万円</dd>
+      <dd><span class="pt">残業ほぼなし</span><span class="pt">研修制度充実</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    <div class="pickCard"><dl>
+      <dt>老健【常勤】</dt>
+      <dd class="pimg"><img src="image/kg_sample_visit_01.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>40</strong>万円</dd>
+      <dd><span class="pt">夜勤・オンコールなし</span><span class="pt">駅近徒歩5分</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+    <div class="pickCard"><dl>
+      <dt>デイサービス【常勤】</dt>
+      <dd class="pimg"><img src="image/kg_sample_visit_03.jpg" alt=""></dd>
+      <dd class="ico">看護師</dd>
+      <dd class="fee">月給 <strong>38</strong>万円</dd>
+      <dd><span class="pt">未経験OK</span><span class="pt">住宅補助あり</span></dd>
+    </dl><a href="https://ad.presco.asia/6f0d4d84dec27e8e/cl/?bId=f54f7c0D&amp;param2=oshigoto&amp;param4=17079339560&amp;param5=185114265804&amp;param1=utm_campaign_17079339560.utm_content_185114265804.utm_term_%E7%9C%8B%E8%AD%B7%E5%B8%AB+%E8%BB%A2%E8%81%B7.gclid_Cj0KCQjwrs7RBhDuARIsAIVfBD2KC94ZFhAVd9MUrzcOf2BfRnzwv3bQy-FEYA6ncaN9Uazqo1hu15MaAkxdEALw_wcB.gbraid_0AAAAADiYHKQzfIuD7utkhBoNU92n9Ax_y.spAT_assigned" target="_blank" rel="nofollow noopener" class="pbtn ncw-cta">求人を紹介してもらう</a></div>
+  </div>
+  <p class="notice" style="text-align:center;">※上記は求人例となります。最新の求人についてはサービス公式サイトでご確認ください。</p>
+</section>
 
 <!-- ミニコラム -->
 <div style="background:#fff3e0; padding:24px 14px;">
@@ -481,6 +567,32 @@
   </div>
 
 </div>
+
+<!-- おすすめの組み合わせ -->
+<section class="combi">
+  <div class="sec-ttl">おすすめの組み合わせ</div>
+  <p class="lead">看護師さんの転職ならまずはこの王道2サイトがオススメです。<br>『看護師専門の転職サイト』として転職成功実績が豊富で、どちらも非公開の好条件求人を独自に揃えています！</p>
+  <div class="combiDots">- - - - - - - - - - -</div>
+  <div class="combiWrap">
+    <div class="combiPlus">＋</div>
+    <div class="combiCard">
+      <h3>レバウェル看護</h3>
+      <a href="https://kango-oshigoto.jp/" target="_blank" rel="nofollow noopener" class="cimg ncw-cta"><img src="http://app-rank.com/wp-content/uploads/2026/06/レバウェル看護詳細ロゴ.png" alt="レバウェル看護"></a>
+      <dl><dt>求人数</dt><dd>約230,000件</dd></dl>
+      <dl><dt>対応エリア</dt><dd>全国</dd></dl>
+      <p>レア求人探すなら！非公開求人も多数保有する看護師転職サイト</p>
+      <a href="https://kango-oshigoto.jp/" target="_blank" rel="nofollow noopener" class="cbtn ncw-cta">公式サイト ›</a>
+    </div>
+    <div class="combiCard">
+      <h3>ナースではたらこ</h3>
+      <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="nofollow noopener" class="cimg ncw-cta"><img src="http://app-rank.com/wp-content/uploads/2026/06/ナースではたらこ詳細ロゴ.jpg" alt="ナースではたらこ"></a>
+      <dl><dt>求人数</dt><dd>約170,000件</dd></dl>
+      <dl><dt>対応エリア</dt><dd>全国</dd></dl>
+      <p>聞きづらい条件交渉もおまかせ！逆指名で希望の病院も狙える看護師転職サイト</p>
+      <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="nofollow noopener" class="cbtn ncw-cta">公式サイト ›</a>
+    </div>
+  </div>
+</section>
 
 <!-- フッター -->
 <div style="background:#ff6767; color:#fff; text-align:center; padding:18px; font-size:12px;">
